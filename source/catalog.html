@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Погнали, каталог</title>
+</head>
+<body>
+  <header>
+  <span class="slogan">Погнали?</span>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li>О сервисе</li>
+      <li>Направления</li>
+      <li>Попутчики</li>
+    </ul>
+    <button class="nav__login btn" type="button">Авторизация</button>
+    <ul class='contact nav__contact'>
+      <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
+      <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    </ul>
+    <ul class="social-list">
+      <li class="social-list__item">facebook</li>
+      <li class="social-list__item">vk</li>
+      <li class="social-list__item">instagram</li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <h1 class="head">Попутчики</h1>
+    <form class="form">
+      <h2>Фильтрация по странам</h2>
+      <ul class="country-filter">
+        <li class="country-filter__item">
+          <ul class="filter-world">
+            <li class="filter-world__item">Европа</li>
+            <li class="filter-world__item">Азия</li>
+            <li class="filter-world__item">Америка</li>
+            <li class="filter-world__item">Острова</li>
+          </ul>
+        </li>
+        <li class="country-filter__item">
+          <ul class="letter-list">
+            <li class="letter-list__item"><input type="radio"><label>а</label></li>
+            <li class="letter-list__item"><input type="radio"><label>б</label></li>
+            <li class="letter-list__item"><input type="radio"><label>в</label></li>
+            <li class="letter-list__item"><input type="radio"><label>г</label></li>
+            <li class="letter-list__item"><input type="radio"><label>д</label></li>
+            <li class="letter-list__item"><input type="radio"><label>е</label></li>
+            <li class="letter-list__item"><input type="radio"><label>з</label></li>
+            <li class="letter-list__item"><input type="radio"><label>и</label></li>
+            <li class="letter-list__item"><input type="radio"><label>к</label></li>
+            <li class="letter-list__item"><input type="radio"><label>л</label></li>
+            <li class="letter-list__item"><input type="radio"><label>м</label></li>
+            <li class="letter-list__item"><input type="radio"><label>н</label></li>
+            <li class="letter-list__item"><input type="radio"><label>о</label></li>
+            <li class="letter-list__item"><input type="radio"><label>п</label></li>
+            <li class="letter-list__item"><input type="radio"><label>р</label></li>
+            <li class="letter-list__item"><input type="radio"><label>с</label></li>
+            <li class="letter-list__item"><input type="radio"><label>т</label></li>
+            <li class="letter-list__item"><input type="radio"><label>у</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ф</label></li>
+            <li class="letter-list__item"><input type="radio"><label>х</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ч</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ш</label></li>
+            <li class="letter-list__item"><input type="radio"><label>э</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ю</label></li>
+            <li class="letter-list__item"><input type="radio"><label>я</label></li>
+          </ul>
+        </li>
+        <li class="country-filter__item">
+          <ul class="country-choice-list">
+            <li class="country-choice-list__item">Австралия</li>
+            <li class="country-choice-list__item">Австрия</li>
+            <li class="country-choice-list__item">Азейрбаджан</li>
+            <li class="country-choice-list__item">Албания</li>
+            <li class="country-choice-list__item">Алжир</li>
+            <li class="country-choice-list__item">Ангола</li>
+            <li class="country-choice-list__item">Андорра</li>
+            <li class="country-choice-list__item">Антигуа и Барбуда</li>
+            <li class="country-choice-list__item">Аргентина</li>
+            <li class="country-choice-list__item">Армения</li>
+            <li class="country-choice-list__item">Афганистан</li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="subhead">Подберите идеального попутчика</h2>
+      <ul class="companion-filter">
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Хобби</h3>
+          <ul class="hobby-list">
+            <li class="hobby-list__item"></li>
+          </ul>
+        </li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Музыка</h3>
+          <ul class="music-list">
+            <li class="music-list__item">Тяжелый рок</li>
+            <li class="music-list__item">Русский рэп</li>
+            <li class="music-list__item">Евроденс</li>
+          </ul>
+        </li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Еда</h3>
+          <ul class="food-list">
+            <li class="food-list__item"></li>
+          </ul>
+        </li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Транспорт</h3>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
+          </ul>
+        </li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Левел</h3>
+          <input class="level-range level-range--low" type="number">
+          <input class="level-range level-range--high" type="number">
+        </li>
+      </ul>
+      <button class="btn form__show">Показать</button>
+    </form>
+    <section class="traveler">
+      <ul class="traveler-list">
+        <li class="traveler__item">
+          <span class="traveler__name">Таня Фирсова</span>
+          <span class="traveler__score">1,5 M</span>
+          <ul class="traveler__tags tag-list">
+              <li class="tag-list__item">#ЗОЖ</li>
+              <li class="tag-list__item">#ПП</li>
+              <li class="tag-list__item">#Фитнес</li>
+              <li class="tag-list__item">#пляж</li>
+              <li class="tag-list__item">#авокадо</li>
+              <li class="tag-list__item">#смузи</li>
+            </ul>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+              <li class="adventure-list__item">Шри-Ланка</li>
+              <li class="adventure-list__item">Таиланд</li>
+              <li class="adventure-list__item">Сейшелы</li>
+            </ul>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
+          </ul>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
+        </li>
+        <li>
+          <span class="traveler__name">Петя Демин</span>
+          <span class="traveler__score">1500</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#бургер</li>
+            <li class="tag-list__item">#бар</li>
+            <li class="tag-list__item">#футбол</li>
+            <li class="tag-list__item">#концерт</li>
+            <li class="tag-list__item">#крафт</li>
+          </ul>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="transport-list__item">Бельгия</li>
+            <li class="transport-list__item">Чехия</li>
+          </ul>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
+          </ul>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
+        </li>
+        <li>
+          <span class="traveler__name">Марк Смолов</span>
+          <span class="traveler__score">170</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#рэп</li>
+            <li class="tag-list__item">#тату</li>
+            <li class="tag-list__item">#хайпбист</li>
+            <li class="tag-list__item">#кроссовки</li>
+            <li class="tag-list__item">#суприм</li>
+          </ul>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="adventure-list__item">США</li>
+            <li class="adventure-list__item">Австралия</li>
+            <li class="adventure-list__item">Доминика</li>
+          </ul>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
+          </ul>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
+        </li>
+        <li>
+          <span class="traveler__name">Лариса Роговая</span>
+          <span class="traveler__score">23</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#образования</li>
+            <li class="tag-list__item">#карьера</li>
+            <li class="tag-list__item">#учеба</li>
+            <li class="tag-list__item">#линкедин</li>
+          </ul>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="adventure-list__item">Великобритания</li>
+            <li class="adventure-list__item">Германия</li>
+          </ul>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
+          </ul>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
+        </li>
+      </ul>
+      <button class="btn traveler__show">Показать ещё</button>
+      <div class="traveler__nav">
+        <button class="traveler__page-left">left</button>
+        <button class="traveler__page-right">right</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span class="slogan">Погнали?</span>
+    <ul class="social-list">
+      <li class="social-list__item">facebook</li>
+      <li class="social-list__item">vk</li>
+      <li class="social-list__item">instagram</li>
+    </ul>
+    <span class="footer__develop">Разработано</span>
+  </footer>
+</body>
+</html>
