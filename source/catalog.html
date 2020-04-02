@@ -6,244 +6,242 @@
 </head>
 <body>
   <header>
-    <span>Погнали?</span>
-    <div>
-      <ul>
-        <li>О сервисе</li>
-        <li>Направления</li>
-        <li>Попутчики</li>
-      </ul>
-      <button type="button">Авторизация</button>
-      <ul>
-        <li><a href="tel:88005558628">8 800 555-86-28</a></li>
-        <li><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-      </ul>
-
-      <ul>
-        <li>facebook</li>
-        <li>vk</li>
-        <li>instagram</li>
-      </ul>
-    </div>
-  </header>
+  <span class="slogan">Погнали?</span>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li>О сервисе</li>
+      <li>Направления</li>
+      <li>Попутчики</li>
+    </ul>
+    <button class="nav__login btn" type="button">Авторизация</button>
+    <ul class='contact nav__contact'>
+      <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
+      <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    </ul>
+    <ul class="social-list">
+      <li class="social-list__item">facebook</li>
+      <li class="social-list__item">vk</li>
+      <li class="social-list__item">instagram</li>
+    </ul>
+  </nav>
+</header>
   <main>
-    <h1>Попутчики</h1>
-    <form>
-      <span>Фильтрация по странам</span>
-      <ul>
-        <li>
-          <ul>
-            <li>Европа</li>
-            <li>Азия</li>
-            <li>Америка</li>
-            <li>Острова</li>
+    <h1 class="head">Попутчики</h1>
+    <form class="form">
+      <h2>Фильтрация по странам</h2>
+      <ul class="country-filter">
+        <li class="country-filter__item">
+          <ul class="filter-world">
+            <li class="filter-world__item">Европа</li>
+            <li class="filter-world__item">Азия</li>
+            <li class="filter-world__item">Америка</li>
+            <li class="filter-world__item">Острова</li>
           </ul>
         </li>
-        <li>
-          <ul>
-            <li>а</li>
-            <li>б</li>
-            <li>в</li>
-            <li>г</li>
-            <li>д</li>
-            <li>е</li>
-            <li>з</li>
-            <li>и</li>
-            <li>к</li>
-            <li>л</li>
-            <li>м</li>
-            <li>н</li>
-            <li>о</li>
-            <li>п</li>
-            <li>р</li>
-            <li>с</li>
-            <li>т</li>
-            <li>у</li>
-            <li>ф</li>
-            <li>х</li>
-            <li>ч</li>
-            <li>ш</li>
-            <li>э</li>
-            <li>ю</li>
-            <li>я</li>
+        <li class="country-filter__item">
+          <ul class="letter-list">
+            <li class="letter-list__item"><input type="radio"><label>а</label></li>
+            <li class="letter-list__item"><input type="radio"><label>б</label></li>
+            <li class="letter-list__item"><input type="radio"><label>в</label></li>
+            <li class="letter-list__item"><input type="radio"><label>г</label></li>
+            <li class="letter-list__item"><input type="radio"><label>д</label></li>
+            <li class="letter-list__item"><input type="radio"><label>е</label></li>
+            <li class="letter-list__item"><input type="radio"><label>з</label></li>
+            <li class="letter-list__item"><input type="radio"><label>и</label></li>
+            <li class="letter-list__item"><input type="radio"><label>к</label></li>
+            <li class="letter-list__item"><input type="radio"><label>л</label></li>
+            <li class="letter-list__item"><input type="radio"><label>м</label></li>
+            <li class="letter-list__item"><input type="radio"><label>н</label></li>
+            <li class="letter-list__item"><input type="radio"><label>о</label></li>
+            <li class="letter-list__item"><input type="radio"><label>п</label></li>
+            <li class="letter-list__item"><input type="radio"><label>р</label></li>
+            <li class="letter-list__item"><input type="radio"><label>с</label></li>
+            <li class="letter-list__item"><input type="radio"><label>т</label></li>
+            <li class="letter-list__item"><input type="radio"><label>у</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ф</label></li>
+            <li class="letter-list__item"><input type="radio"><label>х</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ч</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ш</label></li>
+            <li class="letter-list__item"><input type="radio"><label>э</label></li>
+            <li class="letter-list__item"><input type="radio"><label>ю</label></li>
+            <li class="letter-list__item"><input type="radio"><label>я</label></li>
           </ul>
         </li>
-        <li>
-          <ul>
-            <li>Австралия</li>
-            <li>Австрия</li>
-            <li>Азейрбаджан</li>
-            <li>Албания</li>
-            <li>Алжир</li>
-            <li>Ангола</li>
-            <li>Андорра</li>
-            <li>Антигуа и Барбуда</li>
-            <li>Аргентина</li>
-            <li>Армения</li>
-            <li>Афганистан</li>
+        <li class="country-filter__item">
+          <ul class="country-choice-list">
+            <li class="country-choice-list__item">Австралия</li>
+            <li class="country-choice-list__item">Австрия</li>
+            <li class="country-choice-list__item">Азейрбаджан</li>
+            <li class="country-choice-list__item">Албания</li>
+            <li class="country-choice-list__item">Алжир</li>
+            <li class="country-choice-list__item">Ангола</li>
+            <li class="country-choice-list__item">Андорра</li>
+            <li class="country-choice-list__item">Антигуа и Барбуда</li>
+            <li class="country-choice-list__item">Аргентина</li>
+            <li class="country-choice-list__item">Армения</li>
+            <li class="country-choice-list__item">Афганистан</li>
           </ul>
         </li>
       </ul>
-      <span>Подберите идеального попутчика</span>
-      <ul>
-        <li>
-          <h3>Хобби</h3>
-          <ul>
-            <li></li>
+      <h2 class="subhead">Подберите идеального попутчика</h2>
+      <ul class="companion-filter">
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Хобби</h3>
+          <ul class="hobby-list">
+            <li class="hobby-list__item"></li>
           </ul>
         </li>
-        <li>
-          <h3>Музыка</h3>
-          <ul>
-            <li>Тяжелый рок</li>
-            <li>Русский рэп</li>
-            <li>Евроденс</li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Музыка</h3>
+          <ul class="music-list">
+            <li class="music-list__item">Тяжелый рок</li>
+            <li class="music-list__item">Русский рэп</li>
+            <li class="music-list__item">Евроденс</li>
           </ul>
         </li>
-        <li>
-          <h3>Еда</h3>
-          <ul>
-            <li></li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Еда</h3>
+          <ul class="food-list">
+            <li class="food-list__item"></li>
           </ul>
         </li>
-        <li>
-          <h3>Транспорт<h3>
-          <ul>
-            <li>самолет</li>
-            <li>автобус</li>
-            <li>вело</li>
-            <li>ногами</li>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Транспорт</h3>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
           </ul>
         </li>
-        <li>
-          <h3>Левел</h3>
-          <input>
-          <input>
-          <input>
+        <li class="companion-filter__item">
+          <h3 class="subsubhead">Левел</h3>
+          <input class="level-range level-range--low" type="number">
+          <input class="level-range level-range--high" type="number">
         </li>
-        <button>Показать</button>
       </ul>
+      <button class="btn form__show">Показать</button>
     </form>
-    <section>
-      <ul>
-        <li>
-          <span>Таня Фирсова</span>
-          <span>1,5 M</span>
-          <ul>
-            <li>#ЗОЖ</li>
-            <li>#ПП</li>
-            <li>#Фитнес</li>
-            <li>#пляж</li>
-            <li>#авокадо</li>
-            <li>#смузи</li>
+    <section class="traveler">
+      <ul class="traveler-list">
+        <li class="traveler__item">
+          <span class="traveler__name">Таня Фирсова</span>
+          <span class="traveler__score">1,5 M</span>
+          <ul class="traveler__tags tag-list">
+              <li class="tag-list__item">#ЗОЖ</li>
+              <li class="tag-list__item">#ПП</li>
+              <li class="tag-list__item">#Фитнес</li>
+              <li class="tag-list__item">#пляж</li>
+              <li class="tag-list__item">#авокадо</li>
+              <li class="tag-list__item">#смузи</li>
+            </ul>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+              <li class="adventure-list__item">Шри-Ланка</li>
+              <li class="adventure-list__item">Таиланд</li>
+              <li class="adventure-list__item">Сейшелы</li>
+            </ul>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
           </ul>
-          <span>хочет посетить:</span>
-          <ul>
-            <li>Шри-Ланка</li>
-            <li>Таиланд</li>
-            <li>Сейшелы</li>
-          </ul>
-          <span>транспорт:</span>
-          <ul>
-            <li>самолет</li>
-            <li>автобус</li>
-            <li>вело</li>
-            <li>ногами</li>
-          </ul>
-          <span>левел:</span>
-          <button>Позвать!</button>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
         </li>
         <li>
-          <span>Петя Демин</span>
-          <span>1500</span>
-          <ul>
-            <li>#бургер</li>
-            <li>#бар</li>
-            <li>#футбол</li>
-            <li>#концерт</li>
-            <li>#крафт</li>
+          <span class="traveler__name">Петя Демин</span>
+          <span class="traveler__score">1500</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#бургер</li>
+            <li class="tag-list__item">#бар</li>
+            <li class="tag-list__item">#футбол</li>
+            <li class="tag-list__item">#концерт</li>
+            <li class="tag-list__item">#крафт</li>
           </ul>
-          <span>хочет посетить:</span>
-          <ul>
-            <li>Бельгия</li>
-            <li>Чехия</li>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="transport-list__item">Бельгия</li>
+            <li class="transport-list__item">Чехия</li>
           </ul>
-          <span>транспорт:</span>
-          <ul>
-            <li>самолет</li>
-            <li>автобус</li>
-            <li>вело</li>
-            <li>ногами</li>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
           </ul>
-          <span>левел:</span>
-          <button>Позвать!</button>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
         </li>
         <li>
-          <span>Марк Смолов</span>
-          <span>170</span>
-          <ul>
-            <li>#рэп</li>
-            <li>#тату</li>
-            <li>#хайпбист</li>
-            <li>#кроссовки</li>
-            <li>#суприм</li>
+          <span class="traveler__name">Марк Смолов</span>
+          <span class="traveler__score">170</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#рэп</li>
+            <li class="tag-list__item">#тату</li>
+            <li class="tag-list__item">#хайпбист</li>
+            <li class="tag-list__item">#кроссовки</li>
+            <li class="tag-list__item">#суприм</li>
           </ul>
-          <span>хочет посетить:</span>
-          <ul>
-            <li>США</li>
-            <li>Австралия</li>
-            <li>Доминика</li>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="adventure-list__item">США</li>
+            <li class="adventure-list__item">Австралия</li>
+            <li class="adventure-list__item">Доминика</li>
           </ul>
-          <span>транспорт:</span>
-          <ul>
-            <li>самолет</li>
-            <li>автобус</li>
-            <li>вело</li>
-            <li>ногами</li>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
           </ul>
-          <span>левел:</span>
-          <button>Позвать!</button>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
         </li>
         <li>
-          <span>Лариса Роговая</span>
-          <span>23</span>
-          <ul>
-            <li>#образования</li>
-            <li>#карьера</li>
-            <li>#учеба</li>
-            <li>#линкедин</li>
+          <span class="traveler__name">Лариса Роговая</span>
+          <span class="traveler__score">23</span>
+          <ul class="traveler__tags tag-list">
+            <li class="tag-list__item">#образования</li>
+            <li class="tag-list__item">#карьера</li>
+            <li class="tag-list__item">#учеба</li>
+            <li class="tag-list__item">#линкедин</li>
           </ul>
-          <span>хочет посетить:</span>
-          <ul>
-            <li>Великобритания</li>
-            <li>Германия</li>
+          <span class="traveler__head-list">хочет посетить:</span>
+          <ul class="traveler__desire adventure-list">
+            <li class="adventure-list__item">Великобритания</li>
+            <li class="adventure-list__item">Германия</li>
           </ul>
-          <span>транспорт:</span>
-          <ul>
-            <li>самолет</li>
-            <li>автобус</li>
-            <li>вело</li>
-            <li>ногами</li>
+          <span class="traveler__head-list">транспорт:</span>
+          <ul class="transport-list">
+            <li class="transport-list__item">самолет</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">вело</li>
+            <li class="transport-list__item">ногами</li>
           </ul>
-          <span>левел:</span>
-          <button>Позвать!</button>
+          <span class="traveler__head-list">левел:</span>
+          <button class="btn traveler__call">Позвать!</button>
         </li>
       </ul>
-      <button>Показать ещё</button>
-      <div>
-        <button>left</button>
-        <button>right</button>
+      <button class="btn traveler__show">Показать ещё</button>
+      <div class="traveler__nav">
+        <button class="traveler__page-left">left</button>
+        <button class="traveler__page-right">right</button>
       </div>
     </section>
   </main>
   <footer>
-    <span>Погнали?</span>
-    <ul>
-      <li>facebook</li>
-      <li>vk</li>
-      <li>instagram</li>
+    <span class="slogan">Погнали?</span>
+    <ul class="social-list">
+      <li class="social-list__item">facebook</li>
+      <li class="social-list__item">vk</li>
+      <li class="social-list__item">instagram</li>
     </ul>
-    <span>Разработано</span>
+    <span class="footer__develop">Разработано</span>
   </footer>
 </body>
 </html>
