@@ -1,0 +1,66 @@
+.transport-list {
+  margin: 0 0 21px 73px;
+}
+
+.transport-list--catalog {
+  margin: 0 0 20px 0;
+}
+
+.transport-list__item {
+  display: inline-block;
+  width: 33px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.5;
+
+  &:nth-child(1) {
+    background-size: 19px 21px;
+    background-image: url("../img/plane.svg");
+  }
+
+  &:nth-child(2) {
+    background-size: 17px 21px;
+    background-image: url("../img/bus.svg");
+  }
+
+  &:nth-child(3) {
+    background-size: 24px 21px;
+    background-image: url("../img/bike.svg");
+  }
+
+  &:nth-child(4) {
+    background-size: 20px 21px;
+    background-image: url("../img/run.svg");
+  }
+}
+
+.transport-list__item--active {
+  opacity: 1;
+}
+
+.transport-list__item--catalog {
+  border-radius: 50%;
+  background-color: @grey;
+
+  &:nth-child(1) {
+    background-size: 14px 16px;
+    background-position: 9px 8px;
+  }
+
+  &:nth-child(2) {
+    background-size: 13px 16px;
+    background-position: 10px 8px;
+  }
+
+  &:nth-child(3) {
+    background-size: 19px 17px;
+    background-position: 7px 7.5px;
+  }
+
+  &:nth-child(4) {
+    background-size: 15px 17px;
+    background-position: 9px 7.5px;
+  }
+}

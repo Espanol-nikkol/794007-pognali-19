@@ -1,0 +1,61 @@
+@import "manage-list.less";
+@import "plan-list.less";
+
+.review {
+  .bloggersans-bold;
+
+  padding: 0 25px 39px 25px;
+  position: relative;
+
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-size: 320px 569px;
+  background-position: 0 -97px;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+
+    display: block;
+    position: absolute;
+    top: 126px;
+    right: 49px;
+    width: 192px;
+    height: 255px;
+
+    background-image: url("../../img/traveller-illustration-mobile@1x.png");
+    background-size: 192px 255px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.review__head {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+
+  margin-bottom: 333px;
+}
+
+.review__quote {
+  .bloggersans-light;
+
+  width: 148px;
+
+  margin-bottom: 25px;
+}
+
+.review__quote, .review__quote-author {
+  margin-left: 24px;
+  display: block;
+
+  color: white;
+}
+
+.review__quote-author {
+  width: 153px;
+  margin-bottom: 33px;
+
+  font-style: normal;
+}

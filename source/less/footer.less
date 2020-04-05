@@ -1,0 +1,32 @@
+.footer {
+  padding: 38px 0 24px 0;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  z-index: 3;
+  margin-top: -204px;
+}
+
+.footer__develop {
+  width: 269px;
+  display: block;
+  margin-left: 26px;
+  position: relative;
+
+  &:after {
+    content: '';
+
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27px;
+    height: 34px;
+
+    background-size: 27px 34px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url("../img/htmlacademy.svg");
+  }
+}
+
