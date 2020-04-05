@@ -1,0 +1,45 @@
+.reg {
+  padding: 72px 0 0 25px;
+  position: relative;
+  z-index: 3;
+  border-radius: 20px;
+
+  background-color: @dark-state-blue;
+}
+
+.reg__link {
+  color: @light-gold;
+}
+
+.reg__label {
+  margin: 32px 0 32px 0;
+  width: 270px;
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 60px;
+    height: 62px;
+    position: absolute;
+    top: 3px;
+    right: -3px;
+    border-radius: 10px;
+
+    background-color: @light-gold;
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-size: 10px 14px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+}
+
+.reg__email {
+  width: 270px;
+  line-height: 62px;
+  border-radius: 10px;
+  padding: 0;
+}

@@ -3,162 +3,143 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <span class="slogan">Погнали?</span>
-      <nav class="nav">
+    <header class="header">
+      <span class="slogan"></span>
+      <nav class="nav visually-hidden">
         <ul class="nav__list">
           <li>О сервисе</li>
-          <li>Направления</li>
-          <li>Попутчики</li>
+          <li><a>Направления</a></li>
+          <li><a href="catalog.html">Попутчики</a></li>
         </ul>
-        <button class="nav__login btn" type="button">Авторизация</button>
-        <ul class='contact nav__contact'>
+        <button class="nav__login btn btn--yellow btn--header" type="button">Авторизация</button>
+        <ul class='contact contact--header'>
           <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
           <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
         </ul>
         <ul class="social-list">
-          <li class="social-list__item">facebook</li>
-          <li class="social-list__item">vk</li>
-          <li class="social-list__item">instagram</li>
+          <li class="social-list__item"></li>
+          <li class="social-list__item"></li>
+          <li class="social-list__item"></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="index">
       <section class="review">
-        <h1 class="head">В путешествие с крутыми попутчиками!</h1>
+        <h1 class="review__head">В путешествие с крутыми попутчиками!</h1>
         <ul class="manage-list">
-          <li class="manage-list__item"><button class="btn" type="button">телефон</button></li>
-          <li class="manage-list__item"><button class="btn" type="button">почта</button></li>
-          <li class="manage-list__item"><button class="btn" type="button">Авторизация</button></li>
+          <li class="manage-list__item manage-list__phone"></li>
+          <li class="manage-list__item manage-list__mail"></li>
+          <li class="manage-list__item"><button class="btn btn--yellow btn--medium btn--manage" type="button">Авторизация</button></li>
         </ul>
-        <blockquote class="review__quote">Лучшее приложение, что я видел в жизни!</blockquote>
+        <q class="review__quote">Лучшее приложение, что я видел в жизни!</q>
         <cite class="review__quote-author">Мурат Эльтазин главный редактор газеты "гаджетлайф"</cite>
         <ol class="review__plan-list plan-list">
-          <li class="plan-list__item">Выберите направление</li>
-          <li class="plan-list__item">Изучите идеи путешественников</li>
-          <li class="plan-list__item">Найдите тех, кто похож на вас</li>
-          <li class="plan-list__item">Путешествуйте вместе!</li>
+          <li class="plan-list__item"><span class="plan-list__text">Выберите направление</span></li>
+          <li class="plan-list__item"><span class="plan-list__text">Изучите идеи путешественников</span></li>
+          <li class="plan-list__item"><span class="plan-list__text">Находите тех, кто похож на вас</span></li>
+          <li class="plan-list__item"><span class="plan-list__text">Путешествуйте вместе!</span></li>
         </ol>
       </section>
       <section class="about">
         <h2 class="subhead">О сервисе</h2>
-        <p class="descr-block">
+        <p class="about__descr descr-block">
           Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
-        <span class="motivator">
+        <span class="motivator motivator--about">
           А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </span>
       </section>
       <section class="direction">
         <h2 class="subhead">Направления</h2>
-        <p class="descr-block">
-          Мы не продаем туры и ничего не рекламируем.
+        <p class="descr-block descr-block--direction">
+          Мы не продаем туры <br> и ничего не рекламируем.
           Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
         </p>
         <ul class="direction__country country-list">
-          <li class="country-list__item">
+          <li class="country-list__item  country-list__thailand">
             <div class="country-list__card">
               <h3 class="country-list__name">Таиланд</h3>
               <span class="country-list__motiv">Джунгли зовут!</span>
             </div>
           </li>
-          <li class="country-list__item">
+          <li class="country-list__item country-list__france">
             <div class="country-list__card">
               <h3 class="country-list__name">Франция</h3>
               <span class="country-list__motiv">Трэ бьен, манифик</span>
             </div>
           </li>
-          <li class="country-list__item">
+          <li class="country-list__item country-list__czech">
             <div class="country-list__card">
               <h3 class="country-list__name">Чехия</h3>
               <span class="country-list__motiv">Закоулки старой Европы</span>
             </div>
           </li>
-          <li>
-            <button class="direction__show btn" type="button">Показать всё</button>
-          </li>
         </ul>
+        <button class="btn btn--small-radius btn--yellow" type="button">Показать все</button>
       </section>
       <section class="companions">
         <h2 class="subhead">Попутчики</h2>
-        <p class="descr-block">
+        <p class="companions__descr descr-block">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
           Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
         <span class="motivator">Теперь можно легко найти единомышленников!</span>
         <ul class="companion-list">
-          <li class="companion-list__item">
+          <li class="companion-list__item companion-list__firsova">
             <div class="companion-list__card">
+              <ul class="adventure-list">
+                <li class="adventure-list__item">страна 1</li>
+                <li class="adventure-list__item">страна 2</li>
+                <li class="adventure-list__item">страна 3</li>
+              </ul>
               <h3 class="companion-list__name">Таня Фирсова</h3>
-              <ul class="companion-list__features-list features-list">
-                <li class="features-list__item">
-                  <ul class="adventure-list">
-                    <li class="adventure-list__item">страна 1</li>
-                    <li class="adventure-list__item">страна 2</li>
-                    <li class="adventure-list__item">страна 3</li>
-                  </ul>
-                </li>
-                <li class="features-list__item">
-                  <ul class="tag-list">
-                    <li class="tag-list__item">#ЗОЖ</li>
-                    <li class="tag-list__item">#ПП</li>
-                    <li class="tag-list__item">#Фитнес</li>
-                    <li class="tag-list__item">#пляж</li>
-                    <li class="tag-list__item">#авокадо</li>
-                    <li class="tag-list__item">#смузи</li>
-                  </ul>
-                </li>
-                <li class="features-list__item">
-                  <ul class="transport-list">
-                    <li class="transport-list__item">самолет</li>
-                    <li class="transport-list__item">автобус</li>
-                    <li class="transport-list__item">вело</li>
-                    <li class="transport-list__item">ногами</li>
-                  </ul>
-                </li>
+              <ul class="tag-list">
+                <li class="tag-list__item">#ЗОЖ</li>
+                <li class="tag-list__item">#ПП</li>
+                <li class="tag-list__item">#Фитнес</li>
+                <li class="tag-list__item">#пляж</li>
+                <li class="tag-list__item">#авокадо</li>
+                <li class="tag-list__item">#смузи</li>
+              </ul>
+              <ul class="transport-list">
+                <li class="transport-list__item transport-list__item--active"></li>
+                <li class="transport-list__item"></li>
+                <li class="transport-list__item"></li>
+                <li class="transport-list__item"></li>
               </ul>
             </div>
           </li>
-          <li class="companion-list__item">
+          <li class="companion-list__item companion-list__demin">
             <div class="companion-list__card">
+              <ul class="adventure-list">
+                <li class="adventure-list__item">страна 1</li>
+                <li class="adventure-list__item">страна 2</li>
+              </ul>
               <h3 class="companion-list__name">Петя Демин</h3>
-              <ul class="features-list">
-                <li class="features-list__item">
-                  <ul class="adventure-list">
-                    <li class="adventure-list__item">страна 1</li>
-                    <li class="adventure-list__item">страна 2</li>
-                  </ul>
-                </li>
-                <li class="features-list__item">
-                  <ul class="tag-list">
-                    <li class="tag-list__item">#бургер</li>
-                    <li class="tag-list__item">#бар</li>
-                    <li class="tag-list__item">#футбол</li>
-                    <li class="tag-list__item">#концерт</li>
-                    <li class="tag-list__item">#крафт</li>
-                  </ul>
-                </li>
-                <li class="features-list__item">
-                  <ul class="transport-list">
-                    <li class="transport-list__item">самолет</li>
-                    <li class="transport-list__item">автобус</li>
-                    <li class="transport-list__item">вело</li>
-                    <li class="transport-list__item">ногами</li>
-                  </ul>
-                </li>
+              <ul class="tag-list">
+                <li class="tag-list__item">#бургер</li>
+                <li class="tag-list__item">#бар</li>
+                <li class="tag-list__item">#футбол</li>
+                <li class="tag-list__item">#концерт</li>
+                <li class="tag-list__item">#крафт</li>
+              </ul>
+              <ul class="transport-list">
+                <li class="transport-list__item transport-list__item--active"></li>
+                <li class="transport-list__item transport-list__item--active"></li>
+                <li class="transport-list__item"></li>
+                <li class="transport-list__item transport-list__item--active"></li>
               </ul>
             </div>
-          </li>
-          <li class="companion-list__item">
-            <button class="companions__show btn" type="button">Показать всех</button>
           </li>
         </ul>
+        <button class="btn btn--companions btn--small-radius btn--yellow" type="button">Показать всех</button>
       </section>
       <section class="offer">
-        <h2 class="subhead">Добавьте свой профиль</h2>
+        <h2 class="subhead subhead--offer">Добавьте свой профиль</h2>
         <ol class="offer-list">
           <li class="offer-list__item">
             Базовое размещение
@@ -173,59 +154,65 @@
             <span class="offer-list__price">59 руб./мес</span>
           </li>
         </ol>
-        <button class="offer__show btn" type="button">Показать тарифы для бизнеса</button>
+        <a class="offer__show">Показать тарифы для бизнеса</a>
+        <div class="offer__popup visually-hidden">
+          <h2 class="subhead subhead--popup">Бизнес-тарифы</h2>
+          <ul class="offer-list">
+            <li class="offer-list__item">
+              Реклама у блоггера
+              <span class="offer-list__price">300 000 руб./пост</span>
+            </li>
+            <li class="offer-list__item">
+              Накрутка подписчиков
+              <span class="offer-list__price">от 1 руб./шт.</span>
+            </li>
+            <li class="offer-list__item">
+              Лайки от ботов
+              <span class="offer-list__price">от 20 коп./лайк</span>
+            </li>
+            <li class="offer-list__item">
+              Ваш продакт-плейсмент
+              <span class="offer-list__price">Индивидуально</span>
+            </li>
+          </ul>
+          <button class="btn btn--white">Закрыть окно</button>
+        </div>
+
       </section>
       <section class="reg">
-        <h2 class="subhead">Заинтересовались?</h2>
-        <p class="descr-block">
-          Зарегистрируйтесь, это быстро и бесплатно!
-          Уже зарегистрированы? Тогда скорее <a>авторизуйтесь</a>.
+        <h2 class="subhead subhead--reg">Заинтересовались?</h2>
+        <p class="descr-block descr-block--reg">
+          Зарегистрируйтесь,<br>
+          это быстро и бесплатно!<br>
+          Уже зарегистрированы? Тогда
+          скорее <a class="reg__link">авторизуйтесь</a>.
         </p>
-        <label><input class="reg_email" type="email"></label>
-        <p>
-          Остались вопросы?
+        <label class="reg__label"><input class="reg__email" type="email"></label>
+        <p class="descr-block descr-block--reg">
+          Остались вопросы?<br>
           Мы с радостью на них ответим!
         </p>
-        <ul class='contact reg__contact'>
-          <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-          <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        <ul class='contact contact--reg'>
+          <li class="contact__item"><a class="contact__link" href="tel:88005558628">8 800 555-86-28</a></li>
+          <li class="contact__item"><a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
         </ul>
       </section>
       <section class="map">
-        <span class="map__address">ул. Большая конюшенная, 19/8</span>
-        <button class="map__route" type="button">Проложить маршрут</button>
+        <div class="map__wrapper">
+          <span class="map__address">ул. Большая конюшенная, 19/8</span>
+          <button class="btn btn--yellow btn--small-radius btn--map" type="button">Проложить маршрут</button>
+        </div>
         <img class="map__map">
       </section>
     </main>
-    <footer>
-      <span class="slogan">Погнали?</span>
-      <ul class="social-list">
-        <li class="social-list__item">facebook</li>
-        <li class="social-list__item">vk</li>
-        <li class="social-list__item">instagram</li>
+    <footer class="footer footer--index">
+      <span class="slogan slogan--footer"></span>
+      <ul class="social-list social-list--footer">
+        <li class="social-list__item social-list__item--footer"></li>
+        <li class="social-list__item social-list__item--footer"></li>
+        <li class="social-list__item social-list__item--footer"></li>
       </ul>
       <span class="footer__develop">Разработано</span>
     </footer>
-    <div class="offer__popup">
-      <h2 class="subhead">Бизнес-тарифы</h2>
-      <ul>
-        <li class="offer-list__item">
-          Реклама у блоггера
-          <span class="offer-list__price">300 000 руб./пост</span>
-        </li>
-        <li class="offer-list__item">
-          Накрутка подписчиков
-          <span class="offer-list__price">от 1 руб./шт.</span>
-        </li>
-        <li class="offer-list__item">
-          Лайки от ботов
-          <span class="offer-list__price">от 20 коп./лайк</span>
-        </li>
-        <li class="offer-list__item">
-          Ваш продакт-плейсмент
-          <span class="offer-list__price">Индивидуально</span>
-        </li>
-      </ul>
-    </div>
   </body>
 </html>

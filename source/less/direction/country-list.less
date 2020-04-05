@@ -1,0 +1,91 @@
+.country-list {
+  margin-top: 66px;
+  width: 270px;
+  margin-bottom: 25px;
+}
+
+.country-list__item {
+  height: 190px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 270px;
+    height: 110px;
+    border-radius: 10px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 270px 110px;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 35px;
+    height: 24px;
+    position: absolute;
+    top: 83px;
+    left: 25px;
+
+    //background-repeat: no-repeat;
+    //background-position: 0 0;
+    //background-size: 35px 24px;
+    background-color: red;
+  }
+}
+
+.country-list__thailand::before {
+  background-image: url("../../img/thailand-mobile@1x.jpg");
+}
+
+.country-list__france::before {
+  background-image: url("../../img/france-mobile@1x.jpg");
+}
+
+.country-list__czech::before {
+  background-image: url("../../img/czech-mobile@1x.jpg");
+}
+
+//.country-list__thailand::after {
+//  background-image: url("../../img/thailand");
+//}
+//
+//.country-list__france::after {
+//  background-image: url("../../img/france-mobile@1x.jpg");
+//}
+//
+//.country-list__czech::after {
+//  background-image: url("../../img/czech-mobile@1x.jpg");
+//}
+
+.country-list__card {
+  border-radius: 10px;
+  width: 270px;
+  height: 90px;
+  margin-top: -15px;
+
+  background-color: white;
+}
+
+.country-list__name {
+  padding-top: 28px;
+  margin: 0 0 5px 24px;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: @dark-two;
+}
+
+.country-list__motiv {
+  color: @greyish-brown-30;
+  line-height: 18px;
+
+  margin-left: 25px;
+  display: block;
+}

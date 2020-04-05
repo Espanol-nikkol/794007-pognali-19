@@ -1,0 +1,49 @@
+.manage-list {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.manage-list__phone, .manage-list__mail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  position: relative;
+  &::after {
+    position: absolute;
+  }
+}
+
+.manage-list__phone {
+  background-color: @mango;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    top: 10px;
+    left: 12px;
+
+    background-image: url("../../img/topmenu-phone.svg");
+  }
+}
+
+.manage-list__mail {
+  background-color: @mango-two;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 18px;
+    height: 14px;
+
+    top: 14px;
+    left: 12px;
+
+    background-image: url("../../img/topmenu-mail.svg");
+  }
+}

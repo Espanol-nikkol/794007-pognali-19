@@ -1,0 +1,49 @@
+.offer-list {
+  .bloggersans-light;
+
+  width: 200px;
+  margin-bottom: 31px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: black;
+    opacity: 0.05;
+  }
+}
+
+.offer-list__item {
+  padding: 15px 0 15px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 200px;
+    height: 1px;
+
+    background-color: black;
+    opacity: 0.05;
+  }
+}
+
+.offer__show {
+  .bloggersans-bold;
+
+  line-height: 16px;
+  color: @dark-blue-grey
+}
