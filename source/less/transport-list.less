@@ -2,7 +2,7 @@
   margin: 0 0 21px 73px;
 }
 
-.transport-list--catalog {
+.transport-list--cycle {
   margin: 0 0 20px 0;
 }
 
@@ -10,57 +10,88 @@
   display: inline-block;
   width: 33px;
   height: 32px;
+  position: relative;
 
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.5;
+  &::after {
+    content: "";
 
-  &:nth-child(1) {
+    width: 33px;
+    height: 32px;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+  }
+
+  &:nth-child(1)::after {
     background-size: 19px 21px;
     background-image: url("../img/plane.svg");
   }
 
-  &:nth-child(2) {
+  &:nth-child(2)::after {
     background-size: 17px 21px;
     background-image: url("../img/bus.svg");
   }
 
-  &:nth-child(3) {
+  &:nth-child(3)::after {
     background-size: 24px 21px;
     background-image: url("../img/bike.svg");
   }
 
-  &:nth-child(4) {
+  &:nth-child(4)::after {
     background-size: 20px 21px;
     background-image: url("../img/run.svg");
   }
 }
 
-.transport-list__item--active {
+.transport-list__item--active::after {
   opacity: 1;
 }
 
-.transport-list__item--catalog {
+.transport-list__item--cycle {
   border-radius: 50%;
   background-color: @grey;
 
-  &:nth-child(1) {
+  &:nth-child(1)::after {
     background-size: 14px 16px;
     background-position: 9px 8px;
   }
 
-  &:nth-child(2) {
+  &:nth-child(2)::after {
     background-size: 13px 16px;
     background-position: 10px 8px;
   }
 
-  &:nth-child(3) {
+  &:nth-child(3)::after {
     background-size: 19px 17px;
     background-position: 7px 7.5px;
   }
 
-  &:nth-child(4) {
+  &:nth-child(4)::after {
     background-size: 15px 17px;
     background-position: 9px 7.5px;
   }
+}
+
+.transport-list--filter-companion {
+  margin: 18px 0 0 0;
+}
+
+.transport-list__item--white {
+  background-color: white;
+}
+
+.transport-list--me {
+  display: flex;
+  width: 132px;
+  margin: 0;
+  padding: 15px 69px 15px 69px;
+
+  border: 1px solid @cloudy-blue;
+  border-radius: 10px;
 }

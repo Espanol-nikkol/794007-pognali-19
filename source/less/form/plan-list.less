@@ -1,0 +1,24 @@
+.plan-list {
+  margin: 34px 0 60px 0;
+}
+
+.plan-list__item {
+  padding: 24px 0 25px 24px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+
+  background-color: white;
+
+  &::before {
+    display: inline-block;
+  }
+
+  &:nth-child(1)::before {
+    content: "1.";
+  }
+
+  &:nth-child(2)::before {
+    content: "2.";
+  }
+}
