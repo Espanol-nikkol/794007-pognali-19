@@ -26,11 +26,9 @@
       </ul>
     </nav>
     <h1 class="head">Попутчики</h1>
-  </header>
-  <main class="catalog">
     <form class="filter-country">
-      <h2>Фильтрация по странам</h2>
-      <ul class="country-filter">
+      <h2 class="subhead subhead--filter-country">Фильтрация по странам</h2>
+      <ul class="country-filter visually-hidden">
         <li class="country-filter__item">
           <ul class="filter-world">
             <li class="filter-world__item">Европа</li>
@@ -85,45 +83,57 @@
         </li>
       </ul>
     </form>
+
+  </header>
+  <main class="catalog">
     <form class="filter-companion">
-      <h2 class="subhead">Подберите идеального попутчика</h2>
-      <ul class="companion-filter">
-        <li class="companion-filter__item">
-          <h3 class="subsubhead">Хобби</h3>
+      <h2 class="subhead subhead--filter-companion">Подберите идеального попутчика</h2>
+      <ul class="filter-companion__list">
+        <li class="filter-companion__item">
+          <h3 class="subhead--sub">Хобби</h3>
           <ul class="hobby-list">
             <li class="hobby-list__item"></li>
           </ul>
         </li>
-        <li class="companion-filter__item">
-          <h3 class="subsubhead">Музыка</h3>
+        <li class="filter-companion__item">
+          <h3 class="subhead--sub">Музыка</h3>
           <ul class="music-list">
-            <li class="music-list__item">Тяжелый рок</li>
-            <li class="music-list__item">Русский рэп</li>
-            <li class="music-list__item">Евроденс</li>
+            <li class="music-list__item">
+              <input type="checkbox" class="music-list__check">
+              <label>Тяжелый рок</label>
+            </li>
+            <li class="music-list__item">
+              <input type="checkbox" class="music-list__check">
+              <label>Русский рэп</label>
+            </li>
+            <li class="music-list__item">
+              <input type="checkbox" class="music-list__check">
+              <label>Евроденс</label>
+            </li>
           </ul>
         </li>
-        <li class="companion-filter__item">
-          <h3 class="subsubhead">Еда</h3>
+        <li class="filter-companion__item">
+          <h3 class="subhead--sub">Еда</h3>
           <ul class="food-list">
             <li class="food-list__item"></li>
           </ul>
         </li>
-        <li class="companion-filter__item">
-          <h3 class="subsubhead">Транспорт</h3>
-          <ul class="transport-list transport-list--catalog">
-            <li class="transport-list__item">самолет</li>
-            <li class="transport-list__item">автобус</li>
-            <li class="transport-list__item">вело</li>
-            <li class="transport-list__item">ногами</li>
+        <li class="filter-companion__item">
+          <h3 class="subhead--sub">Транспорт</h3>
+          <ul class="transport-list transport-list--cycle transport-list--filter-companion">
+            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--white transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
           </ul>
         </li>
-        <li class="companion-filter__item">
-          <h3 class="subsubhead">Левел</h3>
+        <li class="filter-companion__item">
+          <h3 class="subhead--sub">Левел</h3>
           <input class="level-range level-range--low" type="number">
           <input class="level-range level-range--high" type="number">
         </li>
       </ul>
-      <button class="btn btn--white btn--upper btn--catalog">Показать</button>
+      <button class="btn btn--white btn--upper btn-230-40">Показать</button>
     </form>
     <section class="traveler">
       <ul class="traveler-list">
@@ -152,13 +162,13 @@
             <span class="traveler__head-list">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--catalog">
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
+          <ul class="transport-list transport-list--cycle">
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
           </ul>
-          <button class="btn btn--catalog btn--yellow btn--traveler btn--upper">Позвать!</button>
+          <button class="btn btn-230-40 btn--yellow btn--traveler btn--upper">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <span class="traveler__name">Петя Демин</span>
@@ -183,13 +193,13 @@
             <span class="traveler__head-list">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--catalog">
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
+          <ul class="transport-list transport-list--cycle">
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
           </ul>
-          <button class="btn btn--catalog btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <button class="btn btn-230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <span class="traveler__name">Марк Смолов</span>
@@ -215,13 +225,13 @@
             <span class="traveler__head-list traveler__level traveler__level--">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--catalog">
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
+          <ul class="transport-list transport-list--cycle">
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
           </ul>
-          <button class="btn btn--catalog btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <button class="btn btn-230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <span class="traveler__name">Лариса Роговая</span>
@@ -245,13 +255,13 @@
             <span class="traveler__head-list">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--catalog">
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
-            <li class="transport-list__item transport-list__item--catalog"></li>
+          <ul class="transport-list transport-list--cycle">
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--cycle"></li>
           </ul>
-          <button class="btn btn--catalog btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <button class="btn btn-230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
       </ul>
       <a class="traveler__more">Показать ещё</a>

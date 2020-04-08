@@ -38,3 +38,68 @@
 .subhead--reg {
   padding-left: 31px;
 }
+
+.subhead--filter-country {
+  margin: 0;
+
+  text-transform: uppercase;
+  color: @dark-blue-grey;
+  font-size: 16px;
+  line-height: 22px;
+
+  &::after {
+    content: "";
+
+    display: inline-block;
+    width: 17px;
+    height: 3px;
+    margin-left: 28px;
+    position: relative;
+    top: -4px;
+
+    background-image: url("../img/dots.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 17px 3px;
+  }
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    margin-right: 12px;
+
+    background-image: url("../img/filter.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+  }
+}
+
+.subhead--filter-companion {
+  color: @dark-state-blue;
+  font-size: 22.5px;
+  line-height: 22.5px;
+  width: 118px;
+  margin: 0 0 21px 0;
+  padding: 0;
+}
+
+.subhead--sub {
+  .bloggersans-bold;
+  text-transform: uppercase;
+  color: @dark-state-blue;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.subhead--black {
+  color: @dark-state-blue;
+}
+
+.subhead--form {
+  padding-left: 0;
+  margin-bottom: 0;
+}

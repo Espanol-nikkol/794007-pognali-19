@@ -1,0 +1,27 @@
+.head {
+  display: block;
+  width: 295px;
+  padding: 25px 0 12px 25px;
+  margin: -25px -25px 0 -25px;
+  position: relative;
+  order: 2;
+  border-radius: 20px;
+
+  font-size: 36px;
+  line-height: 40px;
+  color: white;
+  background-color: @dark-two;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 157px;
+    height: 5px;
+    position: absolute;
+    bottom: -2px;
+    left: 25px;
+    border-radius: 2.4px;
+    background-color: @mango;
+  }
+}
