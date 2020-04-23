@@ -12,6 +12,12 @@
 
   &::before {
     display: inline-block;
+
+    .bloggersans-medium;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 1.6px;
+    color: @dark-state-blue;
   }
 
   &:nth-child(1)::before {
@@ -20,5 +26,59 @@
 
   &:nth-child(2)::before {
     content: "2.";
+  }
+}
+
+@media (min-width: 768px) {
+  .plan-list {
+    margin: 56px 0 0 0;
+  }
+
+  .plan-list__item {
+    padding: 37px 40px 19px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      top: 41px;
+      right: 31px;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    &:nth-child(1)::before {
+    }
+
+    &:nth-child(2)::before {
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .plan-list__item {
+    padding: 44px 42px 40px 41px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    &::before {
+      position: relative;
+      top: 0;
+      right: 0;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    &:nth-child(1)::before {
+    }
+
+    &:nth-child(2)::before {
+    }
   }
 }

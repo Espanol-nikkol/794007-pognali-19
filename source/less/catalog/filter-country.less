@@ -1,8 +1,34 @@
 .filter-country {
   width: 320px;
-  margin: -26px -25px 0 -25px;
-  padding: 46px 0 17px 0;
-  border-radius: 20px;
+  margin: -30px -25px 0 -25px;
+  padding: 50px 0 17px 0;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  z-index: 3;
 
   background-color: @grey-four;
+}
+
+@media (min-width: 768px) {
+  .filter-country {
+    width: 619px;
+    margin: -50px -40px 46px -40px;
+    padding: 100px 75px 59px 74px;
+    border-radius: 0 0 50px 50px;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .filter-country {
+    width: 1146px;
+    margin: -50px -60px 46px -60px;
+    padding: 100px 170px 59px 124px;
+    display: flex;
+    flex-wrap: wrap;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+  }
 }

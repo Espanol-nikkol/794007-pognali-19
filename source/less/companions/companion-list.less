@@ -4,6 +4,7 @@
 
 .companion-list__item {
   margin-bottom: 10px;
+  border-radius: 10px;
 
   background-color: white;
 
@@ -33,16 +34,109 @@
   width: 270px;
   min-height: 157px;
   border-radius: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .companion-list__name {
-  margin: 0 0 16px 69px;
+  margin: 0 0 16px 0;
+  width: 270px;
 
   .bloggersans-bold;
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
 }
 
+@media (min-width: 768px) {
+  .companion-list {
+    margin: 0 0 80px 0;
+    display: flex;
+  }
 
 
+  .companion-list__item {
+    margin: 0 48px 0 0;
+    width: 285px;
 
+    &::before {
+      width: 285px;
+      height: 285px;
+      border-radius: 10px;
+
+      background-size: 285px 285px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  .companion-list__firsova::before {
+    background-image: url("../../img/firsova-desktop@1x.jpg");
+  }
+
+  .companion-list__demin::before {
+    background-image: url("../../img/demin-desktop@1x.jpg");
+  }
+
+  .companion-list__card {
+    width: 285px;
+  }
+
+  .companion-list__name {
+    margin: 0 0 16px 0;
+    width: 285px;
+
+    .bloggersans-bold;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .companion-list {
+    margin: 0;
+    grid-row: 1 / span 4;
+    grid-column: 2;
+    display: flex;
+  }
+
+
+  .companion-list__item {
+    margin: 0 60px 0 0;
+    width: 285px;
+
+    &::before {
+      width: 285px;
+      height: 285px;
+      border-radius: 10px;
+
+      background-size: 285px 285px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  .companion-list__firsova::before {
+    background-image: url("../../img/firsova-desktop@1x.jpg");
+  }
+
+  .companion-list__demin::before {
+    background-image: url("../../img/demin-desktop@1x.jpg");
+  }
+
+  .companion-list__card {
+    width: 285px;
+    //min-height: 157px;
+    //border-radius: 10px;
+  }
+
+  .companion-list__name {
+    margin: 0 0 16px 69px;
+
+    .bloggersans-bold;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}

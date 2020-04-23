@@ -18,6 +18,30 @@ ul, ol {
 }
 
 a {
-  color: @black-grey;
+  color: white;
   text-decoration: none;
+}
+
+section {
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 768px;
+  }
+
+  section {
+    border-radius: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+  }
+
+  section {
+    border-radius: 50px;
+  }
 }

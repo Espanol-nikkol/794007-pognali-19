@@ -1,14 +1,17 @@
 .reg {
-  padding: 72px 0 0 25px;
+  padding: 72px 0 0 0;
   position: relative;
   z-index: 3;
-  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   background-color: @dark-state-blue;
 }
 
 .reg__link {
   color: @light-gold;
+  text-decoration: underline;
 }
 
 .reg__label {
@@ -26,7 +29,7 @@
     position: absolute;
     top: 3px;
     right: -3px;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
 
     background-color: @light-gold;
     background-image: url("../../img/triangle-arrow-right.svg");
@@ -34,12 +37,71 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-
 }
 
 .reg__email {
   width: 270px;
   line-height: 62px;
   border-radius: 10px;
-  padding: 0;
+  padding: 0 0 0 24px;
+
+  color: @greyish-brown-30;
+}
+
+@media (min-width: 768px) {
+  .reg {
+    background-color: @dark-blue-grey;
+  }
+
+  .reg__label {
+    margin: 0 0 61px 0;
+    width: 618px;
+
+    &::after {
+      width: 82px;
+      height: 81px;
+    }
+  }
+
+  .reg__email {
+    width: 501px;
+    line-height: 81px;
+    padding: 0 0 0 35px;
+
+    font-size: 24px;
+
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (min-width: 1044px) {
+  .reg {
+    padding: 108px 130px 138px 130px;
+  }
+
+  .reg__label {
+    margin: 0 0 71px 0;
+    width: 1175px;
+
+    &::after {
+      content: "Регистрация";
+      .bloggersans-bold;
+      font-size: 24px;
+      line-height: 24px;
+      color: @dark-state-blue;
+      line-height: 81px;
+      padding-left: 37px;
+
+      width: 298px;
+      height: 81px;
+
+      background-position: 278px 36px;
+    }
+  }
+
+  .reg__email {
+    width: 815px;
+  }
 }

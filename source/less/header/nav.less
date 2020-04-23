@@ -4,7 +4,7 @@
   line-height: 36px;
   color: @dark-blue-grey;
 
-  margin-top: 79px;
+  margin-top: 0;
 }
 
 .nav__list {
@@ -13,4 +13,36 @@
 
   margin-left: 42px;
   margin-bottom: 58px;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    margin: 0;
+    order: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    width: 974px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .nav__list {
+    .visually-hidden--no;
+    display: flex;
+  }
+
+  .nav__link, .nav__item {
+    .bloggersans-medium;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .nav__item {
+    margin-right: 36px;
+  }
 }

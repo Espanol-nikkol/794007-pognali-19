@@ -6,56 +6,56 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <span class="slogan"></span>
-    <nav class="nav visually-hidden">
-      <ul class="nav__list">
-        <li>О сервисе</li>
-        <li><a>Направления</a></li>
-        <li><a href="catalog.html">Попутчики</a></li>
-      </ul>
-      <button class="nav__login btn btn--yellow btn--header" type="button">Авторизация</button>
-      <ul class='contact contact--header'>
-        <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-        <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-      </ul>
-      <ul class="social-list">
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-      </ul>
-    </nav>
-    <h1 class="head">Направления</h1>
+<header class="header header--dark header--form">
+  <span class="slogan slogan--header"></span>
+  <nav class="nav nav--catalog">
+    <ul class="nav__list nav__list--catalog visually-hidden">
+      <li class="nav__item nav__item--catalog">О сервисе</li>
+      <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="">Направления</a></li>
+      <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="catalog.html">Попутчики</a></li>
+    </ul>
+    <button class="btn btn--yellow btn--upper btn--header visually-hidden" type="button">Авторизация</button>
+    <ul class='contact contact--header contact--header-catalog visually-hidden'>
+      <li class="contact__item contact__item--header"><a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a></li>
+      <li class="contact__item contact__item--header"><a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    </ul>
+    <ul class="social-list social-list--header visually-hidden">
+      <li class="social-list__item"></li>
+      <li class="social-list__item"></li>
+      <li class="social-list__item"></li>
+    </ul>
+  </nav>
   </header>
   <main class="form">
+    <h1 class="head head--form">Направления</h1>
     <section class="me">
-      <div class="me__wrapper">
-        <div class="me__level-contain">
-          <span class="me__level-number">80</span>
-          <span class="me__level-text">level</span>
-        </div>
-        <img class="me__avatar" src="img/photo-account-mobile@1x.jpg" width="99" height="100" alt="avatar">
+      <div class="me__wrapper-avatar">
+        <img class="me__avatar" src="img/photo-account-tablet@1x.jpg" width="99" height="100" alt="avatar">
       </div>
       <button class="btn btn--me btn--upper">Сменить фото</button>
-      <span class="me__head-list">Тэги</span>
-      <ul class="tag-list tag-list--me">
-        <li class="tag-list__item">#бургер</li>
-        <li class="tag-list__item">#бар</li>
-        <li class="tag-list__item">#футбол</li>
-        <li class="tag-list__item">#концерт</li>
-        <li class="tag-list__item">#крафт</li>
-      </ul>
-      <span class="me__head-list me__head-list--transport">Транспорт</span>
-      <ul class="transport-list transport-list--me transport-list--cycle">
-        <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
-        <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
-        <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
-        <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
-      </ul>
+      <div class="me__wrapper-tags">
+        <span class="me__head-list me__head-list--tags">Тэги</span>
+        <ul class="tag-list tag-list--me">
+          <li class="tag-list__item">#бургер</li>
+          <li class="tag-list__item">#бар</li>
+          <li class="tag-list__item">#футбол</li>
+          <li class="tag-list__item">#концерт</li>
+          <li class="tag-list__item">#крафт</li>
+        </ul>
+      </div>
+      <div class="me__wrapper-transports">
+        <span class="me__head-list me__head-list--transport">Транспорт</span>
+        <ul class="transport-list transport-list--me transport-list--cycle">
+          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+          <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
+          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+        </ul>
+      </div>
     </section>
     <section class="plan">
       <h2 class="subhead subhead--black subhead--form">Мои планы</h2>
-      <ol class="plan-list">
+      <ul class="plan-list">
         <li class="plan-list__item">
           <span class="plan__direction">Франция, Италия</span>
           <span class="plan__companion">3 попутчика</span>
@@ -68,7 +68,7 @@
           <span class="plan__duration">1 июл - 15 июл</span>
           <span class="plan__change">Изменить</span>
         </li>
-      </ol>
+      </ul>
     </section>
     <section class="plan-add">
       <form class="plan-add__form">
@@ -76,7 +76,7 @@
         <ul class="step-list">
           <li class="step-list__item">
             <div class="plan-add__wrapper">
-              <h3>Шаг 1.</h3>
+              <h3 class="plan-add__subhead">Шаг 1.</h3>
               <span>Даты пребывания</span>
             </div>
             <p class="plan-add__description">
@@ -84,25 +84,101 @@
               которых вы хотели бы позвать в поездку
               и её предполагаемую длительность.
             </p>
-            <label class="plan-add__label">
+            <label class="plan-add__label plan-add__label--companion">
               Ищу попутчиков:
-              <input class="plan-add__input" type="number">
+              <input class="plan-add__input" type="number" value="2">
             </label>
-            <label class="plan-add__label">
+            <label class="plan-add__label  plan-add__label--duration">
               Длительность:
-              <input class="plan-add__input" type="number">
+              <input class="plan-add__input" type="number" value="2">
             </label>
-            <input type="checkbox">
-            <label class="plan-add__label plan-add__label--mini">Можно с детьми</label>
-            <div class="plan-add__calendar">
-              календарь
+            <input type="checkbox" class="plan-add__check">
+            <label class="plan-add__label plan-add__label--child">Можно с детьми</label>
+            <div class="calendar">
+              <span class="calendar__month">Март 2019</span>
+              <ul class="calendar__week-list">
+                <li class="calendar__week-day"></li>
+                <li class="calendar__week-day"></li>
+                <li class="calendar__week-day"></li>
+                <li class="calendar__week-day"></li>
+                <li class="calendar__week-day"></li>
+                <li class="calendar__week-day calendar__week-day--weekend"></li>
+                <li class="calendar__week-day calendar__week-day--weekend"></li>
+              </ul>
+              <table class="calendar__month-list">
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--last">23</td>
+                  <td class="calendar__month-day calendar__month-day--last">24</td>
+                  <td class="calendar__month-day calendar__month-day--last">25</td>
+                  <td class="calendar__month-day calendar__month-day--last">26</td>
+                  <td class="calendar__month-day calendar__month-day--last">27</td>
+                  <td class="calendar__month-day calendar__month-day--last">28</td>
+                  <td class="calendar__month-day calendar__month-day--last calendar__month-day--first-march">1</td>
+                </tr>
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--last">2</td>
+                  <td class="calendar__month-day calendar__month-day--last">3</td>
+                  <td class="calendar__month-day calendar__month-day--last">4</td>
+                  <td class="calendar__month-day calendar__month-day--last">5</td>
+                  <td class="calendar__month-day calendar__month-day--last">6</td>
+                  <td class="calendar__month-day calendar__month-day--last">7</td>
+                  <td class="calendar__month-day calendar__month-day--last">8</td>
+                </tr>
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--last">9</td>
+                  <td class="calendar__month-day calendar__month-day--last">10</td>
+                  <td class="calendar__month-day calendar__month-day--last">11</td>
+                  <td class="calendar__month-day calendar__month-day--last">12</td>
+                  <td class="calendar__month-day calendar__month-day--last">13</td>
+                  <td class="calendar__month-day calendar__month-day--last">14</td>
+                  <td class="calendar__month-day calendar__month-day--last">15</td>
+                </tr>
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--last">16</td>
+                  <td class="calendar__month-day calendar__month-day--last">17</td>
+                  <td class="calendar__month-day calendar__month-day--last">18</td>
+                  <td class="calendar__month-day calendar__month-day--last">19</td>
+                  <td class="calendar__month-day calendar__month-day--last">20</td>
+                  <td class="calendar__month-day calendar__month-day--last">21</td>
+                  <td class="calendar__month-day calendar__month-day--last">22</td>
+                </tr>
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--last">23</td>
+                  <td class="calendar__month-day calendar__month-day--last">24</td>
+                  <td class="calendar__month-day calendar__month-day--last">25</td>
+                  <td class="calendar__month-day calendar__month-day--next calendar__month-day--today calendar__month-day--active calendar__month-day--start">26</td>
+                  <td class="calendar__month-day calendar__month-day--next calendar__month-day--active">27</td>
+                  <td class="calendar__month-day calendar__month-day--next calendar__month-day--active calendar__month-day--end">28</td>
+                  <td class="calendar__month-day calendar__month-day--next ">29</td>
+                </tr>
+                <tr>
+                  <td class="calendar__month-day calendar__month-day--next">30</td>
+                  <td class="calendar__month-day calendar__month-day--next">31</td>
+                  <td class="calendar__month-day calendar__month-day--next calendar__month-day--first-april">1</td>
+                  <td class="calendar__month-day calendar__month-day--next">2</td>
+                  <td class="calendar__month-day calendar__month-day--next">3</td>
+                  <td class="calendar__month-day calendar__month-day--next">4</td>
+                  <td class="calendar__month-day calendar__month-day--next">5</td>
+                </tr>
+              </table>
             </div>
-            <button class="btn btn--yellow btn--230-40 btn--upper">Следующий шаг</button>
+            <button class="btn btn--yellow btn--upper btn--plan-add">Следующий шаг</button>
+            <ul class="step-list__steps visually-hidden">
+              <li class="step-list__stage step-list__stage--active">
+                Даты
+              </li>
+              <li class="step-list__stage">
+                Маршрут
+              </li>
+              <li class="step-list__stage">
+                Развлечения
+              </li>
+            </ul>
           </li>
           <li class="step-list__item">
             <div class="plan-add__wrapper">
               <h3 class="plan-add__subhead">Шаг 2.</h3>
-              <span class="plan-add__major">Маршрут</span>
+              <span>Маршрут</span>
             </div>
             <p class="plan-add__description">
               Укажите страны, которые вы хотели посетить.
@@ -111,30 +187,38 @@
             <ul class="route-list">
               <li class="route-list__item">
                 <select class="route-list__country"></select>
-                <div class="route-list__flag"></div>
               </li>
               <li class="route-list__item">
                 <select class="route-list__country"></select>
-                <div class="route-list__flag"></div>
               </li>
-              <li class="route-list__item">
-                <select class="route-list__country"></select>
-                <div class="route-list__flag"></div>
+              <li class="route-list__item route-list__item--choice">
+                <select class="route-list__country route-list__country--choice"></select>
               </li>
-              <li class="route-list__item">
+              <li class="route-list__item route-list__item--more">
                 <button class="btn btn--route-list btn--upper">Добавить страну</button>
               </li>
             </ul>
-            <button class="btn btn--yellow btn--230-40 btn--upper">Следующий шаг</button>
-            <button class="btn btn--white btn--230-40 btn--upper">На шаг назад</button>
+            <button class="btn btn--yellow btn--plan-add btn--upper btn--step-next">Следующий шаг</button>
+            <button class="btn btn--white btn--plan-add btn--upper btn--step-last">На шаг назад</button>
+            <ul class="step-list__steps visually-hidden">
+              <li class="step-list__stage">
+                Даты
+              </li>
+              <li class="step-list__stage step-list__stage--active">
+                Маршрут
+              </li>
+              <li class="step-list__stage">
+                Развлечения
+              </li>
+            </ul>
           </li>
           <li class="step-list__item">
             <div class="plan-add__wrapper">
               <h3 class="plan-add__subhead">Шаг 3.</h3>
-              <span class="plan-add__major">Развлечения</span>
+              <span>Развлечения</span>
             </div>
             <p class="plan-add__description">
-              Наконец, расскажите о своих планах времяпрепровождения.
+              Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить теги.
             </p>
             <ul class="entertainment-list">
@@ -149,8 +233,19 @@
                   </textarea>
               </li>
             </ul>
-            <button class="btn btn--yellow btn--230-40 btn--upper">Отправить</button>
-            <button class="btn btn--white btn--230-40 btn--upper">На шаг назад</button>
+            <button class="btn btn--yellow btn--plan-add btn--upper btn--step-next">Отправить</button>
+            <button class="btn btn--white btn--plan-add btn--upper btn--step-last">На шаг назад</button>
+            <ul class="step-list__steps visually-hidden">
+              <li class="step-list__stage">
+                Даты
+              </li>
+              <li class="step-list__stage">
+                Маршрут
+              </li>
+              <li class="step-list__stage step-list__stage--active">
+                Развлечения
+              </li>
+            </ul>
           </li>
         </ul>
       </form>

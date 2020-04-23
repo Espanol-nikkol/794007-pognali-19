@@ -47,3 +47,34 @@
     background-image: url("../../img/topmenu-mail.svg");
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .manage-list {
+    .visually-hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  .manage-list {
+    .visually-hidden;
+    position: absolute;
+    top: -40px;
+    right: 60px;
+
+  }
+
+  .manage-list__phone, .manage-list__mail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .manage-list__phone::after {
+    top: 16px;
+    left: 17px;
+  }
+
+  .manage-list__mail::after {
+    top: 18px;
+    left: 16px;
+  }
+}

@@ -10,3 +10,52 @@
   background-color: white;
 }
 
+@media (min-width: 768px) {
+  .step-list {
+    margin-top: 60px;
+  }
+
+  .step-list__item {
+    padding: 49px 44px 55px 43px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step-list__item {
+    padding: 100px 162px 105px 162px;
+    margin-bottom: 44px;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 218px 181px 401px 193px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .step-list__steps {
+    .visually-hidden--no;
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+
+  }
+
+  .step-list__stage {
+    margin-bottom: 26px;
+    opacity: 0.6;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .step-list__stage--active {
+    opacity: 1;
+  }
+}
+

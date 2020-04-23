@@ -6,7 +6,41 @@
 .traveler-list__item {
   margin-bottom: 10px;
   border-radius: 20px;
-  padding: 16px 0 22px 25px;
+  padding: 16px 25px 22px 25px;
 
   background-color: white;
+}
+
+@media (min-width: 768px) {
+  .traveler-list {
+    width: 688px;
+    margin-bottom: 51px;
+  }
+
+  .traveler-list__item {
+    margin-bottom: 40px;
+    padding: 35px 35px 30px 35px;
+
+    display: grid;
+    grid-template-columns: 226px 231px 161px;
+    grid-template-rows: 49px 91px 72px 18px 36px;
+    align-content: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .traveler-list {
+    width: 950px;
+    margin-bottom: 71px;
+  }
+
+  .traveler-list__item {
+    margin-bottom: 30px;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 341px 286px 215px 104px;
+    grid-template-rows: 48px 49px 91px 97px;
+    align-content: flex-start;
+  }
 }
