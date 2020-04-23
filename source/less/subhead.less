@@ -7,6 +7,11 @@
   padding-left: 25px;
 }
 
+.subhead--about {
+  position: relative;
+  z-index: 3;
+}
+
 .subhead--offer {
   width: 101px;
   margin-bottom: 44px;
@@ -32,11 +37,6 @@
 
 .subhead--popup {
   margin-bottom: 29px;
-  margin-left: 51px;
-}
-
-.subhead--reg {
-  padding-left: 31px;
 }
 
 .subhead--filter-country {
@@ -102,4 +102,177 @@
 .subhead--form {
   padding-left: 0;
   margin-bottom: 0;
+  .bloggersans-bold;
+}
+
+@media (min-width: 768px) {
+  .subhead {
+    font-size: 45px;
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .subhead--about {
+    z-index: 2;
+    margin: 43px 0 43px 36px;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 688px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: @dark-blue-grey-two;
+
+      position: absolute;
+      top: -43px;
+      left: -40px;
+      z-index: -1;
+    }
+  }
+
+  .subhead--direction {
+    margin-bottom: 62px;
+  }
+
+  .subhead--companions {
+    margin-bottom: 61px;
+  }
+
+  .subhead--offer {
+    width: 478px;
+    margin: 0 auto 74px;
+
+    &::before {
+      content: "";
+
+      display: block;
+      position: absolute;
+      top: 70px;
+      right: 26px;
+
+      width: 99px;
+      height: 99px;
+
+      background-image: none;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 99px 99px;
+    }
+  }
+
+  .subhead--reg {
+    width: 668px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .subhead--popup {
+    text-align: center;
+    margin-bottom: 47px;
+  }
+
+  .subhead--filter-country {
+    .visually-hidden;
+  }
+
+  .subhead--filter-companion {
+    width: auto;
+    margin-bottom: 37px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .subhead--sub {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: auto;
+  }
+
+  .subhead--form {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .subhead--about {
+    margin: 223px 0 61px 0;
+    &::before {
+      width: 213px;
+      height: 213px;
+
+      position: absolute;
+      top: -43px;
+      left: -72px;
+      z-index: -1;
+    }
+  }
+
+  .subhead--direction {
+    grid-column: 2;
+  }
+
+  .subhead--companions {
+    grid-column: 1;
+    &::before {
+      content: "";
+
+      display: block;
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: @dark-blue-grey-two;
+
+      position: absolute;
+      top: -63px;
+      left: -71px;
+      z-index: -1;
+    }
+  }
+
+  .subhead--offer {
+    width: 1180px;
+    margin-bottom: 134px;
+
+    text-align: center;
+  }
+
+  .subhead--reg {
+    width: 1180px;
+    text-align: center;
+  }
+
+  .subhead--filter-country {
+    .visually-hidden--no;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-right: 35px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -900px;
+    }
+  }
+
+  .subhead--filter-companion {
+    margin-bottom: 36px;
+  }
+
+  .subhead--sub {
+    width: 189px;
+    margin-bottom: 25px;
+    line-height: 16px;
+  }
+
+  .subhead--form {
+    margin-left: 70px;
+  }
 }

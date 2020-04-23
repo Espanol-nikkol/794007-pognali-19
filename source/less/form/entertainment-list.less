@@ -9,3 +9,45 @@
     margin-bottom: 22px;
   }
 }
+
+@media (min-width: 768px) {
+  .entertainment-list {
+    order: 3;
+  }
+
+  .entertainment-list__item {
+    width: 528px;
+    margin-bottom: 53px;
+
+    &:last-child {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .entertainment-list {
+    position: relative;
+    padding-top: 82px;
+    &::before {
+      content: "";
+
+      width: 1000px;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: @light-blue-grey-five;
+    }
+  }
+
+  .entertainment-list__item {
+    width: 730px;
+    margin-bottom: 53px;
+
+    &:last-child {
+      margin-bottom: 56px;
+    }
+  }
+}

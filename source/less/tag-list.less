@@ -1,7 +1,7 @@
 .tag-list {
   width: 177px;
   display: flex;
-  margin: 0 0 17px 47px;
+  margin: 0 auto 17px auto;
 
   justify-content: center;
   flex-wrap: wrap;
@@ -24,4 +24,69 @@
 
   border: 1px solid @cloudy-blue;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .tag-list {
+    width: 177px;
+    display: flex;
+    margin: 0 auto 17px auto;
+
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .tag-list__item {
+    margin-left: 3px;
+  }
+
+  .tag-list--traveler {
+    width: auto;
+    margin: 0;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    justify-content: flex-start;
+  }
+
+  .tag-list--me {
+    width: 538px;
+    justify-content: flex-start;
+    margin: 0 ;
+    padding: 37px 40px 37px 40px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  //.tag-list {
+  //  width: 177px;
+  //  display: flex;
+  //  margin: 0 auto 17px auto;
+  //
+  //  justify-content: center;
+  //  align-content: flex-start;
+  //  flex-wrap: wrap;
+  //}
+
+  //.tag-list__item {
+  //  margin-left: 3px;
+  //}
+
+  .tag-list--traveler {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .tag-list--me {
+    width: 690px;
+    height: 94px;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+  }
 }

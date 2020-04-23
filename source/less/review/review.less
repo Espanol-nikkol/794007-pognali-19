@@ -1,16 +1,17 @@
 @import "manage-list.less";
-@import "plan-list.less";
+@import "guide-list.less";
 
 .review {
   .bloggersans-bold;
 
-  padding: 0 25px 39px 25px;
+  padding: 0 25px 0 25px;
   position: relative;
 
   background-image: url("../../img/globe-back-mobile@1x.jpg");
   background-size: 320px 569px;
   background-position: 0 -97px;
   background-repeat: no-repeat;
+  background-color: @dark-two;
 
   &::before {
     content: "";
@@ -58,4 +59,95 @@
   margin-bottom: 33px;
 
   font-style: normal;
+}
+
+@media (min-width: 768px) {
+  .review {
+    padding: 0 40px 96px 40px;
+
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
+    background-size: 1479px 612px;
+    background-position: -375px 210px;
+    background-color: @dark-blue-grey;
+
+    &::before {
+      top: 220px;
+      right: 100px;
+      width: 372px;
+      height: 451px;
+      z-index: 0;
+
+      background-image: url("../../img/traveller-illustration-tablet@1x.png");
+      background-size: 372px 451px;
+    }
+  }
+
+  .review__head {
+    width: 400px;
+
+    font-size: 60px;
+    line-height: 70px;
+    margin: 0 auto 96px;
+  }
+
+  .review__quote {
+    width: 257px;
+    margin-bottom: 52px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .review__quote, .review__quote-author {
+    margin-left: 35px;
+  }
+
+  .review__quote-author {
+    width: 243px;
+    margin-bottom: 213px;
+
+    font-style: normal;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .review {
+    padding: 0 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 100px;
+
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
+    background-size: 1800px 750px;
+    background-position: -200px -50px;
+
+    &::before {
+      top: 50px;
+      right: 400px;
+      width: 431px;
+      height: 640px;
+
+      background-image: url("../../img/traveller-illustration-desktop@1x.png");
+      background-size: 431px 640px;
+    }
+  }
+
+  .review__head {
+    width: 400px;
+    margin: 118px auto 0 69px;
+
+    text-align: left;
+  }
+
+  .review__wrapper {
+    margin: 141px 0 117px 0;
+  }
+
+
+  .review__quote-author {
+    width: 250px;
+    margin-bottom: 0;
+  }
 }

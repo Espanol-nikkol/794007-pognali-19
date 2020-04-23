@@ -3,10 +3,64 @@
   padding-top: 25px;
   padding-left: 25px;
   width: 195px;
+  position: relative;
+  z-index: 2;
 
+
+  .bloggersans-bold;
   color: white;
 }
 
 .motivator--about {
   padding-bottom: 84px;
+}
+
+.motivator--reg {
+  .bloggersans-light;
+  padding: 0;
+  display: block;
+  width: 270px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .motivator {
+    padding: 0;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .motivator--about {
+    margin: 0 0 53px 35px;
+  }
+
+  .motivator--companions {
+    width: 252px;
+    margin-bottom: 62px;
+  }
+
+  .motivator--reg {
+    text-align: left;
+    font-size: 28px;
+    line-height: 33px;
+
+    width: auto;
+    margin: 0 7px 66px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .motivator--about {
+    width: 409px;
+    margin: 0 0 86px 0;
+  }
+
+  .motivator--companions {
+    grid-column: 1;
+  }
+
+  .motivator--reg {
+    margin: 0 7px 78px 0;
+  }
 }

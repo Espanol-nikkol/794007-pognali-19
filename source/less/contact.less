@@ -2,9 +2,6 @@
   .bloggersans-bold;
   font-size: 16px;
   line-height: 22px;
-
-  margin-left: 61px;
-  margin-bottom: 58px;
 }
 
 .contact__item {
@@ -48,3 +45,120 @@
 .contact__link {
   color: @light-gold;
 }
+
+@media (min-width: 768px) {
+  .contact {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .contact__item {
+    margin-bottom: 32px;
+    position: relative;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: -25px;
+      left: -90px;
+
+      background-color: @dark-blue-grey-two;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .contact__item:first-child::before {
+    background-size: 27px 27px;
+    background-position: 21px 21px;
+  }
+
+  .contact__item:last-child::before {
+    background-size: 27px 19px;
+    background-position: 20px 25px;
+  }
+
+  .contact--reg {
+    width: 600px;
+    margin: 0 0 0 166px;
+  }
+
+  .contact__link {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact--header {
+    .visually-hidden--no;
+    display: flex;
+    order: 3;
+    margin-left: auto;
+  }
+
+  .contact__item--header {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 0;
+
+    background-repeat: no-repeat;
+
+    &::before {
+      display: none;
+    }
+
+    &:nth-of-type(1) {
+      background-color: @mango;
+      background-size: 18px 18px;
+      background-position: 17px 16px;
+      background-image: url("../img/topmenu-phone.svg");
+    }
+
+    &:nth-of-type(2) {
+      background-color: @mango-two;
+      background-size: 18px 14px;
+      background-position: 16px 18px;
+      background-image: url("../img/topmenu-mail.svg");
+    }
+  }
+
+  .contact__link--header {
+    .visually-hidden;
+  }
+  .contact__item {
+    &::before {
+      width: 90px;
+      height: 90px;
+      top: -25px;
+      left: -90px;
+    }
+  }
+
+  .contact__item:first-child::before {
+    background-size: 36px 36px;
+    background-position: 28px 28px;
+  }
+
+  .contact__item:last-child::before {
+    background-size: 36px 26px;
+    background-position: 28px 33px;
+  }
+
+  .contact--reg {
+    display: flex;
+    width: 980px;
+    margin: 0 0 0 auto;
+
+  }
+
+  .contact__item--reg {
+    width: 305px;
+    margin-right: 136px;
+  }
+
+  .contact__link {
+    text-transform: uppercase;
+  }
+
+}
+

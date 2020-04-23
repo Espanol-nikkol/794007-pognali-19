@@ -1,9 +1,8 @@
 .plan {
-  padding: 29px 26px 30px 26px;
+  padding: 29px 25px 30px 25px;
   margin-top: -30px;
   position: relative;
   z-index: 2;
-  border-radius: 20px;
 
   background-color: @pale-grey-two;
 }
@@ -13,7 +12,7 @@
   font-size: 16px;
   line-height: 16px;
 
-  margin:  0 0 21px 5px;
+  margin:  0 0 21px 0;
   display: inline-block;
 }
 
@@ -38,4 +37,73 @@
 .plan__change {
   line-height: 18px;
   color: @black-30;
+}
+
+@media (min-width: 768px) {
+  .plan {
+    padding: 58px 75px 80px 75px;
+    margin-top: -30px;
+
+    background-color: @pale-grey-two;
+  }
+
+  .plan__direction {
+    font-size: 24px;
+    line-height: 22px;
+
+    width: 535px;
+    margin:  0 0 54px 0;
+  }
+
+  .plan__duration, .plan__companion, .plan__change {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+
+  .plan__companion {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 618px;
+      height: 1px;
+      position: absolute;
+      top: -19px;
+      left: -40px;
+
+      background-color: @dark-blue-grey-30;
+      opacity: 0.3;
+    }
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .plan {
+    padding: 58px 75px 80px 75px;
+    margin-top: -50px;
+
+    background-color: @pale-grey-two;
+  }
+
+  .plan__direction {
+    width: auto;
+    margin: 0 auto 0 38px;
+  }
+
+  .plan__companion {
+    margin-right: 39px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .plan__duration {
+    margin-right: auto;
+  }
 }

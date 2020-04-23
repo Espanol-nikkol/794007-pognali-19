@@ -13,3 +13,38 @@
 .direction__descr {
   width: 205px;
 }
+
+@media (min-width: 768px) {
+  .direction {
+    padding: 132px 75px 80px 75px;
+    z-index: 1;
+
+    &::before {
+      content: "";
+
+      width: 289px;
+      height: 575px;
+      display: block;
+      position: absolute;
+      top: 132px;
+      right: 40px;
+      z-index: -1;
+
+      background-image: url("../../img/flags-back@1x.png");
+      background-size: 289px 575px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .direction {
+    padding: 251px 0 139px 131px;
+    display: grid;
+    grid-template-columns: 559px 337px;
+    grid-template-rows: 105px 258px 81px;
+    grid-column-gap: 171px;
+  }
+
+}

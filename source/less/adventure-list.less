@@ -1,17 +1,112 @@
 .adventure-list {
-  margin: 0 0 15px 63px;
+  .bloggersans-medium;
+  margin: -12px auto 15px auto;
   display: flex;
+
+  text-transform: uppercase;
 }
 
 .adventure-list__item {
   margin-right: 19px;
+  width: 35px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 35px 24px;
+
+  &--uk {
+    background-image: url("../img/united-kingdom.png");
+  }
+
+  &--usa {
+    background-image: url("../img/united-states-of-america.png");
+  }
+
+  &--thailand {
+    background-image: url("../img/thailand.png");
+  }
+
+  &--germany {
+    background-image: url("../img/germany.png");
+  }
+
+  &--dominica {
+    background-image: url("../img/dominica.png");
+  }
+
+  &--australia {
+    background-image: url("../img/australia.png");
+  }
+
+  &--belgium {
+    background-image: url("../img/belgium.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czech.png");
+  }
+
+  &--shrilanka {
+    background-image: url("../img/srilanka.png");
+  }
+
+  &--thailand {
+    background-image: url("../img/thailand.png");
+  }
+
+  &--seychelles {
+    background-image: url("../img/seychelles.png");
+  }
 }
 
 .adventure-list--catalog {
-  display: block;
   margin: 0 0 23px 0;
 }
 
 .adventure-list__item--catalog {
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .adventure-list {
+    margin: -12px auto 15px auto;
+    display: flex;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .adventure-list--catalog {
+    margin: 0;
+    grid-row: -1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .adventure-list__item--catalog {
+    margin-bottom: 15px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .adventure-list__item {
+    margin-right: 0;
+    width: 35px;
+    height: 24px;
+  }
+
+  .adventure-list--catalog {
+    display: block;
+
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .adventure-list__item--catalog {
+    margin-bottom: 14px;
+    width: auto;
+
+  }
 }

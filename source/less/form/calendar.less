@@ -1,0 +1,293 @@
+.calendar {
+  margin-bottom: 23px;
+  padding-top: 12px;
+  position: relative;
+
+  &::before, &::after {
+    content: "";
+
+    width: 221px;
+    height: 1px;
+    display: block;
+    position: absolute;
+
+    background-color: @cloudy-blue;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    top: 42px;
+    left: 0;
+  }
+}
+
+.calendar__month {
+  .bloggersans-bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: @dark-state-blue;
+  text-align: center;
+
+  width: 221px;
+  display: block;
+  margin-bottom: 36px;
+}
+
+.calendar__week-list {
+  width: 221px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 12px;
+}
+
+.calendar__week-day, .calendar__month-day {
+  .bloggersans;
+  font-size: 14px;
+}
+
+.calendar__week-day {
+  text-transform: uppercase;
+  line-height: 10px;
+  color: @black-grey;
+  opacity: 0.5;
+
+  &:nth-child(1)::before {
+    content: "п";
+  }
+
+  &:nth-child(2)::before {
+    content: "в";
+  }
+
+  &:nth-child(3)::before {
+    content: "с";
+  }
+
+  &:nth-child(4)::before {
+    content: "ч";
+  }
+
+  &:nth-child(5)::before {
+    content: "п";
+  }
+
+  &:nth-child(6)::before {
+    content: "с";
+  }
+
+  &:nth-child(7)::before {
+    content: "в";
+  }
+}
+
+.calendar__week-day--weekend {
+  color: @orange-red;
+}
+
+.calendar__month-list {
+  width: 217px;
+  border-collapse: collapse;
+}
+
+.calendar__month-day {
+  width: 30px;
+
+  line-height: 30px;
+  text-align: center;
+
+  border: 1px solid @light-blue-grey-five;
+}
+
+.calendar__month-day--last {
+  color: @dark-state-blue-30;
+}
+
+.calendar__month-day--next {
+  background-color: @grey;
+}
+
+.calendar__month-day--active {
+  color: white;
+  background-color: @dark-state-blue;
+}
+
+.calendar__month-day--today {
+  border: 2px solid @orange-red;
+}
+
+@media (min-width: 768px) {
+  .calendar {
+    margin-bottom: 23px;
+    padding-top: 12px;
+    position: relative;
+    order: 6;
+    width: 531px;
+
+    &::before, &::after {
+      content: "";
+
+      width: 531px;
+      height: 1px;
+      display: block;
+      position: absolute;
+
+      background-color: @cloudy-blue;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      top: 85px;
+      left: 0;
+    }
+  }
+
+  .calendar__month {
+    .bloggersans-bold;
+    font-size: 36px;
+    line-height: 34px;
+    color: @dark-state-blue;
+    text-align: center;
+
+    width: 531px;
+    display: block;
+    margin-bottom: 63px;
+  }
+
+  .calendar__week-list {
+    width: 531px;
+    margin-bottom: 8px;
+  }
+
+  .calendar__week-day {
+    font-size: 18px;
+    line-height: 14px;
+    letter-spacing: 1.8px;
+    text-transform: capitalize;
+
+    &:nth-child(1)::before {
+      content: "пн";
+    }
+
+    &:nth-child(2)::before {
+      content: "вт";
+    }
+
+    &:nth-child(3)::before {
+      content: "ср";
+    }
+
+    &:nth-child(4)::before {
+      content: "чт";
+    }
+
+    &:nth-child(5)::before {
+      content: "пн";
+    }
+
+    &:nth-child(6)::before {
+      content: "сб";
+    }
+
+    &:nth-child(7)::before {
+      content: "вс";
+    }
+  }
+
+  .calendar__month-list {
+    width: 532px;
+  }
+
+  .calendar__month-day {
+    width: 75px;
+
+    .bloggersans-medium;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  .calendar__month-day--today {
+    border-width: 4px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .calendar {
+    margin-bottom: 56px;
+    padding-top: 29px;
+    width: 1000px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+
+    &::before, &::after {
+      width: 1000px;
+    }
+  }
+
+  .calendar__month {
+    text-align: center;
+
+    width: 1000px;
+    margin-bottom: 42px;
+  }
+
+  .calendar__week-list {
+    width: 1000px;
+    margin-bottom: 22px;
+  }
+
+  .calendar__month-list {
+    width: 1001px;
+  }
+
+  .calendar__month-day {
+    width: 126px;
+    height: 57px;
+    vertical-align: top;
+    padding: 15px 0 0 16px;
+
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 14px;
+    text-align: left;
+
+    &--first-april::after, &--first-march::after {
+      display: inline-block;
+      width: auto;
+      margin-left: 5px;
+    }
+    &--first-march::after {
+      content: "мар";
+    }
+    &--first-april::after {
+      content: "апр";
+    }
+
+    &--start::after, &--end::after {
+      display: block;
+      margin: 12px 0 0 0;
+      width: auto;
+      line-height: 16px;
+    }
+
+    &--start::after {
+      content: "Заезд";
+    }
+
+    &--end::after {
+      content: "Выезд";
+    }
+  }
+
+}

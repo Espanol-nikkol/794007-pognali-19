@@ -1,15 +1,122 @@
 .descr-block {
   .bloggersans-light;
   color: white;
+}
 
-  padding-left: 25px;
+.descr-block--about {
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+
+    width: 292px;
+    height: 352px;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    z-index: -1;
+
+    background-image: url("../img/about-mobile@1x.png");
+    background-size: 292px 352px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: @dark-blue-grey;
+  }
+
 }
 
 .descr-block--reg {
-  width: 230px;
+  width: 170px;
+  text-align: left;
+}
+
+.descr-block--reg:nth-of-type(1)::first-line {
+  text-align: center;
+  word-spacing: 50px;
+}
+
+.descr-block--reg:nth-of-type(2) {
+  width: 200px;
   text-align: center;
 }
 
 .descr-block--direction {
   color: @black-grey;
+}
+
+@media (min-width: 768px) {
+  .descr-block {
+    padding: 0;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .descr-block--about {
+    position: relative;
+    z-index: 2;
+    width: 298px;
+    margin: 0 0 38px 35px;
+
+    &::after {
+      width: 376px;
+      height: 548px;
+      top: 0;
+      left: 300px;
+
+      background-image: url("../img/about-tablet@1x.png");
+      background-size: 376px 548px;
+      background-position: 0 0;
+      background-color: transparent;
+    }
+  }
+
+  .descr-block--direction {
+    width: 340px;
+  }
+
+  .descr-block--companions {
+    width: 425px;
+    margin-bottom: 46px;
+  }
+
+  .descr-block--reg {
+    width: 688px;
+    text-align: center;
+  }
+
+  .descr-block--reg:nth-of-type(1)::first-line {
+    word-spacing: normal;
+  }
+
+  .descr-block--reg:nth-of-type(2) {
+    width: 688px;
+    margin-bottom: 67px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .descr-block--about {
+    width: 615px;
+    margin: 0 0 44px 0;
+
+    &::after {
+      width: 630px;
+      height: 655px;
+      top: -175px;
+      left: 650px;
+
+      background-image: url("../img/about-desktop@1x.png");
+      background-size: 630px 655px;
+      background-position: 0 0;
+      background-color: transparent;
+    }
+  }
+
+  .descr-block--direction {
+    grid-column: 2;
+  }
+
+  .descr-block--companions {
+    grid-column: 1;
+  }
 }

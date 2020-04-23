@@ -39,11 +39,165 @@
     background-color: black;
     opacity: 0.05;
   }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    font-size: 16px;
+    color: white;
+    line-height: 34px;
+    text-align: center;
+  }
 }
 
-.offer__show {
-  .bloggersans-bold;
+.offer-list__item:nth-child(1)::before {
+  content: "1";
+  background-color: @mango-three;
+}
 
-  line-height: 16px;
-  color: @dark-blue-grey
+.offer-list__item:nth-child(2)::before {
+  content: "2";
+  background-color: @mango-two;
+}
+
+.offer-list__item:nth-child(3)::before {
+  content: "3";
+  background-color: @light-gold;
+}
+
+.offer-list__item--popup::before {
+  display: none;
+}
+
+.offer-list--popup {
+  margin-bottom: 33px;
+}
+
+.offer-list__price {
+  display: block;
+}
+
+
+@media (min-width: 768px) {
+  .offer-list {
+    width: 562px;
+    margin: 0 34px 59px auto;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &::before {
+      width: 562px;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      position: absolute;
+      top: -40px;
+      right: -30px;
+      z-index: -1;
+
+      background-color: @grey-four;
+    }
+  }
+
+  .offer-list__item {
+    padding: 15px 0 15px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      width: 562px;
+    }
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: 0;
+      left: -80px;
+
+      font-size: 28px;
+      line-height: 67px;
+    }
+  }
+
+  .offer-list--popup {
+    width: 506px;
+
+    font-size: 22px;
+    line-height: 28px;
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      width: 506px;
+    }
+  }
+
+  .offer-list__item--popup {
+    &::after {
+      width: 506px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .offer-list {
+    width: 813px;
+    margin: 0 auto 59px 92px;
+    &::before {
+      width: 813px;
+    }
+
+    &::after {
+      width: 444px;
+      height: 300px;
+      top: -40px;
+      right: -150px;
+    }
+  }
+
+  .offer-list__item {
+    padding: 15px 0 15px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      width: 813px;
+    }
+  }
+
+  .offer-list--popup {
+    width: 630px;
+    margin: 0;
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      width: 630px;
+    }
+  }
+
+  .offer-list__item--popup {
+    &::after {
+      width: 630px;
+    }
+  }
 }

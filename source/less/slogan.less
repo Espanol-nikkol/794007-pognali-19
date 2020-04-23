@@ -2,6 +2,10 @@
   width: 295px;
   height: 19px;
   display: block;
+  background-repeat: no-repeat;
+}
+
+.slogan--header {
   padding: 19px 0 51px 25px;
   margin-left: -25px;
   position: relative;
@@ -9,19 +13,72 @@
 
   background-image: url("../img/logo-mobile-white@1x.png");
   background-size: 100px 19px;
-  background-repeat: no-repeat;
   background-position: 25px 19px;
   background-color: @dark-two;
 }
 
 .slogan--footer {
-  display: block;
-  width: 100px;
-  margin: 0 auto 41px;
-  padding: 0;
+  width: 270px;
+  margin: 0 0 41px 0;
+  order: 1;
 
   text-align: center;
   background-image: url("../img/logo-mobile-blue@1x.png");
   background-color: transparent;
-  background-position: 0 0;
+  background-position: 50% 0;
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    width: 166px;
+    height: 42px;
+  }
+
+  .slogan--header {
+    padding: 0;
+    margin: 0 auto 0 0;
+    order: 1;
+
+    background-image: url("../img/logo-tablet-white@1x.png");
+    background-size: 166px 42px;
+    background-position: 0 0;
+    background-color: @dark-blue-grey;
+  }
+
+  .slogan--header-catalog {
+    background-color: transparent;
+  }
+
+    .slogan--footer {
+    width: 165px;
+    margin: 0;
+    text-align: center;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-position: 0 0;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1440px) {
+  .slogan {
+    width: 200px;
+    height: 52px;
+    background-color: transparent;
+  }
+
+  .slogan--header {
+    margin: 0 145px 0 0;
+
+    background-image: url("../img/logo-desktop-white@1x.png");
+    background-size: 200px 52px;
+
+  }
+
+  .slogan--footer {
+    width: 165px;
+    margin: 0;
+    text-align: center;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-position: 0 0;
+  }
 }

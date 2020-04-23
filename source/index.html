@@ -7,19 +7,23 @@
   </head>
   <body>
     <header class="header">
-      <span class="slogan"></span>
-      <nav class="nav visually-hidden">
-        <ul class="nav__list">
-          <li>О сервисе</li>
-          <li><a>Направления</a></li>
-          <li><a href="catalog.html">Попутчики</a></li>
+      <span class="slogan slogan--header"></span>
+      <nav class="nav">
+        <ul class="nav__list visually-hidden">
+          <li class="nav__item">О сервисе</li>
+          <li class="nav__item"><a class="nav_link" href="">Направления</a></li>
+          <li class="nav__item"><a class="nav_link" href="catalog.html">Попутчики</a></li>
         </ul>
-        <button class="nav__login btn btn--yellow btn--header" type="button">Авторизация</button>
-        <ul class='contact contact--header'>
-          <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-          <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        <button class="btn btn--yellow btn--upper btn--header visually-hidden" type="button">Авторизация</button>
+        <ul class='contact contact--header visually-hidden'>
+          <li class="contact__item contact__item--header">
+            <a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a>
+          </li>
+          <li class="contact__item contact__item--header">
+            <a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
         </ul>
-        <ul class="social-list">
+        <ul class="social-list social-list--header visually-hidden">
           <li class="social-list__item"></li>
           <li class="social-list__item"></li>
           <li class="social-list__item"></li>
@@ -34,8 +38,10 @@
           <li class="manage-list__item manage-list__mail"></li>
           <li class="manage-list__item"><button class="btn btn--yellow btn--manage" type="button">Авторизация</button></li>
         </ul>
-        <q class="review__quote">Лучшее приложение, что я видел в жизни!</q>
-        <cite class="review__quote-author">Мурат Эльтазин главный редактор газеты "гаджетлайф"</cite>
+        <div class="review__wrapper">
+          <q class="review__quote">Лучшее приложение, что я видел в жизни!</q>
+          <cite class="review__quote-author">Мурат Эльтазин <br>главный редактор газеты "гаджетлайф"</cite>
+        </div>
         <ol class="guide-list">
           <li class="guide-list__item"><span class="guide-list__text">Выберите направление</span></li>
           <li class="guide-list__item"><span class="guide-list__text">Изучите идеи путешественников</span></li>
@@ -44,57 +50,61 @@
         </ol>
       </section>
       <section class="about">
-        <h2 class="subhead">О сервисе</h2>
-        <p class="about__descr descr-block">
+        <h2 class="subhead subhead--about">О сервисе</h2>
+        <p class="descr-block descr-block--about">
           Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
         <span class="motivator motivator--about">
           А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </span>
+        <button class="btn btn--yellow btn--about visually-hidden">Подробнее</button>
       </section>
       <section class="direction">
-        <h2 class="subhead">Направления</h2>
+        <h2 class="subhead subhead--direction">Направления</h2>
         <p class="descr-block descr-block--direction">
           Мы не продаем туры <br> и ничего не рекламируем.
           Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
         </p>
-        <ul class="direction__country country-list">
+        <ul class="country-list">
           <li class="country-list__item  country-list__thailand">
             <div class="country-list__card">
               <h3 class="country-list__name">Таиланд</h3>
               <span class="country-list__motiv">Джунгли зовут!</span>
+              <span class="country-list__count">18321</span>
             </div>
           </li>
           <li class="country-list__item country-list__france">
             <div class="country-list__card">
               <h3 class="country-list__name">Франция</h3>
               <span class="country-list__motiv">Трэ бьен, манифик</span>
+              <span class="country-list__count">12518</span>
             </div>
           </li>
           <li class="country-list__item country-list__czech">
             <div class="country-list__card">
               <h3 class="country-list__name">Чехия</h3>
               <span class="country-list__motiv">Закоулки старой Европы</span>
+              <span class="country-list__count">5326</span>
             </div>
           </li>
         </ul>
-        <button class="btn btn--small-radius btn--yellow" type="button">Показать все</button>
+        <button class="btn btn--small-radius btn--yellow btn--direction" type="button">Показать все</button>
       </section>
       <section class="companions">
-        <h2 class="subhead">Попутчики</h2>
-        <p class="companions__descr descr-block">
+        <h2 class="subhead subhead--companions">Попутчики</h2>
+        <p class="descr-block descr-block--companions">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
           Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <span class="motivator">Теперь можно легко найти единомышленников!</span>
+        <span class="motivator motivator--companions">Теперь можно легко найти единомышленников!</span>
         <ul class="companion-list">
           <li class="companion-list__item companion-list__firsova">
             <div class="companion-list__card">
               <ul class="adventure-list">
-                <li class="adventure-list__item">страна 1</li>
-                <li class="adventure-list__item">страна 2</li>
-                <li class="adventure-list__item">страна 3</li>
+                <li class="adventure-list__item adventure-list__item--shrilanka"></li>
+                <li class="adventure-list__item adventure-list__item--thailand"></li>
+                <li class="adventure-list__item adventure-list__item--seychelles"></li>
               </ul>
               <h3 class="companion-list__name">Таня Фирсова</h3>
               <ul class="tag-list">
@@ -116,8 +126,8 @@
           <li class="companion-list__item companion-list__demin">
             <div class="companion-list__card">
               <ul class="adventure-list">
-                <li class="adventure-list__item">страна 1</li>
-                <li class="adventure-list__item">страна 2</li>
+                <li class="adventure-list__item adventure-list__item--belgium"></li>
+                <li class="adventure-list__item adventure-list__item--czech"></li>
               </ul>
               <h3 class="companion-list__name">Петя Демин</h3>
               <ul class="tag-list">
@@ -139,6 +149,28 @@
         <button class="btn btn--companions btn--small-radius btn--yellow" type="button">Показать всех</button>
       </section>
       <section class="offer">
+        <div class="offer__popup visually-hidden">
+          <h2 class="subhead subhead--popup">Бизнес-тарифы</h2>
+          <ul class="offer-list offer-list--popup">
+            <li class="offer-list__item offer-list__item--popup">
+              Реклама у блоггера
+              <span class="offer-list__price offer-list__price--popup">300 000 руб./пост</span>
+            </li>
+            <li class="offer-list__item offer-list__item--popup">
+              Накрутка подписчиков
+              <span class="offer-list__price offer-list__price--popup">от 1 руб./шт.</span>
+            </li>
+            <li class="offer-list__item offer-list__item--popup">
+              Лайки от ботов
+              <span class="offer-list__price offer-list__price--popup">от 20 коп./лайк</span>
+            </li>
+            <li class="offer-list__item offer-list__item--popup">
+              Ваш продакт-плейсмент
+              <span class="offer-list__price offer-list__price--popup">Индивидуально</span>
+            </li>
+          </ul>
+          <button class="btn btn--popup btn--upper">Закрыть окно</button>
+        </div>
         <h2 class="subhead subhead--offer">Добавьте свой профиль</h2>
         <ol class="offer-list">
           <li class="offer-list__item">
@@ -155,46 +187,27 @@
           </li>
         </ol>
         <a class="offer__show">Показать тарифы для бизнеса</a>
-        <div class="offer__popup visually-hidden">
-          <h2 class="subhead subhead--popup">Бизнес-тарифы</h2>
-          <ul class="offer-list">
-            <li class="offer-list__item">
-              Реклама у блоггера
-              <span class="offer-list__price">300 000 руб./пост</span>
-            </li>
-            <li class="offer-list__item">
-              Накрутка подписчиков
-              <span class="offer-list__price">от 1 руб./шт.</span>
-            </li>
-            <li class="offer-list__item">
-              Лайки от ботов
-              <span class="offer-list__price">от 20 коп./лайк</span>
-            </li>
-            <li class="offer-list__item">
-              Ваш продакт-плейсмент
-              <span class="offer-list__price">Индивидуально</span>
-            </li>
-          </ul>
-          <button class="btn btn--white">Закрыть окно</button>
-        </div>
-
       </section>
       <section class="reg">
         <h2 class="subhead subhead--reg">Заинтересовались?</h2>
-        <p class="descr-block descr-block--reg">
-          Зарегистрируйтесь,<br>
-          это быстро и бесплатно!<br>
+        <span class="descr-block descr-block--reg">
+          Зарегистрируйтесь,
+          это быстро и бесплатно!
+        </span>
+        <span class="descr-block descr-block--reg">
           Уже зарегистрированы? Тогда
           скорее <a class="reg__link">авторизуйтесь</a>.
-        </p>
-        <label class="reg__label"><input class="reg__email" type="email"></label>
-        <p class="descr-block descr-block--reg">
-          Остались вопросы?<br>
+        </span>
+        <label class="reg__label"><input class="reg__email" type="email" placeholder="E-mail"></label>
+        <span class="motivator motivator--reg">
+          Остались вопросы?
+        </span>
+        <span class="motivator motivator--reg">
           Мы с радостью на них ответим!
-        </p>
+        </span>
         <ul class='contact contact--reg'>
-          <li class="contact__item"><a class="contact__link" href="tel:88005558628">8 800 555-86-28</a></li>
-          <li class="contact__item"><a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          <li class="contact__item contact__item--reg"><a class="contact__link" href="tel:88005558628">8 800 555-86-28</a></li>
+          <li class="contact__item contact__item--reg"><a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
         </ul>
       </section>
       <section class="map">

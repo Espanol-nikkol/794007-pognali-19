@@ -1,9 +1,31 @@
 @import "catalog/filter-country.less";
 @import "catalog/filter-companion.less";
+@import "catalog/level-range.less";
+@import "catalog/filter-world.less";
+
 
 .catalog {
   background-color: @grey;
-  padding: 0 25px 250px 25px;
+  padding: 75px 25px 250px 25px;
+  margin-top: -50px;
   position: relative;
   z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    margin-top: 0;
+    padding: 0 40px 100px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog {
+    padding: 0 60px 100px 60px;
+    display: grid;
+    grid-template-columns: 950px 285px;
+    grid-column-gap: 85px;
+    grid-template-rows: 124px 213px 1630px;
+    align-items: flex-start;
+  }
 }
