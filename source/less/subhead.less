@@ -35,6 +35,10 @@
   }
 }
 
+.subhead--sub-level {
+  margin-bottom: 15px;
+}
+
 .subhead--popup {
   margin-bottom: 29px;
 }
@@ -105,6 +109,39 @@
   .bloggersans-bold;
 }
 
+.subhead--country-contents {
+  .bloggersans-medium;
+
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: white;
+  line-height: 42px;
+  text-transform: uppercase;
+  background-color: @dark-state-blue;
+  border-radius: 4px 4px 0 0;
+
+  padding-left: 13px;
+  width: 207px;
+}
+
+.subhead--companions {
+  position: relative;
+  &::before {
+    content: "";
+
+    display: block;
+    width: 113px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: @dark-blue-grey-two;
+
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    z-index: -1;
+  }
+}
+
 @media (min-width: 768px) {
   .subhead {
     font-size: 45px;
@@ -140,6 +177,8 @@
 
   .subhead--companions {
     margin-bottom: 61px;
+
+
   }
 
   .subhead--offer {
@@ -197,6 +236,15 @@
     font-size: 36px;
     line-height: 50px;
   }
+
+  .subhead--country-contents {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 70px;
+
+    padding-left: 27px;
+    width: 342px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -220,18 +268,11 @@
   .subhead--companions {
     grid-column: 1;
     &::before {
-      content: "";
-
-      display: block;
       width: 213px;
       height: 213px;
-      border-radius: 20px;
-      background-color: @dark-blue-grey-two;
 
-      position: absolute;
       top: -63px;
       left: -71px;
-      z-index: -1;
     }
   }
 
@@ -274,5 +315,11 @@
 
   .subhead--form {
     margin-left: 70px;
+  }
+
+  .subhead--country-contents {
+    width: 730px;
+    position: relative;
+    z-index: 6;
   }
 }

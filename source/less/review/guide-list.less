@@ -7,26 +7,59 @@
 .guide-list__item {
   height: 100px;
   border-radius: 10px;
+  position: relative;
 
   color: @dark-two;
   font-size: 18px;
   line-height: 18px;
 
-  &:first-child {
-    background-color: @mango;
+  &::after {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+
+    .bloggersans-bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: white;
   }
-  &:nth-child(2) {
-    margin-top: -20px;
-    background-color: @mango-three;
+}
+
+.guide-list__item:nth-child(1) {
+  background-color: @mango;
+
+  &::after {
+    content: "1";
   }
-  &:nth-child(3) {
-    margin-top: -20px;
-    background-color: @mango-two;
+}
+
+.guide-list__item:nth-child(2) {
+  margin-top: -20px;
+  background-color: @mango-three;
+
+  &::after {
+    content: "2";
   }
-  &:nth-child(4) {
-    height: 80px;
-    margin-top: -20px;
-    background-color: @light-gold;
+}
+
+.guide-list__item:nth-child(3) {
+  margin-top: -20px;
+  background-color: @mango-two;
+
+  &::after {
+    content: "3";
+  }
+}
+
+.guide-list__item:nth-child(4) {
+  height: 80px;
+  margin-top: -20px;
+  background-color: @light-gold;
+
+  &::after {
+    content: "4";
   }
 }
 
@@ -74,19 +107,27 @@
       width: 360px;
       height: 140px;
     }
+
+    &::after {
+      font-size: 30px;
+      line-height: 22px;
+
+      top: 89px;
+      right: 313px;
+    }
   }
 
   .guide-list__text {
     width: 190px;
-    margin: 31px 0 0 34px;
+    padding: 31px 0 0 34px;
   }
 }
 
 @media (min-width: 1440px) {
   .guide-list {
     width: 1320px;
-    margin-bottom: 123px;
-    flex-wrap: wrap;
+    padding-bottom: 123px;
+    flex-wrap: nowrap;
     position: relative;
     z-index: 4;
   }
@@ -111,10 +152,14 @@
       width: 360px;
       height: 107px;
     }
+
+    &::after {
+      top: 29px;
+      right: 53px;
+    }
   }
 
   .guide-list__text {
     width: 190px;
-    margin: 31px 0 0 34px;
   }
 }

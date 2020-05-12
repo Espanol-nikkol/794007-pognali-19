@@ -44,6 +44,24 @@
   letter-spacing: normal;
 
   display: inline-block;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    margin-right: 13px;
+    position: relative;
+    top: 8px;
+
+    border: 1px solid @cloudy-blue;
+
+    background-size: 9px 9px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .plan-add__input {
@@ -74,13 +92,16 @@
 
 .plan-add__plan {
   padding: 13px 21px 0 15px;
-  width: 220px;
+  width: 188px;
   min-height: 220px;
 
   font-size: 16px;
   line-height: 22px;
-}
 
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
 
 .plan-add__check {
   .visually-hidden;
@@ -142,12 +163,26 @@
     font-size: 20px;
     letter-spacing: 2px;
     color: @dark-state-blue;
+    margin-top: -20px;
     order: 4;
 
     margin-bottom: 35px;
 
     &::before {
-      display: none;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      margin-right: 23px;
+      position: relative;
+      top: 35px;
+
+      border: 1px solid @cloudy-blue;
+
+      background-size: 9px 9px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: transparent;
     }
   }
 

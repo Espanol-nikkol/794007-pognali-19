@@ -38,6 +38,17 @@
   background-color: @light-gold;
 }
 
+.social-list--header {
+  .visually-hidden;
+}
+
+.social-list--header-open {
+  .visually-hidden--no;
+  justify-content: center;
+}
+
+
+
 @media (min-width: 768px) {
   .social-list__item {
     width: 60px;
@@ -67,6 +78,17 @@
 
   .social-list--footer {
     margin-bottom: 0;
+  }
+
+  .social-list--header {
+    .visually-hidden;
+  }
+
+  .social-list--header-open {
+    grid-column: 2;
+    grid-row: 4;
+    justify-content: flex-start;
+    opacity: 0.2;
   }
 }
 

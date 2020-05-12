@@ -27,9 +27,12 @@
     </nav>
   </header>
   <main class="catalog">
-    <h1 class="head head--catalog">Попутчики</h1>
+    <div class="head head--catalog">
+      <h1 class="head__title head__title--catalog">Попутчики</h1>
+      <a class="head__return">на главную</a>
+    </div>
     <form class="filter-country">
-      <h2 class="subhead subhead--filter-country">Фильтрация по странам</h2>
+      <h2 class="subhead subhead--filter-country">Фильтрация по странам:</h2>
       <ul class="country-filter">
         <li class="country-filter__item">
           <ul class="filter-world visually-hidden">
@@ -37,6 +40,7 @@
             <li class="filter-world__item">Азия</li>
             <li class="filter-world__item">Америка</li>
             <li class="filter-world__item">Острова</li>
+            <li class="filter-world__item visually-hidden">Показать все</li>
           </ul>
         </li>
         <li class="country-filter__item">
@@ -149,7 +153,7 @@
           </ul>
         </li>
         <li class="filter-companion__item">
-          <h3 class="subhead--sub">Левел</h3>
+          <h3 class="subhead--sub subhead--sub-level">Левел</h3>
           <ul class="filter-companion__sublist filter-companion__sublist--level">
             <li class="filter-companion__subitem filter-companion__subitem--level">
               <input class="level-range level-range--low" type="number">
@@ -160,13 +164,14 @@
           </ul>
         </li>
       </ul>
-      <button class="btn btn--white btn--upper btn--230-40 btn--filter-companion">Показать</button>
+      <button class="btn btn--white btn--upper btn--filter-companion">Показать</button>
     </form>
     <section class="traveler">
       <ul class="traveler-list">
         <li class="traveler-list__item">
           <img class="traveler__avatar" src="img/firsova-desktop@1x.jpg">
           <span class="traveler__name">Таня Фирсова</span>
+          <button class="traveler__like"></button>
           <span class="traveler__score">1,5 M</span>
           <ul class="tag-list tag-list--traveler">
               <li class="tag-list__item">#ЗОЖ</li>
@@ -187,20 +192,24 @@
             </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list">левел:</span>
+            <span class="traveler__head-list traveler__head-list--level">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--cycle transport-list--traveler">
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-          </ul>
-          <button class="btn btn--230-40 btn--yellow btn--traveler btn--upper">Позвать!</button>
+          <div class="traveler__wrapper traveler__wrapper--transport-level">
+            <ul class="transport-list transport-list--cycle transport-list--traveler">
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            </ul>
+            <div class="traveler__level traveler__level--firsova"></div>
+          </div>
+          <button class="btn  btn--yellow btn--traveler btn--upper">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <img class="traveler__avatar" src="img/demin-desktop@1x.jpg">
           <span class="traveler__name">Петя Демин</span>
+          <button class="traveler__like"></button>
           <span class="traveler__score">1500</span>
           <ul class="tag-list tag-list--traveler">
             <li class="tag-list__item">#бургер</li>
@@ -219,20 +228,24 @@
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list">левел:</span>
+            <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-demin">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--cycle transport-list--traveler">
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-          </ul>
-          <button class="btn btn--230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <div class="traveler__wrapper traveler__wrapper--transport-level">
+            <ul class="transport-list transport-list--cycle transport-list--traveler">
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            </ul>
+            <div class="traveler__level traveler__level--demin"></div>
+          </div>
+          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <img class="traveler__avatar" src="img/smolov-desktop@1x.jpg">
           <span class="traveler__name">Марк Смолов</span>
+          <button class="traveler__like"></button>
           <span class="traveler__score">170</span>
           <ul class="tag-list tag-list--traveler">
             <li class="tag-list__item">#рэп</li>
@@ -252,20 +265,24 @@
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list traveler__level traveler__level--">левел:</span>
+            <span class="traveler__head-list traveler__level  traveler__head-list--level traveler__head-list--level-demin">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--cycle transport-list--traveler">
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-          </ul>
-          <button class="btn btn--230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <div class="traveler__wrapper traveler__wrapper--transport-level">
+            <ul class="transport-list transport-list--cycle transport-list--traveler">
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            </ul>
+            <div class="traveler__level traveler__level--smolov"></div>
+          </div>
+          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
         <li class="traveler-list__item">
           <img class="traveler__avatar" src="img/rogovaya-desktop@1x.jpg">
           <span class="traveler__name">Лариса Роговая</span>
+          <button class="traveler__like"></button>
           <span class="traveler__score">23</span>
           <ul class="tag-list tag-list--traveler">
             <li class="tag-list__item">#образования</li>
@@ -283,16 +300,19 @@
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list">левел:</span>
+            <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-rogovay">левел:</span>
             <span class="traveler__headline"></span>
           </div>
-          <ul class="transport-list transport-list--cycle transport-list--traveler">
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-          </ul>
-          <button class="btn btn--230-40 btn--upper btn--yellow btn--traveler">Позвать!</button>
+          <div class="traveler__wrapper traveler__wrapper--transport-level">
+            <ul class="transport-list transport-list--cycle transport-list--traveler">
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            </ul>
+            <div class="traveler__level traveler__level--rogovay"></div>
+          </div>
+          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
         </li>
       </ul>
       <a class="traveler__more">Показать ещё</a>

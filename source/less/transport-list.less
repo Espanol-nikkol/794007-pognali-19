@@ -1,4 +1,7 @@
 .transport-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0 auto 21px auto;
 }
 
@@ -7,7 +10,6 @@
 }
 
 .transport-list__item {
-  display: inline-block;
   width: 33px;
   height: 32px;
   position: relative;
@@ -98,6 +100,12 @@
   border-radius: 10px;
 }
 
+.transport-list--traveler {
+  grid-row: 7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 @media (min-width: 768px) {
   .transport-list {
     margin: 0;
@@ -165,11 +173,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 45px;
-
-    grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    justify-self: flex-end;
   }
 
   .transport-list--me {
@@ -180,82 +183,21 @@
     margin-bottom: 60px;
   }
 
+  .transport-list__item--traveler {
+    background-color: transparent;
+  }
+
   .transport-list__item--active::after {
     opacity: 1;
   }
 }
 
 @media (min-width: 1440px) {
-  //.transport-list {
-  //  margin: 0;
-  //}
-  //
-  //.transport-list--cycle {
-  //  margin: 0;
-  //}
-  //
-  //.transport-list__item {
-  //  width: 43px;
-  //  height: 43px;
-  //
-  //  &::after {
-  //    width: 43px;
-  //    height: 43px;
-  //
-  //    opacity: 0.15;
-  //  }
-  //
-  //  &:nth-child(1)::after {
-  //    background-size: 19px 21px;
-  //  }
-  //
-  //  &:nth-child(2)::after {
-  //    background-size: 17px 21px;
-  //  }
-  //
-  //  &:nth-child(3)::after {
-  //    background-size: 24px 21px;
-  //  }
-  //
-  //  &:nth-child(4)::after {
-  //    background-size: 20px 21px;
-  //  }
-  //}
-  //
-  //.transport-list__item--cycle {
-  //  &:nth-child(1)::after {
-  //    background-size: 19px 21px;
-  //    background-position: 11px 11px;
-  //  }
-  //
-  //  &:nth-child(2)::after {
-  //    background-size: 17px 21px;
-  //    background-position: 13px 10px;
-  //  }
-  //
-  //  &:nth-child(3)::after {
-  //    background-size: 24px 21px;
-  //    background-position: 10px 10px;
-  //  }
-  //
-  //  &:nth-child(4)::after {
-  //    background-size: 20px 21px;
-  //    background-position: 11px 11px;
-  //  }
-  //}
-  //
-  //.transport-list--filter-companion {
-  //  margin: -8px 0 0 0;
-  //}
-
   .transport-list--traveler {
     flex-wrap: nowrap;
     width: auto;
 
-    grid-column: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    justify-self: flex-start;
+    //justify-self: flex-start;
   }
 
   .transport-list__item--traveler {
