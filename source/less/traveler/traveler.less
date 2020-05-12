@@ -10,6 +10,9 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 1;
 }
 
 .traveler__name {
@@ -21,29 +24,32 @@
   display: block;
   width: 78px;
   margin-bottom: 10px;
-  padding-left: 86px;
   position: relative;
+  grid-row: 1;
+  grid-column: 2;
 }
 
-.traveler-list__item:nth-child(1) .traveler__name::before {
-  background-image: url("../../img/firsova-mobile@1x.jpg");
-}
+.traveler__like {
+  width: 31px;
+  height: 31px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 54px;
+  left: 67px;
 
-.traveler-list__item:nth-child(2) .traveler__name::before {
-  background-image: url("../../img/demin-mobile@1x.jpg");
-}
-
-.traveler-list__item:nth-child(3) .traveler__name::before {
-  background-image: url("../../img/smolov-mobile@1x.jpg");
-}
-
-.traveler-list__item:nth-child(4) .traveler__name::before {
-  background-image: url("../../img/rogovaya-mobile@1x.jpg");
+  background-color: @grey;
+  background-position: center center;
+  background-size: 13px 11px;
+  background-repeat: no-repeat;
+  background-image: url("../../img/heart.svg");
 }
 
 .traveler__score {
   display: block;
-  margin: 0 0 24px 86px;
+  margin: 0 0 24px 0;
+  grid-row: 2;
+  grid-column: 2;
 
   .bloggersans-bold;
   font-size: 14px;
@@ -52,24 +58,63 @@
 }
 
 .traveler__wrapper {
+  width: 220px;
+  grid-column-start: 1;
+  grid-column-end: 3;
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-content: flex-start;
+}
+
+.traveler__wrapper:nth-of-type(1) {
+  grid-row: 4;
+}
+
+.traveler__wrapper:nth-of-type(2) {
+  grid-row: 6;
 }
 
 .traveler__head-list {
   display: inline-block;
   margin-bottom: 16px;
-  margin-left: -10px;
+  margin-right: -10px;
   padding: 0 10px 0 10px;
   position: relative;
   z-index: 3;
 
   background-color: white;
+}
 
-  &:first-child {
-    margin-bottom: 23px;
-  }
+.traveler__level {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-top: -5px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 45px 45px;
+}
+
+.traveler__level--firsova {
+  background-image: url("../../img/div99l.png");
+}
+
+.traveler__level--demin {
+  background-image: url("../../img/div80l.png");
+}
+
+.traveler__level--smolov {
+  background-image: url("../../img/div25.png");
+  background-position: right top;
+  background-size: 35px 40px;
+}
+
+.traveler__level--rogovay {
+  background-image: url("../../img/div50.png");
+  background-position: right 0;
+  background-size: 35px 45px;
 }
 
 .traveler__headline {
@@ -128,6 +173,12 @@
     line-height: 24px;
   }
 
+  .traveler__avatar {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px;
+  }
+
   .traveler__name {
     font-size: 30px;
     line-height: 30px;
@@ -167,11 +218,25 @@
     background-image: url("../../img/rogovaya-tablet@1x.jpg");
   }
 
-  .traveler__score {
-    margin: 0;
+  .traveler__like {
+    width: 50px;
+    height: 50px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 51px 0 auto;
+
     grid-column-start: 2;
     grid-row-start: 3;
-    align-self: center;
+
+    background-size: 20px 17px;
+  }
+
+  .traveler__score {
+    margin: 13px 0 0 0;
+    grid-column-start: 2;
+    grid-row-start: 3;
     justify-self: flex-end;
 
     font-size: 20px;
@@ -186,6 +251,20 @@
 
   .traveler__wrapper:nth-of-type(2) {
     .visually-hidden;
+  }
+
+  .traveler__wrapper--transport-level {
+    width: 45px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    justify-self: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .traveler__level {
+    margin-top: 0;
   }
 
   .traveler__head-list {
@@ -212,6 +291,8 @@
     background-color: black;
     opacity: 0.05;
   }
+
+
 
   .traveler__more {
     font-size: 20px;
@@ -248,10 +329,17 @@
     grid-row: 2;
   }
 
+  .traveler__like {
+    grid-column-start: 2;
+    grid-row-start: 4;
+
+    margin-right: 93px;
+  }
+
   .traveler__score {
     grid-column-start: 2;
     grid-row-start: 4;
-    align-self: flex-start;
+    margin: 10px 33px 0 0;
   }
 
   .traveler__wrapper:nth-of-type(1) {
@@ -262,6 +350,19 @@
 
   .traveler__wrapper:nth-of-type(2) {
     .visually-hidden;
+  }
+
+  .traveler__wrapper--transport-level {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: flex-start;
+    width: 319px;
+  }
+
+  .traveler__level {
+    margin: 0 44px 0 auto;
   }
 
   .traveler__head-list {

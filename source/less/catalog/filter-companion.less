@@ -1,5 +1,6 @@
 .filter-companion {
   padding: 26px 25px 22px 26px;
+  margin-bottom: 28px;
   border-radius: 20px;
 
   background-color: @light-gold;
@@ -44,6 +45,14 @@
   }
 }
 
+.filter-companion__sublist--level {
+  display: flex;
+}
+
+.filter-companion__subitem--level {
+  width: 111px;
+}
+
 @media (min-width: 768px) {
   .filter-companion {
     margin-bottom: 40px;
@@ -81,12 +90,19 @@
   }
 
   .filter-companion__sublist--level {
-    display: flex;
-    justify-content: flex-end;
+    //display: flex;
+    //justify-content: flex-end;
   }
 
   .filter-companion__subitem--level {
+    grid-column: 3;
+    grid-row: 1;
+    width: 75px;
     margin-top: -10px;
+
+    &:last-child {
+      justify-self: flex-end;
+    }
   }
 }
 
@@ -138,6 +154,7 @@
   }
 
   .filter-companion__subitem--level {
+    width: 94px;
     margin-top: 0;
   }
 }

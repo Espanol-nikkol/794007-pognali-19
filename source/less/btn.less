@@ -27,9 +27,19 @@
 .btn--header {
   margin-bottom: 67px;
   border-radius: 25px;
+  .visually-hidden;
 
   line-height: 50px;
   text-align: center;
+}
+
+.btn--header-open {
+  .visually-hidden--no;
+  width: 270px;
+  margin-bottom: 50px;
+
+  line-height: 50px;
+  font-size: 17px;
 }
 
 .btn--small-circle {
@@ -55,7 +65,10 @@
 }
 
 .btn--traveler {
+  grid-row: 8;
   margin-left: -5px;
+  width: 230px;
+  line-height: 40px;
 }
 
 .btn--map {
@@ -109,7 +122,11 @@
   border: 1px solid @cloudy-blue;
   border-radius: 4px;
   background-color: @grey;
+}
 
+.btn--filter-companion {
+  width: 230px;
+  line-height: 40px;
 }
 
 @media (min-width: 768px) {
@@ -130,6 +147,11 @@
     overflow: auto;
 
     line-height: 50px;
+  }
+
+  .btn--header-open {
+    grid-column: 3;
+    grid-row: 1;
   }
 
   .btn--about {
@@ -163,6 +185,7 @@
     line-height: 50px;
 
     font-size: 20px;
+    border-radius: 25px;
   }
 
   .btn--traveler {
@@ -170,7 +193,7 @@
     height: 50px;
     grid-row-start: 3;
     grid-column: 2;
-    margin-left: 0;
+    margin-left: -6px;
 
     font-size: 20px;
     line-height: 50px;

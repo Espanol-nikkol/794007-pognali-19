@@ -27,7 +27,9 @@
   </nav>
   </header>
   <main class="form">
-    <h1 class="head head--form">Направления</h1>
+    <div class="head head--form">
+      <h1 class="head__title head__title--form">Направления</h1>
+    </div>
     <section class="me">
       <div class="me__wrapper-avatar">
         <img class="me__avatar" src="img/photo-account-tablet@1x.jpg" width="99" height="100" alt="avatar">
@@ -92,8 +94,8 @@
               Длительность:
               <input class="plan-add__input" type="number" value="2">
             </label>
-            <input type="checkbox" class="plan-add__check">
-            <label class="plan-add__label plan-add__label--child">Можно с детьми</label>
+            <input type="checkbox" class="plan-add__check" id="child">
+            <label class="plan-add__label plan-add__label--child" for="child">Можно с детьми</label>
             <div class="calendar">
               <span class="calendar__month">Март 2019</span>
               <ul class="calendar__week-list">
@@ -193,6 +195,305 @@
               </li>
               <li class="route-list__item route-list__item--choice">
                 <select class="route-list__country route-list__country--choice"></select>
+                <div class="country-contents country-contents--form visually-hidden">
+                  <h2 class="subhead--country-contents">Выберите страну</h2>
+                  <table class="country-contents__table">
+                    <tr class="country-contents__table-row">
+                      <td class="country-contents__head country-contents__head--active">А</td>
+                      <td class="country-contents__head">Б</td>
+                      <td class="country-contents__head">В</td>
+                      <td class="country-contents__head">Г</td>
+                      <td class="country-contents__head">Д</td>
+                    </tr>
+                    <tr class="country-contents__table-row">
+                      <td class="country-contents__head">Е</td>
+                      <td class="country-contents__head">З</td>
+                      <td class="country-contents__head">И</td>
+                      <td class="country-contents__head">К</td>
+                      <td class="country-contents__head">Л</td>
+                    </tr>
+                    <tr class="country-contents__table-row">
+                      <td class="country-contents__head">М</td>
+                      <td class="country-contents__head">Н</td>
+                      <td class="country-contents__head">О</td>
+                      <td class="country-contents__head">П</td>
+                      <td class="country-contents__head">Р</td>
+                    </tr>
+                    <tr class="country-contents__table-row">
+                      <td class="country-contents__head">С</td>
+                      <td class="country-contents__head">Т</td>
+                      <td class="country-contents__head">У</td>
+                      <td class="country-contents__head">Ф</td>
+                      <td class="country-contents__head">Х</td>
+                    </tr>
+                    <tr class="country-contents__table-row">
+                      <td class="country-contents__head">Ч</td>
+                      <td class="country-contents__head">Ш</td>
+                      <td class="country-contents__head">Щ</td>
+                      <td class="country-contents__head">Э</td>
+                      <td class="country-contents__head">Ю</td>
+                    </tr>
+                  </table>
+                  <ul class="country-contents__list">
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist country-contents__sublist--active">
+                        <li class="country-contents__subitem">Австралия</li>
+                        <li class="country-contents__subitem">Австрия</li>
+                        <li class="country-contents__subitem">Азербайджан</li>
+                        <li class="country-contents__subitem">Албания</li>
+                        <li class="country-contents__subitem">Алжир</li>
+                        <li class="country-contents__subitem">Ангола</li>
+                        <li class="country-contents__subitem">Андорра</li>
+                        <li class="country-contents__subitem">Антигуа и Барбуда</li>
+                        <li class="country-contents__subitem">Аргентина</li>
+                        <li class="country-contents__subitem">Армения</li>
+                        <li class="country-contents__subitem">Афганистан</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Багамские Острова</li>
+                        <li class="country-contents__subitem">Бангладеш</li>
+                        <li class="country-contents__subitem">Барбадос</li>
+                        <li class="country-contents__subitem">Бахрейн</li>
+                        <li class="country-contents__subitem">Белоруссия</li>
+                        <li class="country-contents__subitem">Белиз</li>
+                        <li class="country-contents__subitem">Бельгия</li>
+                        <li class="country-contents__subitem">Бенин</li>
+                        <li class="country-contents__subitem">Болгария</li>
+                        <li class="country-contents__subitem">Боливия</li>
+                        <li class="country-contents__subitem">Босния и Герцеговина</li>
+                        <li class="country-contents__subitem">Ботсвана</li>
+                        <li class="country-contents__subitem">Бразилия</li>
+                        <li class="country-contents__subitem">Бруней</li>
+                        <li class="country-contents__subitem">Буркина-Фасо</li>
+                        <li class="country-contents__subitem">Бурунди</li>
+                        <li class="country-contents__subitem">Бутан</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Вануату</li>
+                        <li class="country-contents__subitem">Великобритания</li>
+                        <li class="country-contents__subitem">Венгрия</li>
+                        <li class="country-contents__subitem">Венесуэла</li>
+                        <li class="country-contents__subitem">Восточный Тимор</li>
+                        <li class="country-contents__subitem">Вьетнам</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Габон</li>
+                        <li class="country-contents__subitem">Гаити</li>
+                        <li class="country-contents__subitem">Гайана</li>
+                        <li class="country-contents__subitem">Гамбия</li>
+                        <li class="country-contents__subitem">Гана</li>
+                        <li class="country-contents__subitem">Гватемала</li>
+                        <li class="country-contents__subitem">Гвинея</li>
+                        <li class="country-contents__subitem">Гвинея-Бисау</li>
+                        <li class="country-contents__subitem">Германия</li>
+                        <li class="country-contents__subitem">Гондурас</li>
+                        <li class="country-contents__subitem">Гренада</li>
+                        <li class="country-contents__subitem">Греция</li>
+                        <li class="country-contents__subitem">Грузия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Дания</li>
+                        <li class="country-contents__subitem">Джибути</li>
+                        <li class="country-contents__subitem">Доминика</li>
+                        <li class="country-contents__subitem">Доминикана</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Египет</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Замбия</li>
+                        <li class="country-contents__subitem">Зимбабве</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Израиль</li>
+                        <li class="country-contents__subitem">Индия</li>
+                        <li class="country-contents__subitem">Индонезия</li>
+                        <li class="country-contents__subitem">Иордания</li>
+                        <li class="country-contents__subitem">Ирак</li>
+                        <li class="country-contents__subitem">Иран</li>
+                        <li class="country-contents__subitem">Ирландия</li>
+                        <li class="country-contents__subitem">Исландия</li>
+                        <li class="country-contents__subitem">Испания</li>
+                        <li class="country-contents__subitem">Италия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Кабо-Верде</li>
+                        <li class="country-contents__subitem">Казахстан</li>
+                        <li class="country-contents__subitem">Камбоджа</li>
+                        <li class="country-contents__subitem">Камерун</li>
+                        <li class="country-contents__subitem">Канада</li>
+                        <li class="country-contents__subitem">Катар</li>
+                        <li class="country-contents__subitem">Кения</li>
+                        <li class="country-contents__subitem">Кипр</li>
+                        <li class="country-contents__subitem">Киргизия</li>
+                        <li class="country-contents__subitem">Кирибати</li>
+                        <li class="country-contents__subitem">Китай</li>
+                        <li class="country-contents__subitem">Колумбия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Лаос</li>
+                        <li class="country-contents__subitem">Латвия</li>
+                        <li class="country-contents__subitem">Лесото</li>
+                        <li class="country-contents__subitem">Либерия</li>
+                        <li class="country-contents__subitem">Ливан</li>
+                        <li class="country-contents__subitem">Ливия</li>
+                        <li class="country-contents__subitem">Литва</li>
+                        <li class="country-contents__subitem">Лихтенштейн</li>
+                        <li class="country-contents__subitem">Люксембург</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Маврикий</li>
+                        <li class="country-contents__subitem">Мавритания</li>
+                        <li class="country-contents__subitem">Мадагаскар</li>
+                        <li class="country-contents__subitem">Малави</li>
+                        <li class="country-contents__subitem">Малайзия</li>
+                        <li class="country-contents__subitem">Мали</li>
+                        <li class="country-contents__subitem">Мальдивы</li>
+                        <li class="country-contents__subitem">Мальта</li>
+                        <li class="country-contents__subitem">Марокко</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Намибия</li>
+                        <li class="country-contents__subitem">Науру</li>
+                        <li class="country-contents__subitem">Непал</li>
+                        <li class="country-contents__subitem">Нигер</li>
+                        <li class="country-contents__subitem">Нигерия</li>
+                        <li class="country-contents__subitem">Нидерланды</li>
+                        <li class="country-contents__subitem">Никарагуа</li>
+                        <li class="country-contents__subitem">Новая Зеландия</li>
+                        <li class="country-contents__subitem">Норвегия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">ОАЭ</li>
+                        <li class="country-contents__subitem">Оман</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Пакистан</li>
+                        <li class="country-contents__subitem">Палау</li>
+                        <li class="country-contents__subitem">Панама</li>
+                        <li class="country-contents__subitem">Папуа — Новая Гвинея</li>
+                        <li class="country-contents__subitem">Парагвай</li>
+                        <li class="country-contents__subitem">Перу</li>
+                        <li class="country-contents__subitem">Польша</li>
+                        <li class="country-contents__subitem">Португалия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Сальвадор</li>
+                        <li class="country-contents__subitem">Самоа</li>
+                        <li class="country-contents__subitem">Сан-Марино</li>
+                        <li class="country-contents__subitem">Саудовская Аравия</li>
+                        <li class="country-contents__subitem">Сейшелы</li>
+                        <li class="country-contents__subitem">Сенегал</li>
+                        <li class="country-contents__subitem">Сербия</li>
+                        <li class="country-contents__subitem">Сингапур</li>
+                        <li class="country-contents__subitem">Сирия</li>
+                        <li class="country-contents__subitem">Словакия</li>
+                        <li class="country-contents__subitem">Словения</li>
+                        <li class="country-contents__subitem">США</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Таджикистан</li>
+                        <li class="country-contents__subitem">Таиланд</li>
+                        <li class="country-contents__subitem">Танзания</li>
+                        <li class="country-contents__subitem">Того</li>
+                        <li class="country-contents__subitem">Тонга</li>
+                        <li class="country-contents__subitem">Тринидад и Тобаго</li>
+                        <li class="country-contents__subitem">Тувалу</li>
+                        <li class="country-contents__subitem">Тунис</li>
+                        <li class="country-contents__subitem">Туркмения</li>
+                        <li class="country-contents__subitem">Турция</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Уганда</li>
+                        <li class="country-contents__subitem">Узбекистан</li>
+                        <li class="country-contents__subitem">Украина</li>
+                        <li class="country-contents__subitem">Уругвай</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Фиджи</li>
+                        <li class="country-contents__subitem">Филиппины</li>
+                        <li class="country-contents__subitem">Финляндия</li>
+                        <li class="country-contents__subitem">Франция</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Хорватия</li>
+                      </ul>
+
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Чад</li>
+                        <li class="country-contents__subitem">Черногория</li>
+                        <li class="country-contents__subitem">Чехия</li>
+                        <li class="country-contents__subitem">Чили</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Швейцария</li>
+                        <li class="country-contents__subitem">Швеция</li>
+                        <li class="country-contents__subitem">Шри-Ланка</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Эквадор</li>
+                        <li class="country-contents__subitem">Эритрея</li>
+                        <li class="country-contents__subitem">Эсватини</li>
+                        <li class="country-contents__subitem">Эстония</li>
+                        <li class="country-contents__subitem">Эфиопия</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">ЮАР</li>
+                        <li class="country-contents__subitem">Южный Судан</li>
+                      </ul>
+                    </li>
+                    <li class="country-contents__item">
+                      <ul class="country-contents__sublist">
+                        <li class="country-contents__subitem">Ямайка</li>
+                        <li class="country-contents__subitem">Япония</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="route-list__item route-list__item--more">
                 <button class="btn btn--route-list btn--upper">Добавить страну</button>
@@ -228,9 +529,7 @@
               </li>
               <li class="entertainment-list__item">
                 <span class="plan-add__location">Чехия</span>
-                <textarea class="plan-add__plan">Пить пиво и лазить по старым замкам,
-                    наслаждаться архитектурой и вот это все.
-                  </textarea>
+                <textarea class="plan-add__plan">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </li>
             </ul>
             <button class="btn btn--yellow btn--plan-add btn--upper btn--step-next">Отправить</button>

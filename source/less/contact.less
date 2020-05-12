@@ -36,6 +36,11 @@
   background-position: 14px 16px;
 }
 
+.contact__item--header::before  {
+  left: 0;
+  top: -17px;
+}
+
 .contact--reg {
   margin-top: 36px;
   margin-bottom: 0;
@@ -44,6 +49,18 @@
 
 .contact__link {
   color: @light-gold;
+}
+
+.contact__link--header {
+  margin-left: 61px;
+  color: @dark-blue-grey;
+  text-transform: uppercase;
+}
+
+.contact--header-open {
+  .visually-hidden--no;
+  padding-top: 17px;
+  margin-bottom: 31px;
 }
 
 @media (min-width: 768px) {
@@ -84,6 +101,21 @@
 
   .contact__link {
     text-transform: uppercase;
+  }
+
+  .contact--header-open {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .contact__item--header::before  {
+    left: 0;
+    top: -17px;
+  }
+
+  .contact__link--header {
+    margin-left: 100px;
+
   }
 }
 
@@ -159,6 +191,7 @@
   .contact__link {
     text-transform: uppercase;
   }
+
 
 }
 

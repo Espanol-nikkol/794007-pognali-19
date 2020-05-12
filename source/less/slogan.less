@@ -5,16 +5,22 @@
   background-repeat: no-repeat;
 }
 
+
+
 .slogan--header {
   padding: 19px 0 51px 25px;
   margin-left: -25px;
-  position: relative;
-  order: 7;
 
   background-image: url("../img/logo-mobile-white@1x.png");
   background-size: 100px 19px;
   background-position: 25px 19px;
   background-color: @dark-two;
+}
+
+.slogan--header-open {
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-color: transparent;
+  padding-bottom: 91px;
 }
 
 .slogan--footer {
@@ -38,6 +44,7 @@
     padding: 0;
     margin: 0 auto 0 0;
     order: 1;
+    z-index: 21;
 
     background-image: url("../img/logo-tablet-white@1x.png");
     background-size: 166px 42px;
@@ -45,11 +52,16 @@
     background-color: @dark-blue-grey;
   }
 
+  .slogan--header-open {
+    background-color: transparent;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+  }
+
   .slogan--header-catalog {
     background-color: transparent;
   }
 
-    .slogan--footer {
+  .slogan--footer {
     width: 165px;
     margin: 0;
     text-align: center;
@@ -68,6 +80,7 @@
 
   .slogan--header {
     margin: 0 145px 0 0;
+    order: 1;
 
     background-image: url("../img/logo-desktop-white@1x.png");
     background-size: 200px 52px;

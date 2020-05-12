@@ -1,5 +1,11 @@
-.head {
-  display: block;
+.head--index {
+  width: 250px;
+  margin-bottom: 333px;
+  position: relative;
+  z-index: 4;
+}
+
+.head--catalog, .head--form {
   width: 295px;
   padding: 25px 0 12px 25px;
   margin: 0 -25px 0 -25px;
@@ -7,9 +13,6 @@
   z-index: 4;
   border-radius: 0 0 20px 20px;
 
-  font-size: 36px;
-  line-height: 40px;
-  color: white;
   background-color: @dark-two;
 
   &::after {
@@ -26,19 +29,40 @@
   }
 }
 
+.head__title {
+  font-size: 36px;
+  line-height: 40px;
+  color: white;
+}
+
+.head__title--index {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+
+.head__return {
+  .visually-hidden;
+}
+
 .head--form {
   margin:  0 0 23px 0;
 }
 
+
 @media (min-width: 768px) {
-  .head {
+  .head--index {
+    width: 400px;
+    margin: 0 auto 96px;
+  }
+
+  .head--catalog, .head--form {
     width: 616px;
     padding: 0 75px 67px 77px;
     margin: 0 -40px 0 -40px;
     border-radius: 0 0 50px 50px;
-
-    font-size: 60px;
-    line-height: 70px;
+    background-color: @dark-two;
 
     &::after {
       width: 287px;
@@ -49,6 +73,11 @@
     }
   }
 
+  .head__title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
   .head--form {
     margin:  0 0 64px 0;
   }
@@ -56,21 +85,55 @@
 
 
 @media (min-width: 1440px) {
-  .head {
+  .head--catalog, .head--form {
     width: 1188px;
     padding: 0 123px 69px 129px;
     margin: 0 -60px 0 -60px;
-
+    display: flex;
+    justify-content: space-between;
 
     &::after {
       left: 126px;
     }
   }
 
+  .head--index {
+    width: 400px;
+    margin: 118px auto 0 69px;
+
+    text-align: left;
+  }
+
   .head--catalog {
+    padding-top: 126px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 1;
+  }
+
+  .head__return {
+    .visually-hidden--no;
+
+    .bloggersans-bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    margin-top: 20px;
+
+    &::after {
+      content: "";
+
+      display: inline-block;
+      width: 32px;
+      height: 16px;
+      margin-left: 29px;
+
+      background-image: url("../img/return.svg");
+      background-repeat: no-repeat;
+      background-size: 32px 16px;
+      background-position: 0 0;
+    }
   }
 
   .head--form {

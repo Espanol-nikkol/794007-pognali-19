@@ -13,6 +13,8 @@
     text-transform: uppercase;
 
     display: flex;
+    width: 620px;
+    margin: 0 auto;
   }
 
   .filter-world__item {
@@ -31,12 +33,35 @@
     &:nth-child(4) {
       margin-right: auto;
     }
+
+    &:last-child {
+      color: @dark-blue-grey;
+
+      .visually-hidden--no;
+
+      &::after {
+        content: "";
+
+        display: inline-block;
+        width: 27px;
+        height: 16px;
+
+        background-size: 27px 5px;
+        background-position: 0 5px;
+        background-repeat: no-repeat;
+        background-image: url("../../img/filter.svg");
+      }
+    }
   }
 
   .filter-world__item--active {
     color: @dark-blue-grey;
   }
 }
-  @media (min-width: 1440px) {
 
+@media (min-width: 1440px) {
+  .filter-world {
+    width: 912px;
+    margin: 0;
+  }
 }
