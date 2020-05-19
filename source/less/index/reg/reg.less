@@ -1,5 +1,5 @@
 .reg {
-  padding: 72px 0 0 0;
+  padding: 121px 0 0 0;
   margin-top: -50px;
   position: relative;
   z-index: 3;
@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  background-color: @dark-state-blue;
+  background-color: @dark-blue-grey;
 }
 
 .reg__link {
@@ -16,7 +16,7 @@
 }
 
 .reg__label {
-  margin: 32px 0 32px 0;
+  margin: 30px 0 30px 0;
   width: 270px;
   display: block;
   position: relative;
@@ -28,15 +28,15 @@
     width: 60px;
     height: 62px;
     position: absolute;
-    top: 3px;
-    right: -3px;
+    top: 0;
+    right: 0;
     border-radius: 0 10px 10px 0;
 
     background-color: @light-gold;
     background-image: url("../../img/triangle-arrow-right.svg");
     background-size: 10px 14px;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 51% 50%;
   }
 }
 
@@ -47,20 +47,27 @@
   padding: 0 0 0 24px;
 
   color: @greyish-brown-30;
+  letter-spacing: 2px;
+  border: none;
 }
 
 @media (min-width: 768px) {
   .reg {
+    padding-top: 124px;
+
     background-color: @dark-blue-grey;
   }
 
   .reg__label {
-    margin: 0 0 61px 0;
+    margin: 0 0 57px 0;
     width: 618px;
+    border-radius: 20px;
 
     &::after {
       width: 82px;
       height: 81px;
+
+      border-radius: 0 20px 20px 0;
     }
   }
 
@@ -70,32 +77,28 @@
     padding: 0 0 0 35px;
 
     font-size: 24px;
-
-
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 20px 0 0 20px;
   }
 }
 
 @media (min-width: 1440px) {
   .reg {
-    padding: 108px 130px 138px 130px;
+    padding: 157px 130px 93px 130px;
   }
 
   .reg__label {
-    margin: 0 0 71px 0;
+    margin: 0 0 70px 0;
     width: 1175px;
 
     &::after {
       content: "Регистрация";
       .bloggersans-bold;
       font-size: 24px;
-      line-height: 24px;
       color: @dark-state-blue;
-      line-height: 81px;
-      padding-left: 37px;
+      line-height: 85px;
+      padding-left: 35px;
 
-      width: 298px;
+      width: 290px;
       height: 81px;
 
       background-position: 278px 36px;

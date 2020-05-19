@@ -1,22 +1,138 @@
 .level-range {
-  width: 107px;
+  width: 63px;
   margin: 0;
-
+  margin-left: -1px;
+  padding: 10px 0 6px 0;
   display: block;
-  text-align: center;
-  line-height: 35px;
+  border: 1px solid @cloudy-blue;
+
+  .bloggersans-medium;
+  line-height: 13.5px;
+  font-size: 15px;
+  color: @dark-state-blue;
+  letter-spacing: 1.5px;
 }
 
+.level-range--low {
+  border-radius: 4px 0 0 4px;
+  padding-left: 46px;
+}
+
+.level-range__label--low {
+  &::after {
+    content: "";
+
+    width: 218px;
+    height: 3px;
+    border-radius: 0.5px;
+    display: block;
+    position: absolute;
+    bottom: -27px;
+    left: -1px;
+
+    opacity: 0.2;
+    background-color: @dark-state-blue;
+  }
+
+  &::before {
+    content: "";
+
+    width: 144px;
+    height: 2px;
+    border-radius: 1px;
+    display: block;
+    position: absolute;
+    bottom: -27px;
+    left: 70px;
+
+    background-color: @dark-state-blue;
+  }
+}
+
+.level-range--high {
+  width: 70px;
+  border-radius: 0 4px 4px 0;
+  padding-left: 39px;
+}
+
+.level-range__label--high {
+  &::after, &::before {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+
+    background-color: @dark-state-blue;
+  }
+
+  &::after {
+    bottom: -30px;
+    left: 209px;
+  }
+
+  &::before {
+    bottom: -30px;
+    left: 65px;
+  }
+}
 
 @media (min-width: 768px) {
   .level-range {
     width: 75px;
-    height: 46px;
+    height: 43px;
     border: 1px solid @cloudy-blue;
     margin: 0;
+    padding: 2px 0 0 0;
 
-    line-height: 46px;
+    font-size: 20px;
     text-align: center;
+
+    &--low {
+      padding-left: 10px;
+      width: 70px;
+    }
+
+    &--high {
+      padding-left: 8px;
+      width: 65px;
+    }
+  }
+
+  .level-range__label--low {
+    &::before {
+      width: 207px;
+      height: 3px;
+      border-radius: 1.5px;
+      bottom: 26px;
+      left: 72px;
+    }
+
+    &::after {
+      width: 280px;
+      height: 3px;
+      border-radius: 1.5px;
+      bottom: 26.5px;
+      left: 0;
+    }
+  }
+
+  .level-range__label--high {
+    &::after, &::before {
+      width: 13px;
+      height: 13px;
+      bottom: 22px;
+    }
+
+    &::before {
+      left: 70px;
+    }
+
+    &::after {
+      left: 269.5px;
+    }
   }
 }
 

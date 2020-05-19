@@ -1,15 +1,41 @@
 .subhead {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 24px;
   color: @mango;
 
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   padding-left: 25px;
 }
 
 .subhead--about {
+  word-spacing: 0.6px;
+  letter-spacing: 1.2px;
+
   position: relative;
   z-index: 3;
+}
+
+.subhead--direction {
+  letter-spacing: 1.9px;
+}
+
+.subhead--companions {
+  letter-spacing: 1.5px;
+  position: relative;
+  &::before {
+    content: "";
+
+    display: block;
+    width: 113px;
+    height: 132px;
+    border-radius: 0 20px 20px 0;
+    background-color: @dark-blue-grey-two;
+
+    position: absolute;
+    top: -30px;
+    left: -25px;
+    z-index: -1;
+  }
 }
 
 .subhead--offer {
@@ -17,12 +43,13 @@
   margin-bottom: 44px;
   padding-left: 0;
 
+  letter-spacing: 1.9px;
   &::before {
     content: "";
 
     display: block;
     position: absolute;
-    top: 70px;
+    top: 80px;
     right: 26px;
 
     width: 99px;
@@ -35,8 +62,13 @@
   }
 }
 
+.subhead--reg {
+  padding-left: 0;
+  letter-spacing: 1.6px;
+}
+
 .subhead--sub-level {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .subhead--popup {
@@ -50,6 +82,7 @@
   color: @dark-blue-grey;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0.75px;
 
   &::after {
     content: "";
@@ -57,9 +90,9 @@
     display: inline-block;
     width: 17px;
     height: 3px;
-    margin-left: 28px;
+    margin-left: 22px;
     position: relative;
-    top: -4px;
+    top: -3px;
 
     background-image: url("../img/dots.svg");
     background-position: 0 0;
@@ -86,6 +119,8 @@
   color: @dark-state-blue;
   font-size: 22.5px;
   line-height: 22.5px;
+  letter-spacing: 1px;
+
   width: 118px;
   margin: 0 0 21px 0;
   padding: 0;
@@ -124,24 +159,6 @@
   width: 207px;
 }
 
-.subhead--companions {
-  position: relative;
-  &::before {
-    content: "";
-
-    display: block;
-    width: 113px;
-    height: 132px;
-    border-radius: 20px;
-    background-color: @dark-blue-grey-two;
-
-    position: absolute;
-    top: -50px;
-    left: -20px;
-    z-index: -1;
-  }
-}
-
 @media (min-width: 768px) {
   .subhead {
     font-size: 45px;
@@ -154,6 +171,7 @@
   .subhead--about {
     z-index: 2;
     margin: 43px 0 43px 36px;
+    letter-spacing: 1.6px;
 
     &::before {
       content: "";
@@ -172,41 +190,36 @@
   }
 
   .subhead--direction {
-    margin-bottom: 62px;
+    margin-bottom: 60px;
   }
 
   .subhead--companions {
     margin-bottom: 61px;
 
-
+    &::before {
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      top: -60px;
+      left: -35px;
+    }
   }
 
   .subhead--offer {
-    width: 478px;
+    width: 480px;
     margin: 0 auto 74px;
+    padding-left: 2px;
 
     &::before {
-      content: "";
-
-      display: block;
-      position: absolute;
-      top: 70px;
-      right: 26px;
-
-      width: 99px;
-      height: 99px;
-
-      background-image: none;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 99px 99px;
+      display: none;
     }
   }
 
   .subhead--reg {
-    width: 668px;
-    text-align: center;
-    margin-bottom: 60px;
+    width: auto;
+    margin: 0 0 60px 6px;
+
+    letter-spacing: 2.1px;
   }
 
   .subhead--popup {
@@ -224,11 +237,13 @@
 
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: 1.3px;
   }
 
   .subhead--sub {
     font-size: 20px;
     line-height: 30px;
+
     margin-right: auto;
   }
 
@@ -249,13 +264,13 @@
 
 @media (min-width: 1440px) {
   .subhead--about {
-    margin: 223px 0 61px 0;
+    margin: 173px 0 58px 0;
     &::before {
       width: 213px;
       height: 213px;
 
       position: absolute;
-      top: -43px;
+      top: -60px;
       left: -72px;
       z-index: -1;
     }
@@ -267,6 +282,10 @@
 
   .subhead--companions {
     grid-column: 1;
+    margin-top: -4px;
+
+    letter-spacing: 1.8px;
+
     &::before {
       width: 213px;
       height: 213px;
@@ -279,6 +298,7 @@
   .subhead--offer {
     width: 1180px;
     margin-bottom: 134px;
+    padding-left: 4px;
 
     text-align: center;
   }
@@ -286,6 +306,7 @@
   .subhead--reg {
     width: 1180px;
     text-align: center;
+    margin: 0 0 58px 5px;
   }
 
   .subhead--filter-country {
@@ -293,8 +314,17 @@
 
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: 0.9px;
 
-    margin-right: 35px;
+    margin-right: 33px;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+      margin-right: 20.5px;
+
+      background-size: 23px 15px;
+    }
 
     &::after {
       position: absolute;

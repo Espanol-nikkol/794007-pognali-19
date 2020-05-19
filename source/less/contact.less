@@ -5,8 +5,9 @@
 }
 
 .contact__item {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
   position: relative;
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -16,7 +17,7 @@
     height: 45px;
     border-radius: 50%;
     position: absolute;
-    top: -15px;
+    top: -12px;
     left: -61px;
 
     background-color: @dark-blue-grey-two;
@@ -42,9 +43,7 @@
 }
 
 .contact--reg {
-  margin-top: 36px;
-  margin-bottom: 0;
-  padding-bottom: 45px;
+  margin: 30px 0 14px 25px;
 }
 
 .contact__link {
@@ -96,7 +95,11 @@
 
   .contact--reg {
     width: 600px;
-    margin: 0 0 0 166px;
+    margin: 0 0 37px 166px;
+  }
+
+  .contact__item--reg {
+    margin-bottom: 39px;
   }
 
   .contact__link {
@@ -124,7 +127,7 @@
     .visually-hidden--no;
     display: flex;
     order: 3;
-    margin-left: auto;
+    margin: -15px 0 0 auto;
   }
 
   .contact__item--header {
@@ -178,7 +181,7 @@
 
   .contact--reg {
     display: flex;
-    width: 980px;
+    width: 905px;
     margin: 0 0 0 auto;
 
   }
@@ -186,6 +189,11 @@
   .contact__item--reg {
     width: 305px;
     margin-right: 136px;
+
+    &::before {
+      top: -35px;
+      left: -123px;
+    }
   }
 
   .contact__link {

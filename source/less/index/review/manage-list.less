@@ -1,5 +1,7 @@
 .manage-list {
-  margin-bottom: 30px;
+  margin: -89px 0 28px 0;
+  position: relative;
+  z-index: 3;
   display: flex;
 }
 
@@ -8,44 +10,21 @@
   height: 40px;
   border-radius: 50%;
 
-  position: relative;
-  &::after {
-    position: absolute;
-  }
+  background-repeat: no-repeat;
 }
 
 .manage-list__phone {
   background-color: @mango;
-
-  &::after {
-    content: "";
-
-    display: block;
-    width: 18px;
-    height: 18px;
-
-    top: 10px;
-    left: 12px;
-
-    background-image: url("../../img/topmenu-phone.svg");
-  }
+  background-image: url("../../img/topmenu-phone.svg");
+  background-size: 18px 18px;
+  background-position: 13px 10px;
 }
 
 .manage-list__mail {
   background-color: @mango-two;
-
-  &::after {
-    content: "";
-
-    display: block;
-    width: 18px;
-    height: 14px;
-
-    top: 14px;
-    left: 12px;
-
-    background-image: url("../../img/topmenu-mail.svg");
-  }
+  background-image: url("../../img/topmenu-mail.svg");
+  background-size: 18px 14px;
+  background-position: 13px 13px;
 }
 
 @media (min-width: 768px) {

@@ -4,30 +4,65 @@
 }
 
 .descr-block--about {
+  width: 200px;
+  display: block;
   position: relative;
+  margin-left: 23px;
   z-index: 2;
+
+  color: transparent;
+
   &::after {
     content: "";
 
-    width: 292px;
+    width: 315px;
     height: 352px;
     position: absolute;
     top: -80px;
-    right: 0;
+    left: -45px;
     z-index: -1;
+    border-radius: 20px;
 
     background-image: url("../img/about-mobile@1x.png");
     background-size: 292px 352px;
-    background-position: 0 0;
+    background-position: 15px 2px;
     background-repeat: no-repeat;
     background-color: @dark-blue-grey;
   }
 
+  &::before {
+    content: 'Любое путешествие веселее \A с попутчиками, которые на \A одной волне с тобой! Делитесь \A своими идеями путешествий и \A черпайте вдохновение в чужих.';
+
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .bloggersans-light;
+    color: white;
+
+    white-space: pre;
+  }
+}
+
+.descr-block--direction {
+  color: @black-grey;
+  margin-left: 25px;
+
+  width: 200px;
+}
+
+.descr-block--companions {
+  width: 220px;
+  padding-left: 25px;
+  margin-bottom: 23px;
 }
 
 .descr-block--reg {
   width: 170px;
-  text-align: left;
+  text-align: center;
 }
 
 .descr-block--reg:nth-of-type(1)::first-line {
@@ -38,14 +73,6 @@
 .descr-block--reg:nth-of-type(2) {
   width: 200px;
   text-align: center;
-}
-
-.descr-block--direction {
-  color: @black-grey;
-}
-
-.descr-block--companions {
-  padding-left: 25px;
 }
 
 @media (min-width: 768px) {
@@ -59,32 +86,58 @@
     position: relative;
     z-index: 2;
     width: 298px;
-    margin: 0 0 38px 35px;
+    margin: 0 0 32px 35px;
 
     &::after {
       width: 376px;
       height: 548px;
-      top: 0;
-      left: 300px;
+      top: -80px;
+      left: 310px;
 
       background-image: url("../img/about-tablet@1x.png");
       background-size: 376px 548px;
       background-position: 0 0;
       background-color: transparent;
     }
+
+    &::before {
+      content: 'Любое путешествие \A веселее с попутчиками,\A которые на одной волне\A с тобой! Делитесь своими \A идеями путешествий \A и черпайте вдохновение \A в чужих.';
+    }
   }
 
   .descr-block--direction {
+    margin-left: 0;
     width: 340px;
   }
 
   .descr-block--companions {
     width: 425px;
-    margin-bottom: 46px;
+    margin-bottom: 38px;
+    position: relative;
+
+    color: transparent;
+
+    &::before {
+      content: "Все мы индивидуальны и у каждого \A свой взгляд на идеальный отдых. \A Одному нужен пляж и коктейль, \A а другому маршрут для хайкинга.";
+
+      display: block;
+      width: 425px;
+      height: 131px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .bloggersans-light;
+      font-size: 28px;
+      line-height: 33px;
+      color: white;
+      white-space: pre;
+    }
   }
 
   .descr-block--reg {
     width: 688px;
+
     text-align: center;
   }
 
@@ -94,23 +147,27 @@
 
   .descr-block--reg:nth-of-type(2) {
     width: 688px;
-    margin-bottom: 67px;
+    margin-bottom: 63px;
   }
 }
 
 @media (min-width: 1440px) {
   .descr-block--about {
     width: 615px;
-    margin: 0 0 44px 0;
+    margin: 0 0 40px 0;
+
+    &::before {
+      content: 'Любое путешествие веселее с попутчиками, которые \A на одной волне с тобой! Делитесь своими идеями \A путешествий и черпайте вдохновение в чужих.';
+    }
 
     &::after {
       width: 630px;
-      height: 655px;
-      top: -175px;
-      left: 650px;
+      height: 670px;
+      top: -150px;
+      left: 618px;
 
       background-image: url("../img/about-desktop@1x.png");
-      background-size: 630px 655px;
+      background-size: 630px 665px;
       background-position: 0 0;
       background-color: transparent;
     }
@@ -122,5 +179,9 @@
 
   .descr-block--companions {
     grid-column: 1;
+  }
+
+  .descr-block--reg:nth-of-type(2) {
+    margin-bottom: 55px;
   }
 }
