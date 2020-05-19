@@ -8,6 +8,7 @@
 
 .filter-companion__list {
   position: relative;
+  margin-bottom: 43px;
 
   &::before {
     content: "";
@@ -17,7 +18,7 @@
     top: 0;
     left: 0;
 
-    width: 200px;
+    width: 225px;
     height: 1px;
 
     background-color: black;
@@ -26,7 +27,7 @@
 }
 
 .filter-companion__item {
-  padding: 13px 0;
+  padding: 13px 0 10px 0;
   position: relative;
 
   &::after {
@@ -37,19 +38,128 @@
     bottom: 0;
     left: 0;
 
-    width: 200px;
+    width: 218px;
     height: 1px;
 
     background-color: black;
     opacity: 0.05;
   }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    top: 19px;
+    right: 0;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 8px 4px;
+    background-image: url("../../img/dropdown.svg");
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.filter-companion__item--open-sublist::before {
+  top: 18px;
+  transform: rotate(180deg);
+}
+
+.filter-companion__item--close-sublist::before {
+  transform: none;
+}
+
+.filter-companion__sublist {
+  margin-top: 13px;
+}
+
+.filter-companion__sublist--transport {
+  margin: 13px 0 11px -1.5px;
+}
+
+.filter-companion__subitem {
+  margin: 0 0 8px 25px;
+}
+
+.filter-companion__subitem--transport {
+  &:nth-child(2) {
+    margin-left: -1px;
+  }
+}
+
+.filter-companion__check {
+  display: none;
+}
+
+.filter-companion__label {
+  font-size: 15px;
+  line-height: 15px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    position: absolute;
+    top: -1px;
+    left: -27px;
+
+    background-color: white;
+    background-size: 9px 9px;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    //background-image: url("../../img/tick.svg");
+  }
+}
+
+.filter-companion__check:checked + .filter-companion__label::before {
+  background-image: url("../../img/tick.svg");
 }
 
 .filter-companion__sublist--level {
+  margin-top: 0;
   display: flex;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    width: 16px;
+    height: 11px;
+    position: absolute;
+    top: 11px;
+    left: 100px;
+
+    background-color: white;
+  }
+
+  &::before {
+    content: "";
+
+    width: 16px;
+    height: 1px;
+    position: absolute;
+    top: 17px;
+    left: 101px;
+    z-index: 3;
+
+    background-color: @cloudy-blue;
+  }
 }
 
 .filter-companion__subitem--level {
+  margin: 0 0 0 0;
+
   width: 111px;
 }
 
@@ -57,26 +167,61 @@
   .filter-companion {
     margin-bottom: 40px;
     padding: 37px 35px 38px 35px;
+
   }
 
   .filter-companion__list {
     position: relative;
+    padding: 13px 0 34px 0;
+    margin-bottom: 35px;
 
     &::before {
       width: 618px;
+
+      opacity: 1;
+      background-color: @macaroni-and-cheese;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 618px;
+      height: 1px;
+
+      background-color: @macaroni-and-cheese;
     }
   }
 
   .filter-companion__item {
-    padding: 34px 0;
+    padding: 0;
+    margin-top: 20px;
     display: flex;
 
-    &::after {
-      width: 618px;
+    &:nth-child(4) {
+      margin: 29px 0 0 -2px;
     }
+
+    &:nth-child(5) {
+      margin-top: 25px;
+    }
+
+    &::after, &::before {
+      display: none;
+    }
+
+  }
+
+  .filter-companion__item:nth-child(2) .subhead--sub {
+    margin-left: -2px;
   }
 
   .filter-companion__sublist {
+    .visually-hidden--no;
     width: 492px;
     display: grid;
     grid-template-columns: 169px 173px 150px;
@@ -85,20 +230,55 @@
     line-height: 20px;
   }
 
+  .filter-companion__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    display: inline-block;
+    margin: 6px 0 0 11px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      top: -3px;
+      left: -35px;
+
+      background-size: 12px 12px;
+      background-position: 5px 5px;
+    }
+  }
+
+  .filter-companion__subitem {
+    margin-bottom: 0;
+  }
+
   .filter-companion__sublist--transport {
     display: flex;
+    margin: -10px 5px 0 0;
   }
 
   .filter-companion__sublist--level {
-    //display: flex;
-    //justify-content: flex-end;
+    &::after {
+      width: 21px;
+      height: 15px;
+      left: 408px;
+      top: 5px;
+    }
+
+    &::before {
+      width: 21px;
+      //height: 1px;
+      left: 408px;
+      top: 12px;
+    }
+
   }
 
   .filter-companion__subitem--level {
     grid-column: 3;
     grid-row: 1;
     width: 75px;
-    margin-top: -10px;
+    margin: -10px 0 0 1px;
 
     &:last-child {
       justify-self: flex-end;

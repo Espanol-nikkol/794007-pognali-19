@@ -1,5 +1,5 @@
 .companion-list {
-  margin: 60px 0 20px 0;
+  margin: 58px 0 20px 0;
 }
 
 .companion-list__item {
@@ -15,7 +15,7 @@
     display: block;
     width: 270px;
     height: 270px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 
     background-size: 270px 270px;
     background-repeat: no-repeat;
@@ -57,25 +57,46 @@
 }
 
 
-  .companion-list__card {
-    width: 270px;
-    min-height: 157px;
-    border-radius: 10px;
+.companion-list__card {
+  width: 270px;
+  min-height: 157px;
+  border-radius: 10px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.companion-list__name {
+  margin: 0 0 13px -2px;
+  display: block;
+  width: auto;
+
+  .bloggersans-bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: 6.5px;
+    left: -15px;
+    border-radius: 50%;
+    float: left;
+
+    background-color: @salmon;
   }
+}
 
-  .companion-list__name {
-    margin: 0 0 16px 0;
-    width: 270px;
+.companion-list__name--active::before {
+  background-color: @green-apple;
+}
 
-    .bloggersans-bold;
-    font-size: 21px;
-    line-height: 21px;
-    text-align: center;
-  }
 
 @media (min-width: 768px) {
   .companion-list {
@@ -83,10 +104,10 @@
     display: flex;
   }
 
-
   .companion-list__item {
     margin: 0 48px 0 0;
     width: 285px;
+    border-radius: 20px;
 
     &::before {
       width: 285px;
@@ -96,6 +117,11 @@
       background-size: 285px 285px;
       background-repeat: no-repeat;
       background-position: 0 0;
+    }
+
+    &::after {
+      top: 18px;
+      left: 20px;
     }
   }
 
@@ -112,12 +138,16 @@
   }
 
   .companion-list__name {
-    margin: 0 0 16px 0;
-    width: 285px;
+    margin: 1px 5px 22px 0;
 
-    .bloggersans-bold;
-    font-size: 21px;
-    line-height: 21px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+      top: 8px;
+    }
   }
 }
 
@@ -129,7 +159,6 @@
     display: flex;
   }
 
-
   .companion-list__item {
     margin: 0 60px 0 0;
     width: 285px;
@@ -137,11 +166,16 @@
     &::before {
       width: 285px;
       height: 285px;
-      border-radius: 10px;
+      border-radius: 20px;
 
       background-size: 285px 285px;
       background-repeat: no-repeat;
       background-position: 0 0;
+    }
+
+    &::after {
+      top: 23px;
+      left: 25px;
     }
   }
 
@@ -160,10 +194,10 @@
   }
 
   .companion-list__name {
-    margin: 0 0 16px 69px;
+    margin: 0 0 18px -3px;
 
     .bloggersans-bold;
-    font-size: 21px;
-    line-height: 21px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }

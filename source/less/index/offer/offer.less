@@ -1,0 +1,72 @@
+@import "offer-list.less";
+@import "offer-popup.less";
+
+.offer {
+  padding: 96px 0 38px 50px;
+  margin-top: -45px;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: @grey;
+}
+
+.offer__popup {
+  width: 220px;
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  z-index: 5;
+  border-radius: 20px;
+  padding: 33px 25px 0 25px;
+
+  background-color: white;
+}
+
+
+@media (min-width: 768px) {
+  .offer {
+    margin-top: -90px;
+    padding: 165px 40px 86px 40px;
+  }
+
+
+  .offer__popup {
+    width: 505px;
+    top: -20px;
+    left: 25px;
+    border-radius: 30px;
+    padding: 52px 91px 0 92px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .offer {
+    margin-top: -110px;
+    padding: 218px 130px 187px 130px;
+  }
+
+  .offer__show {
+    &::after {
+      top: -220px;
+      right: -500px;
+
+      width: 198px;
+      height: 198px;
+
+      background-image: url("../../img/rates@1x.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 198px 198px;
+    }
+  }
+
+
+  .offer__popup {
+    width: 632px;
+    top: -20px;
+    left: 25px;
+    padding: 52px 59px 0 59px;
+  }
+}

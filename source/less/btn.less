@@ -11,7 +11,6 @@
   border: none;
 }
 
-
 .btn--yellow {
   background-color: @light-gold;
 }
@@ -60,29 +59,53 @@
   border-radius: 10px;
 }
 
+.btn--direction, .btn--companions, .btn--map, .btn--about {
+  background-size: 10px 14px;
+  background-position: 236px 22px;
+  background-repeat: no-repeat;
+  background-image: url("../img/triangle-arrow-right.svg");
+}
+
 .btn--companions {
   margin-bottom: 30px;
+}
+
+.btn--offer {
+  .bloggersans-bold;
+
+  padding: 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: @dark-blue-grey;
 }
 
 .btn--traveler {
   grid-row: 8;
   margin-left: -5px;
   width: 230px;
-  line-height: 40px;
+  height: 40px;
+  line-height: 44px;
 }
 
 .btn--map {
+  height: 62px;
   border: solid 3px @dark-blue-grey;
   margin-bottom: 35px;
+  padding-left: 20px;
+
+  background-position: 234px 22px;
 }
 
 .btn--manage {
   text-transform: uppercase;
   text-align: center;
-  padding: 0;
-  line-height: 40px;
+  padding: 13px 0 11px 2px;
+  line-height: 17px;
+  font-size: 17px;
+  color: @dark-two;
 
   width: 189px;
+  margin-top: -1px;
 }
 
 .btn--upper {
@@ -126,14 +149,18 @@
 
 .btn--filter-companion {
   width: 230px;
-  line-height: 40px;
+  height: 40px;
+  margin-left: -7px;
+
+  line-height: 42px;
+  font-size: 17px;
 }
 
 @media (min-width: 768px) {
   .btn {
     width: 618px;
-    line-height: 81px;
 
+    line-height: 81px;
     font-size: 24px;
   }
 
@@ -141,12 +168,13 @@
     position: relative;
     width: 188px;
     height: 50px;
-    margin: 0;
+    margin: -10px 0 0 0;
     border-radius: 25px;
     padding: 0;
     overflow: auto;
 
     line-height: 50px;
+    font-size: 20px;
   }
 
   .btn--header-open {
@@ -155,20 +183,83 @@
   }
 
   .btn--about {
+    background-position: 228px 35px;
+  }
+
+  .btn--about {
     .visually-hidden--no;
     width: 274px;
     height: 81px;
+    margin-left: 35px;
+    padding-left: 35px;
 
     font-size: 24px;
     line-height: 24px;
+  }
+
+  .btn--direction, .btn--companions {
+    border-radius: 25px;
+    padding-left: 32px;
+
+    background-position: 575px 35px;
   }
 
   .btn--companions {
     margin-bottom: 0;
   }
 
+  .btn--offer {
+    width: 668px;
+    position: relative;
+
+    font-size: 20px;
+    line-height: 20px;
+    background-color: transparent;
+    color: @light-navy;
+
+    &::before {
+      content: "";
+
+      display: inline-block;
+      width: 67px;
+      height: 67px;
+      border-radius: 50%;
+      margin-right: 23px;
+      position: relative;
+      top: 26px;
+
+      background-image: url("../img/business.svg");
+      background-position: 25px 22px;
+      background-repeat: no-repeat;
+      background-size: 17px 21px;
+      background-color: @grey-four;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 27px;
+
+      width: 99px;
+      height: 99px;
+
+      background-image: url("../img/rates@1x.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 99px 99px;
+    }
+  }
+
   .btn--map {
+    height: 80px;
     margin-bottom: 85px;
+    padding-left: 30px;
+    border-radius: 20px;
+
+    background-position: 567px 30px;
   }
 
   .btn--popup {
@@ -181,19 +272,23 @@
   }
 
   .btn--filter-companion {
-    width: 618px;
-    line-height: 50px;
-
-    font-size: 20px;
+    width: 615px;
     border-radius: 25px;
+    height: 50px;
+    margin-left: 2px;
+    padding: 2px 3px 0 0;
+
+    line-height: 50px;
+    font-size: 20px;
   }
 
   .btn--traveler {
-    width: 148px;
+    width: 149px;
     height: 50px;
     grid-row-start: 3;
     grid-column: 2;
-    margin-left: -6px;
+    margin: 0 0 22px -4px;
+    border-radius: 25px;
 
     font-size: 20px;
     line-height: 50px;
@@ -247,26 +342,51 @@
     border-radius: 25px;
   }
 
+  .btn--about {
+    margin: 0;
+  }
+
   .btn--direction {
     width: 274px;
     height: 81px;
     grid-column: 2;
+    margin: 2px 0 0 3px;
+    border-radius: 20px;
 
+    background-position: 228px 35px;
   }
 
   .btn--header {
     order: 4;
+    margin-top: -13px;
   }
 
   .btn--companions {
     width: 280px;
     grid-column: 1;
+    border-radius: 20px;
+
+    line-height: 85px;
+    background-position: 235px 35px;
+  }
+
+  .btn--offer::after {
+    width: 198px;
+    height: 198px;
+    top: -205px;
+    left: 980px;
+
+    background-size: 198px 198px;
   }
 
   .btn--map {
     width: 324px;
     margin-bottom: 0;
+    padding-left: 32px;
     border-radius: 20px;
+
+    line-height: 75px;
+    background-position: 274px 31px;
   }
 
   .btn--popup {

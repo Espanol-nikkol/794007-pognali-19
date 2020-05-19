@@ -1,6 +1,7 @@
 .adventure-list {
   .bloggersans-medium;
-  margin: -12px auto 15px auto;
+  margin: -13px 0 12px;
+  width: 270px;
   display: flex;
 
   text-transform: uppercase;
@@ -60,8 +61,20 @@
   }
 }
 
+.adventure-list__item--companions {
+  margin-right: 18px;
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
 .adventure-list--catalog {
-  margin: 0 0 23px 0;
+  margin: 0 0 5px 0;
   grid-row: 5;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -69,10 +82,12 @@
 }
 
 .adventure-list__item--catalog {
-  margin-bottom: 15px;
-  padding-left: 50px;
+  margin-bottom: 4px;
+  padding-left: 40px;
   line-height: 24px;
   width: auto;
+
+  background-size: 26px 18px;
 }
 
 @media (min-width: 768px) {
@@ -85,23 +100,36 @@
   }
 
   .adventure-list--catalog {
-    margin: 0;
-    grid-row: -1;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width: auto;
+    margin: 0 0 15px 0;
+    grid-row: 5;
+    grid-column: 1 / span 3;
   }
 
   .adventure-list__item--catalog {
-    margin-bottom: 15px;
-    width: auto;
+    margin: 0 28px 0 0;
+    padding: 3px 0 0 46px;
+
+    background-size: 35px 24px;
+  }
+
+  .traveler-list__item:nth-child(2) .adventure-list__item--catalog {
+    margin-right: 32px;
+  }
+
+  .traveler-list__item:nth-child(3) .adventure-list__item--catalog {
+    margin-right: 26.5px;
   }
 }
 
 @media (min-width: 1440px) {
   .adventure-list__item {
-    margin-right: 0;
     width: 35px;
     height: 24px;
+  }
+
+  .adventure-list__item--companions {
+    margin-bottom: 6px;
   }
 
   .adventure-list--catalog {

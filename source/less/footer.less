@@ -1,10 +1,10 @@
 .footer {
   padding: 38px 0 24px 0;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 25px 25px 0 0;
   position: relative;
   z-index: 3;
-  margin-top: -204px;
+  margin-top: -245px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -12,7 +12,7 @@
 
 .footer__develop {
   width: 269px;
-  margin-left: 26px;
+  margin-left: 0px;
   position: relative;
   order: 3;
 
@@ -21,8 +21,8 @@
 
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -7px;
+    right: -1px;
     width: 27px;
     height: 34px;
 
@@ -47,14 +47,20 @@
 
   .footer__develop {
     width: 152px;
-    margin-left: 0;
+    margin: 17px 2px 0 0;
 
     font-size: 20px;
     line-height: 24px;
+
+    &::after {
+      right: -2px;
+      top: -3px;
+    }
   }
 
   .footer--catalog {
     margin-top: -100px;
+    border-radius: 57px 57px 0 0;
   }
 }
 
@@ -64,6 +70,7 @@
     padding: 51px 60px 46px 60px;
     margin-top: -150px;
     justify-content: space-between;
+    border-radius: 60px 60px 0 0;
   }
 
   .footer__develop {

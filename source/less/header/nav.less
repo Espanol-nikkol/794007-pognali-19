@@ -18,7 +18,10 @@
     top:31px;
     left: 270px;
 
-    background-color: red;
+    background-size: 24px 11px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../../img/menu.svg");
   }
 }
 
@@ -78,9 +81,19 @@
     display: flex;
     align-items: flex-start;
     order: 2;
+    position: relative;
+    margin-top: 15px;
 
     &::before {
-      display: none;
+      display: block;
+      width: 60px;
+      height: 2px;
+      border-radius: 1px;
+      top: 12px;
+      left: -105px;
+
+      background-color: white;
+      background-image: none;
     }
   }
 
@@ -99,6 +112,6 @@
   }
 
   .nav__item {
-    margin-right: 36px;
+    margin-right: 35px;
   }
 }

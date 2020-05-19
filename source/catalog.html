@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  <header class="header header--dark">
+  <header class="header header--dark header--catalog">
     <span class="slogan slogan--header slogan--header-catalog"></span>
     <nav class="nav nav--catalog">
       <ul class="nav__list nav__list--catalog visually-hidden">
@@ -33,8 +33,8 @@
     </div>
     <form class="filter-country">
       <h2 class="subhead subhead--filter-country">Фильтрация по странам:</h2>
-      <ul class="country-filter">
-        <li class="country-filter__item">
+      <ul class="filter-country__list">
+        <li class="filter-country__item">
           <ul class="filter-world visually-hidden">
             <li class="filter-world__item filter-world__item--active">Европа</li>
             <li class="filter-world__item">Азия</li>
@@ -43,7 +43,7 @@
             <li class="filter-world__item visually-hidden">Показать все</li>
           </ul>
         </li>
-        <li class="country-filter__item">
+        <li class="filter-country__item">
           <ul class="letter-list visually-hidden">
             <li class="letter-list__item"><input type="radio"><label>а</label></li>
             <li class="letter-list__item"><input type="radio"><label>б</label></li>
@@ -72,7 +72,7 @@
             <li class="letter-list__item"><input type="radio"><label>я</label></li>
           </ul>
         </li>
-        <li class="country-filter__item">
+        <li class="filter-country__item">
           <ul class="country-choice-list visually-hidden">
             <li class="country-choice-list__item">Австралия</li>
             <li class="country-choice-list__item">Австрия</li>
@@ -93,73 +93,73 @@
       <h2 class="subhead subhead--filter-companion">Подберите идеального попутчика</h2>
       <ul class="filter-companion__list">
         <li class="filter-companion__item">
-          <h3 class="subhead--sub">Хобби</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--hobby">
+          <h3 class="subhead--sub">Хобби:</h3>
+          <ul class="filter-companion__sublist filter-companion__sublist--hobby visually-hidden">
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Спортзал</label>
+              <input type="checkbox" class="filter-companion__check" checked id="fit">
+              <label class="filter-companion__label" for="fit">Спортзал</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Кальян</label>
+              <input type="checkbox" class="filter-companion__check"  id="hookah">
+              <label class="filter-companion__label" for="hookah">Кальян</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Диван</label>
+              <input type="checkbox" class="filter-companion__check"  id="sofa">
+              <label class="filter-companion__label" for="sofa">Диван</label>
             </li>
           </ul>
         </li>
-        <li class="filter-companion__item">
-          <h3 class="subhead--sub">Музыка</h3>
+        <li class="filter-companion__item filter-companion__item--open-sublist">
+          <h3 class="subhead--sub">Музыка:</h3>
           <ul class="filter-companion__sublist filter-companion__sublist--music">
             <li class="filter-companion__subitem">
-              <input type="checkbox" class="music-list__check">
-              <label>Тяжелый рок</label>
+              <input type="checkbox" class="filter-companion__check" checked class="music-list__check" id="hard-rock">
+              <label class="filter-companion__label" for="hard-rock">Тяжелый рок</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox" class="music-list__check">
-              <label>Русский рэп</label>
+              <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="rus-rap">
+              <label class="filter-companion__label" for="rus-rap">Русский рэп</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox" class="music-list__check">
-              <label>Евроденс</label>
+              <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="eurodance">
+              <label class="filter-companion__label" for="eurodance">Евроденс</label>
             </li>
           </ul>
         </li>
         <li class="filter-companion__item">
-          <h3 class="subhead--sub">Еда</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--food">
+          <h3 class="subhead--sub">Еда:</h3>
+          <ul class="filter-companion__sublist filter-companion__sublist--food visually-hidden">
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Мясоед</label>
+              <input type="checkbox" class="filter-companion__check" checked id="meat">
+              <label class="filter-companion__label" for="meat">Мясоед</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Сидит на ПП</label>
+              <input type="checkbox" class="filter-companion__check"  id="pp">
+              <label class="filter-companion__label" for="pp">Сидит на ПП</label>
             </li>
             <li class="filter-companion__subitem">
-              <input type="checkbox">
-              <label>Веган-сыроед</label>
+              <input type="checkbox" class="filter-companion__check"  id="vegan">
+              <label class="filter-companion__label" for="vegan">Веган-сыроед</label>
             </li>
           </ul>
         </li>
-        <li class="filter-companion__item">
-          <h3 class="subhead--sub">Транспорт</h3>
+        <li class="filter-companion__item filter-companion__item--open-sublist">
+          <h3 class="subhead--sub">Транспорт:</h3>
           <ul class="filter-companion__sublist filter-companion__sublist--transport transport-list transport-list--cycle transport-list--filter-companion">
-            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item transport-list__item--white transport-list__item--cycle"></li>
-            <li class="transport-list__item transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle"></li>
+            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
           </ul>
         </li>
-        <li class="filter-companion__item">
-          <h3 class="subhead--sub subhead--sub-level">Левел</h3>
+        <li class="filter-companion__item filter-companion__item--open-sublist">
+          <h3 class="subhead--sub subhead--sub-level">Левел:</h3>
           <ul class="filter-companion__sublist filter-companion__sublist--level">
             <li class="filter-companion__subitem filter-companion__subitem--level">
-              <input class="level-range level-range--low" type="number">
+              <label class="level-range__label level-range__label--low" for="level_low"><input class="level-range level-range--low" type="number" id="level_low" value="30"></label>
             </li>
             <li class="filter-companion__subitem filter-companion__subitem--level">
-              <input class="level-range level-range--high" type="number">
+              <label class="level-range__label level-range__label--high" for="level_high"><input class="level-range level-range--high" type="number" id="level_high" value="100"></label>
             </li>
           </ul>
         </li>
@@ -169,17 +169,17 @@
     <section class="traveler">
       <ul class="traveler-list">
         <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/firsova-desktop@1x.jpg">
+          <img class="traveler__avatar" src="img/firsova-mobile@1x.jpg">
           <span class="traveler__name">Таня Фирсова</span>
           <button class="traveler__like"></button>
           <span class="traveler__score">1,5 M</span>
           <ul class="tag-list tag-list--traveler">
-              <li class="tag-list__item">#ЗОЖ</li>
-              <li class="tag-list__item">#ПП</li>
-              <li class="tag-list__item">#Фитнес</li>
-              <li class="tag-list__item">#пляж</li>
-              <li class="tag-list__item">#авокадо</li>
-              <li class="tag-list__item">#смузи</li>
+              <li class="tag-list__item tag-list__item--traveler">#ЗОЖ</li>
+              <li class="tag-list__item tag-list__item--traveler">#ПП</li>
+              <li class="tag-list__item tag-list__item--traveler">#Фитнес</li>
+              <li class="tag-list__item tag-list__item--traveler">#пляж</li>
+              <li class="tag-list__item tag-list__item--traveler">#авокадо</li>
+              <li class="tag-list__item tag-list__item--traveler">#смузи</li>
             </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">хочет посетить:</span>
@@ -207,16 +207,16 @@
           <button class="btn  btn--yellow btn--traveler btn--upper">Позвать!</button>
         </li>
         <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/demin-desktop@1x.jpg">
+          <img class="traveler__avatar" src="img/demin-mobile@1x.jpg">
           <span class="traveler__name">Петя Демин</span>
           <button class="traveler__like"></button>
           <span class="traveler__score">1500</span>
           <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item">#бургер</li>
-            <li class="tag-list__item">#бар</li>
-            <li class="tag-list__item">#футбол</li>
-            <li class="tag-list__item">#концерт</li>
-            <li class="tag-list__item">#крафт</li>
+            <li class="tag-list__item tag-list__item--traveler">#бургер</li>
+            <li class="tag-list__item tag-list__item--traveler">#бар</li>
+            <li class="tag-list__item tag-list__item--traveler">#футбол</li>
+            <li class="tag-list__item tag-list__item--traveler">#концерт</li>
+            <li class="tag-list__item tag-list__item--traveler">#крафт</li>
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">хочет посетить:</span>
@@ -248,11 +248,11 @@
           <button class="traveler__like"></button>
           <span class="traveler__score">170</span>
           <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item">#рэп</li>
-            <li class="tag-list__item">#тату</li>
-            <li class="tag-list__item">#хайпбист</li>
-            <li class="tag-list__item">#кроссовки</li>
-            <li class="tag-list__item">#суприм</li>
+            <li class="tag-list__item tag-list__item--traveler">#рэп</li>
+            <li class="tag-list__item tag-list__item--traveler">#тату</li>
+            <li class="tag-list__item tag-list__item--traveler">#хайпбист</li>
+            <li class="tag-list__item tag-list__item--traveler">#кроссовки</li>
+            <li class="tag-list__item tag-list__item--traveler">#суприм</li>
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">хочет посетить:</span>
@@ -265,7 +265,7 @@
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list traveler__level  traveler__head-list--level traveler__head-list--level-demin">левел:</span>
+            <span class="traveler__head-list traveler__head-list--level traveler__head-list--level-smolov">левел:</span>
             <span class="traveler__headline"></span>
           </div>
           <div class="traveler__wrapper traveler__wrapper--transport-level">
@@ -281,14 +281,14 @@
         </li>
         <li class="traveler-list__item">
           <img class="traveler__avatar" src="img/rogovaya-desktop@1x.jpg">
-          <span class="traveler__name">Лариса Роговая</span>
+          <span class="traveler__name traveler__name--active">Лариса Роговая</span>
           <button class="traveler__like"></button>
           <span class="traveler__score">23</span>
           <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item">#образования</li>
-            <li class="tag-list__item">#карьера</li>
-            <li class="tag-list__item">#учеба</li>
-            <li class="tag-list__item">#линкедин</li>
+            <li class="tag-list__item tag-list__item--traveler">#образования</li>
+            <li class="tag-list__item tag-list__item--traveler">#карьера</li>
+            <li class="tag-list__item tag-list__item--traveler">#учеба</li>
+            <li class="tag-list__item tag-list__item--traveler">#линкедин</li>
           </ul>
           <div class="traveler__wrapper">
             <span class="traveler__head-list">хочет посетить:</span>

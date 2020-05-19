@@ -1,0 +1,310 @@
+.country-list {
+  margin-top: 61px;
+  margin-bottom: 25px;
+}
+
+.country-list__item {
+  height: 190px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 270px;
+    height: 120px;
+    border-radius: 10px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 270px 110px;
+  }
+
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 35px;
+    height: 24px;
+    position: absolute;
+    top: 87px;
+    left: 25px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 35px 24px;
+  }
+}
+
+.country-list__item--thailand::before {
+  background-image: url("../../img/thailand-mobile@1x.jpg");
+}
+
+.country-list__item--france::before {
+  background-image: url("../../img/france-mobile@1x.jpg");
+}
+
+.country-list__item--czech::before {
+  background-image: url("../../img/czech-mobile@1x.jpg");
+}
+
+.country-list__item--thailand::after {
+  background-image: url("../../img/thailand.png");
+}
+
+.country-list__item--france::after {
+  background-image: url("../../img/france.png");
+}
+
+.country-list__item--czech::after {
+  background-image: url("../../img/czech.png");
+}
+
+.country-list__card {
+  border-radius: 10px;
+  width: 270px;
+  min-height: 90px;
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  background-color: white;
+}
+
+.country-list__item:last-child .country-list__card::after {
+  content: "";
+
+  width: 320px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: -25px;
+
+  background-image: url("../../img/fade.png");
+  background-size: 681px 81px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.country-list__name {
+  margin: 26px auto 0 24px;
+  order: 1;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: @dark-two;
+  letter-spacing: 1px;
+}
+
+.country-list__motiv, .country-list__count {
+  .bloggersans-medium;
+  color: @greyish-brown-30;
+}
+
+.country-list__motiv {
+  line-height: 18px;
+
+  margin: -1px 0 23px 25px;
+  order: 3;
+}
+
+.country-list__count {
+  order:2;
+  margin: 22px 25px 0 0;
+  position: relative;
+
+  font-size: 16px;
+  line-height: 30px;
+  text-align: right;
+
+  &::before {
+    content: "";
+
+    width: 11px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -20px;
+
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../../img/user.svg");
+  }
+}
+
+@media (min-width: 768px) {
+  .country-list {
+    margin: 105px 0 47px 0;
+  }
+
+  .country-list__item {
+    height: 140px;
+    display: flex;
+
+    &::before {
+      width: 186px;
+      height: 140px;
+      border-radius: 20px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      order: 2;
+      background-size: 186px 140px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      position: absolute;
+      top: 16px;
+      left: 398px;
+
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 70px 47px;
+    }
+
+    &:last-child {
+      background-image: url("../../img/fade.png");
+      background-size: 681px 81px;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+  }
+
+  .country-list__item--thailand::before {
+    background-image: url("../../img/thailand-desktop@1x.jpg");
+  }
+
+  .country-list__item--france::before {
+    background-image: url("../../img/france-desktop@1x.jpg");
+  }
+
+  .country-list__item--czech::before {
+    background-image: url("../../img/czech-desktop@1x.jpg");
+  }
+
+  .country-list__card {
+    min-height: 140px;
+    width: 432px;
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    align-items: flex-start;
+    order: 1;
+  }
+
+  .country-list__item:last-child .country-list__card::after {
+
+    width: 133px;
+    bottom: 0;
+    left: 560px;
+  }
+
+  .country-list__name {
+    font-size: 24px;
+    line-height: 24px;
+    width: 432px;
+
+    margin: 30px 0 0 30px;
+  }
+
+  .country-list__motiv {
+    font-size: 20px;
+    line-height: 17.7px;
+
+    order: 2;
+    width: 432px;
+    margin: -10px 0 0 30px;
+  }
+
+  .country-list__count {
+    margin: 0 0 0 60px;
+    order: 3;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      width: 21px;
+      height: 20px;
+      top: 1px;
+      left: -30px;
+
+      background-size: 21px 20px;
+    }
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .country-list {
+    margin: -5px 171px 0 0;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: @grey-four;
+
+      position: absolute;
+      top: -70px;
+      left: -70px;
+      z-index: -1;
+    }
+  }
+
+  .country-list__item {
+    width: 559px;
+    margin-bottom: 10px;
+
+    &::after {
+      left: 338px;
+      top: 25px;
+    }
+  }
+
+  .country-list__item:last-child .country-list__card::after {
+    width: 681px;
+    height: 81px;
+    bottom: -5px;
+    left: -21px;
+  }
+
+  .country-list__card {
+    width: 373px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .country-list__name {
+    width: 432px;
+
+    margin: 25px 0 0 30px;
+  }
+
+  .country-list__motiv {
+    margin: -12px 0 0 31px;
+  }
+
+  .country-list__count {
+    margin: 5px 0 0 60px;
+
+    &::before {
+      width: 20px;
+      top: 5px;
+
+      background-size: 20px 20px;
+    }
+  }
+}
