@@ -7,6 +7,17 @@
   position: relative;
 
   background-color: @dark-two;
+
+  &--scroll {
+    padding-bottom: 3px;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: auto;
+    z-index: 9;
+
+    background-color: white;
+  }
 }
 
 .header--open {
@@ -20,6 +31,7 @@
 @media (min-width: 768px) {
   .header {
     width: 688px;
+    height: 45px;
     padding: 46px 40px 73px 40px;
     background-color: @dark-blue-grey;
 
@@ -36,12 +48,17 @@
   .header--open {
     background-color: white;
   }
+
+  .header--scroll {
+    background-color: white;
+  }
 }
 
 @media (min-width: 1440px) {
   .header {
     width: 1320px;
     padding: 47px 60px 0 60px;
+    height: auto;
 
     display: flex;
     background-color: @dark-two;
@@ -52,6 +69,12 @@
   }
 
   .header--form {
-    padding-bottom: 126px;
+    padding-bottom: 120px;
+  }
+
+  .header--scroll {
+    padding-top: 22px;
+    padding-bottom: 16px;
+    background-color: white;
   }
 }

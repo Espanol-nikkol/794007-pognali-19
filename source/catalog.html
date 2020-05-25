@@ -1,341 +1,613 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Погнали, каталог</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-  <header class="header header--dark header--catalog">
-    <span class="slogan slogan--header slogan--header-catalog"></span>
-    <nav class="nav nav--catalog">
-      <ul class="nav__list nav__list--catalog visually-hidden">
-        <li class="nav__item nav__item--catalog">О сервисе</li>
-        <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="">Направления</a></li>
-        <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="catalog.html">Попутчики</a></li>
-      </ul>
-      <button class="btn btn--yellow btn--upper btn--header visually-hidden" type="button">Авторизация</button>
-      <ul class='contact contact--header contact--header-catalog visually-hidden'>
-        <li class="contact__item contact__item--header"><a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a></li>
-        <li class="contact__item contact__item--header"><a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-      </ul>
-      <ul class="social-list social-list--header visually-hidden">
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="catalog">
-    <div class="head head--catalog">
-      <h1 class="head__title head__title--catalog">Попутчики</h1>
-      <a class="head__return">на главную</a>
-    </div>
-    <form class="filter-country">
-      <h2 class="subhead subhead--filter-country">Фильтрация по странам:</h2>
-      <ul class="filter-country__list">
-        <li class="filter-country__item">
-          <ul class="filter-world visually-hidden">
-            <li class="filter-world__item filter-world__item--active">Европа</li>
-            <li class="filter-world__item">Азия</li>
-            <li class="filter-world__item">Америка</li>
-            <li class="filter-world__item">Острова</li>
-            <li class="filter-world__item visually-hidden">Показать все</li>
-          </ul>
-        </li>
-        <li class="filter-country__item">
-          <ul class="letter-list visually-hidden">
-            <li class="letter-list__item"><input type="radio"><label>а</label></li>
-            <li class="letter-list__item"><input type="radio"><label>б</label></li>
-            <li class="letter-list__item"><input type="radio"><label>в</label></li>
-            <li class="letter-list__item"><input type="radio"><label>г</label></li>
-            <li class="letter-list__item"><input type="radio"><label>д</label></li>
-            <li class="letter-list__item"><input type="radio"><label>е</label></li>
-            <li class="letter-list__item"><input type="radio"><label>з</label></li>
-            <li class="letter-list__item"><input type="radio"><label>и</label></li>
-            <li class="letter-list__item"><input type="radio"><label>к</label></li>
-            <li class="letter-list__item"><input type="radio"><label>л</label></li>
-            <li class="letter-list__item"><input type="radio"><label>м</label></li>
-            <li class="letter-list__item"><input type="radio"><label>н</label></li>
-            <li class="letter-list__item"><input type="radio"><label>о</label></li>
-            <li class="letter-list__item"><input type="radio"><label>п</label></li>
-            <li class="letter-list__item"><input type="radio"><label>р</label></li>
-            <li class="letter-list__item"><input type="radio"><label>с</label></li>
-            <li class="letter-list__item"><input type="radio"><label>т</label></li>
-            <li class="letter-list__item"><input type="radio"><label>у</label></li>
-            <li class="letter-list__item"><input type="radio"><label>ф</label></li>
-            <li class="letter-list__item"><input type="radio"><label>х</label></li>
-            <li class="letter-list__item"><input type="radio"><label>ч</label></li>
-            <li class="letter-list__item"><input type="radio"><label>ш</label></li>
-            <li class="letter-list__item"><input type="radio"><label>э</label></li>
-            <li class="letter-list__item"><input type="radio"><label>ю</label></li>
-            <li class="letter-list__item"><input type="radio"><label>я</label></li>
-          </ul>
-        </li>
-        <li class="filter-country__item">
-          <ul class="country-choice-list visually-hidden">
-            <li class="country-choice-list__item">Австралия</li>
-            <li class="country-choice-list__item">Австрия</li>
-            <li class="country-choice-list__item">Азейрбаджан</li>
-            <li class="country-choice-list__item">Албания</li>
-            <li class="country-choice-list__item">Алжир</li>
-            <li class="country-choice-list__item">Ангола</li>
-            <li class="country-choice-list__item">Андорра</li>
-            <li class="country-choice-list__item">Антигуа и Барбуда</li>
-            <li class="country-choice-list__item">Аргентина</li>
-            <li class="country-choice-list__item">Армения</li>
-            <li class="country-choice-list__item">Афганистан</li>
-          </ul>
-        </li>
-      </ul>
-    </form>
-    <form class="filter-companion">
-      <h2 class="subhead subhead--filter-companion">Подберите идеального попутчика</h2>
-      <ul class="filter-companion__list">
-        <li class="filter-companion__item">
-          <h3 class="subhead--sub">Хобби:</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--hobby visually-hidden">
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check" checked id="fit">
-              <label class="filter-companion__label" for="fit">Спортзал</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  id="hookah">
-              <label class="filter-companion__label" for="hookah">Кальян</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  id="sofa">
-              <label class="filter-companion__label" for="sofa">Диван</label>
-            </li>
-          </ul>
-        </li>
-        <li class="filter-companion__item filter-companion__item--open-sublist">
-          <h3 class="subhead--sub">Музыка:</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--music">
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check" checked class="music-list__check" id="hard-rock">
-              <label class="filter-companion__label" for="hard-rock">Тяжелый рок</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="rus-rap">
-              <label class="filter-companion__label" for="rus-rap">Русский рэп</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="eurodance">
-              <label class="filter-companion__label" for="eurodance">Евроденс</label>
-            </li>
-          </ul>
-        </li>
-        <li class="filter-companion__item">
-          <h3 class="subhead--sub">Еда:</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--food visually-hidden">
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check" checked id="meat">
-              <label class="filter-companion__label" for="meat">Мясоед</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  id="pp">
-              <label class="filter-companion__label" for="pp">Сидит на ПП</label>
-            </li>
-            <li class="filter-companion__subitem">
-              <input type="checkbox" class="filter-companion__check"  id="vegan">
-              <label class="filter-companion__label" for="vegan">Веган-сыроед</label>
-            </li>
-          </ul>
-        </li>
-        <li class="filter-companion__item filter-companion__item--open-sublist">
-          <h3 class="subhead--sub">Транспорт:</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--transport transport-list transport-list--cycle transport-list--filter-companion">
-            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
-            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle"></li>
-            <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
-          </ul>
-        </li>
-        <li class="filter-companion__item filter-companion__item--open-sublist">
-          <h3 class="subhead--sub subhead--sub-level">Левел:</h3>
-          <ul class="filter-companion__sublist filter-companion__sublist--level">
-            <li class="filter-companion__subitem filter-companion__subitem--level">
-              <label class="level-range__label level-range__label--low" for="level_low"><input class="level-range level-range--low" type="number" id="level_low" value="30"></label>
-            </li>
-            <li class="filter-companion__subitem filter-companion__subitem--level">
-              <label class="level-range__label level-range__label--high" for="level_high"><input class="level-range level-range--high" type="number" id="level_high" value="100"></label>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <button class="btn btn--white btn--upper btn--filter-companion">Показать</button>
-    </form>
-    <section class="traveler">
-      <ul class="traveler-list">
-        <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/firsova-mobile@1x.jpg">
-          <span class="traveler__name">Таня Фирсова</span>
-          <button class="traveler__like"></button>
-          <span class="traveler__score">1,5 M</span>
-          <ul class="tag-list tag-list--traveler">
-              <li class="tag-list__item tag-list__item--traveler">#ЗОЖ</li>
-              <li class="tag-list__item tag-list__item--traveler">#ПП</li>
-              <li class="tag-list__item tag-list__item--traveler">#Фитнес</li>
-              <li class="tag-list__item tag-list__item--traveler">#пляж</li>
-              <li class="tag-list__item tag-list__item--traveler">#авокадо</li>
-              <li class="tag-list__item tag-list__item--traveler">#смузи</li>
-            </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">хочет посетить:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <ul class="adventure-list adventure-list--catalog">
-              <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--shrilanka">Шри-Ланка</li>
-              <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--thailand">Таиланд</li>
-              <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--seychelles">Сейшелы</li>
-            </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list traveler__head-list--level">левел:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <div class="traveler__wrapper traveler__wrapper--transport-level">
-            <ul class="transport-list transport-list--cycle transport-list--traveler">
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            </ul>
-            <div class="traveler__level traveler__level--firsova"></div>
-          </div>
-          <button class="btn  btn--yellow btn--traveler btn--upper">Позвать!</button>
-        </li>
-        <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/demin-mobile@1x.jpg">
-          <span class="traveler__name">Петя Демин</span>
-          <button class="traveler__like"></button>
-          <span class="traveler__score">1500</span>
-          <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item tag-list__item--traveler">#бургер</li>
-            <li class="tag-list__item tag-list__item--traveler">#бар</li>
-            <li class="tag-list__item tag-list__item--traveler">#футбол</li>
-            <li class="tag-list__item tag-list__item--traveler">#концерт</li>
-            <li class="tag-list__item tag-list__item--traveler">#крафт</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">хочет посетить:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <ul class="adventure-list adventure-list--catalog">
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--belgium">Бельгия</li>
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--czech">Чехия</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-demin">левел:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <div class="traveler__wrapper traveler__wrapper--transport-level">
-            <ul class="transport-list transport-list--cycle transport-list--traveler">
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-            </ul>
-            <div class="traveler__level traveler__level--demin"></div>
-          </div>
-          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
-        </li>
-        <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/smolov-desktop@1x.jpg">
-          <span class="traveler__name">Марк Смолов</span>
-          <button class="traveler__like"></button>
-          <span class="traveler__score">170</span>
-          <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item tag-list__item--traveler">#рэп</li>
-            <li class="tag-list__item tag-list__item--traveler">#тату</li>
-            <li class="tag-list__item tag-list__item--traveler">#хайпбист</li>
-            <li class="tag-list__item tag-list__item--traveler">#кроссовки</li>
-            <li class="tag-list__item tag-list__item--traveler">#суприм</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">хочет посетить:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <ul class="adventure-list adventure-list--catalog">
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--usa">США</li>
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--australia">Австралия</li>
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--dominica">Доминика</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list traveler__head-list--level traveler__head-list--level-smolov">левел:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <div class="traveler__wrapper traveler__wrapper--transport-level">
-            <ul class="transport-list transport-list--cycle transport-list--traveler">
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            </ul>
-            <div class="traveler__level traveler__level--smolov"></div>
-          </div>
-          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
-        </li>
-        <li class="traveler-list__item">
-          <img class="traveler__avatar" src="img/rogovaya-desktop@1x.jpg">
-          <span class="traveler__name traveler__name--active">Лариса Роговая</span>
-          <button class="traveler__like"></button>
-          <span class="traveler__score">23</span>
-          <ul class="tag-list tag-list--traveler">
-            <li class="tag-list__item tag-list__item--traveler">#образования</li>
-            <li class="tag-list__item tag-list__item--traveler">#карьера</li>
-            <li class="tag-list__item tag-list__item--traveler">#учеба</li>
-            <li class="tag-list__item tag-list__item--traveler">#линкедин</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">хочет посетить:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <ul class="adventure-list adventure-list--catalog">
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--uk">Великобритания</li>
-            <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--germany">Германия</li>
-          </ul>
-          <div class="traveler__wrapper">
-            <span class="traveler__head-list">транспорт:</span>
-            <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-rogovay">левел:</span>
-            <span class="traveler__headline"></span>
-          </div>
-          <div class="traveler__wrapper traveler__wrapper--transport-level">
-            <ul class="transport-list transport-list--cycle transport-list--traveler">
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-              <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
-            </ul>
-            <div class="traveler__level traveler__level--rogovay"></div>
-          </div>
-          <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
-        </li>
-      </ul>
-      <a class="traveler__more">Показать ещё</a>
-      <div class="page">
-        <ul class="page__list">
-          <li class="page__number page__number--active">1</li>
-          <li class="page__number">2</li>
-          <li class="page__number">3</li>
-          <li class="page__number">4</li>
-        </ul>
-        <span class="page__move page__move--left"></span>
-        <span class="page__move page__move--right"></span>
-      </div>
-    </section>
-  </main>
-  <footer class="footer footer--catalog">
-    <span class="slogan slogan--footer"></span>
-    <ul class="social-list social-list--footer">
-      <li class="social-list__item social-list__item--footer"></li>
-      <li class="social-list__item social-list__item--footer"></li>
-      <li class="social-list__item social-list__item--footer"></li>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Погнали, каталог</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header header--dark header--catalog">
+  <span class="slogan slogan--header slogan--header-catalog"></span>
+  <nav class="nav nav--catalog">
+    <button type="button" class="nav__open"></button>
+    <ul class="nav__list nav__list--catalog visually-hidden">
+      <li class="nav__item nav__item--catalog"><a class="nav__link nav-link--catalog" href="index.html">О сервисе</a></li>
+      <li class="nav__item nav__item--catalog"><a class="nav__link nav-link--catalog" href="form.html">Направления</a></li>
+      <li class="nav__item nav__item--catalog"><a class="nav__link nav-link--catalog" href="#">Попутчики</a></li>
     </ul>
-    <span class="footer__develop">Разработано</span>
-  </footer>
-  </body>
+    <button class="btn btn--yellow btn--upper btn--header visually-hidden" type="button">Авторизация</button>
+    <ul class='contact contact--header contact--header-catalog visually-hidden'>
+      <li class="contact__item contact__item--header"><a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a></li>
+      <li class="contact__item contact__item--header"><a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    </ul>
+    <ul class="social-list social-list--header visually-hidden">
+      <li class="social-list__item"></li>
+      <li class="social-list__item"></li>
+      <li class="social-list__item"></li>
+    </ul>
+  </nav>
+</header>
+<main class="catalog">
+  <div class="head head--catalog">
+    <h1 class="head__title head__title--catalog">Попутчики</h1>
+    <a class="head__return">на главную</a>
+  </div>
+  <form class="filter-country">
+    <div class="filter-country__wrapper">
+      <h2 class="subhead subhead--filter-country">Фильтрация по странам:</h2>
+      <ul class="filter-world">
+        <li class="filter-world__item filter-world__item--active">Европа</li>
+        <li class="filter-world__item">Азия</li>
+        <li class="filter-world__item">Америка</li>
+        <li class="filter-world__item">Острова</li>
+        <li class="filter-world__item visually-hidden">Показать все</li>
+      </ul>
+      <ul class="country-dict">
+        <li class="country-dict__item country-dict__item--active">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="а">
+          <label class="country-dict__label" for="а">а</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Австралия</li>
+            <li class="country-dict__country">Австрия</li>
+            <li class="country-dict__country">Азербайджан</li>
+            <li class="country-dict__country">Албания</li>
+            <li class="country-dict__country">Алжир</li>
+            <li class="country-dict__country">Ангола</li>
+            <li class="country-dict__country">Андорра</li>
+            <li class="country-dict__country">Антигуа и Барбуда</li>
+            <li class="country-dict__country">Аргентина</li>
+            <li class="country-dict__country">Армения</li>
+            <li class="country-dict__country">Афганистан</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="б">
+          <label class="country-dict__label" for="б">б</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Багамские Острова</li>
+            <li class="country-dict__country">Бангладеш</li>
+            <li class="country-dict__country">Барбадос</li>
+            <li class="country-dict__country">Бахрейн</li>
+            <li class="country-dict__country">Белоруссия</li>
+            <li class="country-dict__country">Белиз</li>
+            <li class="country-dict__country">Бельгия</li>
+            <li class="country-dict__country">Бенин</li>
+            <li class="country-dict__country">Болгария</li>
+            <li class="country-dict__country">Боливия</li>
+            <li class="country-dict__country">Босния и Герцеговина</li>
+            <li class="country-dict__country">Ботсвана</li>
+            <li class="country-dict__country">Бразилия</li>
+            <li class="country-dict__country">Бруней</li>
+            <li class="country-dict__country">Буркина-Фасо</li>
+            <li class="country-dict__country">Бурунди</li>
+            <li class="country-dict__country">Бутан</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="в">
+          <label class="country-dict__label" for="в">в</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Вануату</li>
+            <li class="country-dict__country">Великобритания</li>
+            <li class="country-dict__country">Венгрия</li>
+            <li class="country-dict__country">Венесуэла</li>
+            <li class="country-dict__country">Восточный Тимор</li>
+            <li class="country-dict__country">Вьетнам</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="г">
+          <label class="country-dict__label" for="г">г</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Габон</li>
+            <li class="country-dict__country">Гаити</li>
+            <li class="country-dict__country">Гайана</li>
+            <li class="country-dict__country">Гамбия</li>
+            <li class="country-dict__country">Гана</li>
+            <li class="country-dict__country">Гватемала</li>
+            <li class="country-dict__country">Гвинея</li>
+            <li class="country-dict__country">Гвинея-Бисау</li>
+            <li class="country-dict__country">Германия</li>
+            <li class="country-dict__country">Гондурас</li>
+            <li class="country-dict__country">Гренада</li>
+            <li class="country-dict__country">Греция</li>
+            <li class="country-dict__country">Грузия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="д">
+          <label class="country-dict__label" for="д">д</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Дания</li>
+            <li class="country-dict__country">Джибути</li>
+            <li class="country-dict__country">Доминика</li>
+            <li class="country-dict__country">Доминикана</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="е">
+          <label class="country-dict__label" for="е">е</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Египет</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="з">
+          <label class="country-dict__label" for="з">з</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Замбия</li>
+            <li class="country-dict__country">Зимбабве</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="и">
+          <label class="country-dict__label" for="и">и</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Израиль</li>
+            <li class="country-dict__country">Индия</li>
+            <li class="country-dict__country">Индонезия</li>
+            <li class="country-dict__country">Иордания</li>
+            <li class="country-dict__country">Ирак</li>
+            <li class="country-dict__country">Иран</li>
+            <li class="country-dict__country">Ирландия</li>
+            <li class="country-dict__country">Исландия</li>
+            <li class="country-dict__country">Испания</li>
+            <li class="country-dict__country">Италия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="к">
+          <label class="country-dict__label" for="к">к</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Кабо-Верде</li>
+            <li class="country-dict__country">Казахстан</li>
+            <li class="country-dict__country">Камбоджа</li>
+            <li class="country-dict__country">Камерун</li>
+            <li class="country-dict__country">Канада</li>
+            <li class="country-dict__country">Катар</li>
+            <li class="country-dict__country">Кения</li>
+            <li class="country-dict__country">Кипр</li>
+            <li class="country-dict__country">Киргизия</li>
+            <li class="country-dict__country">Кирибати</li>
+            <li class="country-dict__country">Китай</li>
+            <li class="country-dict__country">Колумбия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="л">
+          <label class="country-dict__label" for="л">л</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Лаос</li>
+            <li class="country-dict__country">Латвия</li>
+            <li class="country-dict__country">Лесото</li>
+            <li class="country-dict__country">Либерия</li>
+            <li class="country-dict__country">Ливан</li>
+            <li class="country-dict__country">Ливия</li>
+            <li class="country-dict__country">Литва</li>
+            <li class="country-dict__country">Лихтенштейн</li>
+            <li class="country-dict__country">Люксембург</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="м">
+          <label class="country-dict__label" for="м">м</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Маврикий</li>
+            <li class="country-dict__country">Мавритания</li>
+            <li class="country-dict__country">Мадагаскар</li>
+            <li class="country-dict__country">Малави</li>
+            <li class="country-dict__country">Малайзия</li>
+            <li class="country-dict__country">Мали</li>
+            <li class="country-dict__country">Мальдивы</li>
+            <li class="country-dict__country">Мальта</li>
+            <li class="country-dict__country">Марокко</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="н">
+          <label class="country-dict__label" for="н">н</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Намибия</li>
+            <li class="country-dict__country">Науру</li>
+            <li class="country-dict__country">Непал</li>
+            <li class="country-dict__country">Нигер</li>
+            <li class="country-dict__country">Нигерия</li>
+            <li class="country-dict__country">Нидерланды</li>
+            <li class="country-dict__country">Никарагуа</li>
+            <li class="country-dict__country">Новая Зеландия</li>
+            <li class="country-dict__country">Норвегия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="о">
+          <label class="country-dict__label" for="о">о</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">ОАЭ</li>
+            <li class="country-dict__country">Оман</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="п">
+          <label class="country-dict__label" for="п">п</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Пакистан</li>
+            <li class="country-dict__country">Палау</li>
+            <li class="country-dict__country">Панама</li>
+            <li class="country-dict__country">Папуа — Новая Гвинея</li>
+            <li class="country-dict__country">Парагвай</li>
+            <li class="country-dict__country">Перу</li>
+            <li class="country-dict__country">Польша</li>
+            <li class="country-dict__country">Португалия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="р">
+          <label class="country-dict__label" for="р">р</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Руанда</li>
+            <li class="country-dict__country">Румыния</li>
+            <li class="country-dict__country">Россия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="с">
+          <label class="country-dict__label" for="с">с</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Сальвадор</li>
+            <li class="country-dict__country">Самоа</li>
+            <li class="country-dict__country">Сан-Марино</li>
+            <li class="country-dict__country">Саудовская Аравия</li>
+            <li class="country-dict__country">Сейшелы</li>
+            <li class="country-dict__country">Сенегал</li>
+            <li class="country-dict__country">Сербия</li>
+            <li class="country-dict__country">Сингапур</li>
+            <li class="country-dict__country">Сирия</li>
+            <li class="country-dict__country">Словакия</li>
+            <li class="country-dict__country">Словения</li>
+            <li class="country-dict__country">США</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="т">
+          <label class="country-dict__label" for="т">т</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Таджикистан</li>
+            <li class="country-dict__country">Таиланд</li>
+            <li class="country-dict__country">Танзания</li>
+            <li class="country-dict__country">Того</li>
+            <li class="country-dict__country">Тонга</li>
+            <li class="country-dict__country">Тринидад и Тобаго</li>
+            <li class="country-dict__country">Тувалу</li>
+            <li class="country-dict__country">Тунис</li>
+            <li class="country-dict__country">Туркмения</li>
+            <li class="country-dict__country">Турция</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="у">
+          <label class="country-dict__label" for="у">у</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Уганда</li>
+            <li class="country-dict__country">Узбекистан</li>
+            <li class="country-dict__country">Украина</li>
+            <li class="country-dict__country">Уругвай</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="ф">
+          <label class="country-dict__label" for="ф">ф</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Фиджи</li>
+            <li class="country-dict__country">Филиппины</li>
+            <li class="country-dict__country">Финляндия</li>
+            <li class="country-dict__country">Франция</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="х">
+          <label class="country-dict__label" for="х">х</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Хорватия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="ч">
+          <label class="country-dict__label" for="ч">ч</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Чад</li>
+            <li class="country-dict__country">Черногория</li>
+            <li class="country-dict__country">Чехия</li>
+            <li class="country-dict__country">Чили</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="ш">
+          <label class="country-dict__label" for="ш">ш</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Швейцария</li>
+            <li class="country-dict__country">Швеция</li>
+            <li class="country-dict__country">Шри-Ланка</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="э">
+          <label class="country-dict__label" for="э">э</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Эквадор</li>
+            <li class="country-dict__country">Эритрея</li>
+            <li class="country-dict__country">Эсватини</li>
+            <li class="country-dict__country">Эстония</li>
+            <li class="country-dict__country">Эфиопия</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="ю">
+          <label class="country-dict__label" for="ю">ю</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">ЮАР</li>
+            <li class="country-dict__country">Южный Судан</li>
+          </ul>
+        </li>
+        <li class="country-dict__item">
+          <input class="country-dict__radio" type="radio" name="country-letter" id="я">
+          <label class="country-dict__label" for="я">я</label>
+          <ul class="country-dict__list">
+            <li class="country-dict__country">Ямайка</li>
+            <li class="country-dict__country">Япония</li>
+          </ul>
+        </li>
+  </ul>
+      <button class="btn btn--filter-country visually-hidden" type="button">Свернуть</button>
+    </div>
+  </form>
+  <form class="filter-companion">
+    <h2 class="subhead subhead--filter-companion">Подберите идеального попутчика</h2>
+    <ul class="filter-companion__list">
+      <li class="filter-companion__item">
+        <h3 class="subhead--sub">Хобби:</h3>
+        <ul class="filter-companion__sublist filter-companion__sublist--hobby">
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check" checked id="fit">
+            <label class="filter-companion__label" for="fit">Спортзал</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check" id="hookah">
+            <label class="filter-companion__label" for="hookah">Кальян</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check" id="sofa">
+            <label class="filter-companion__label" for="sofa">Диван</label>
+          </li>
+        </ul>
+      </li>
+      <li class="filter-companion__item filter-companion__item--open">
+        <h3 class="subhead--sub">Музыка:</h3>
+        <ul class="filter-companion__sublist filter-companion__sublist--music">
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check" checked class="music-list__check" id="hard-rock">
+            <label class="filter-companion__label" for="hard-rock">Тяжелый рок</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="rus-rap">
+            <label class="filter-companion__label" for="rus-rap">Русский рэп</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check"  class="music-list__check" id="eurodance">
+            <label class="filter-companion__label" for="eurodance">Евроденс</label>
+          </li>
+        </ul>
+      </li>
+      <li class="filter-companion__item">
+        <h3 class="subhead--sub">Еда:</h3>
+        <ul class="filter-companion__sublist filter-companion__sublist--food">
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check" checked id="meat">
+            <label class="filter-companion__label" for="meat">Мясоед</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check"  id="pp">
+            <label class="filter-companion__label" for="pp">Сидит на ПП</label>
+          </li>
+          <li class="filter-companion__subitem">
+            <input type="checkbox" class="filter-companion__check"  id="vegan">
+            <label class="filter-companion__label" for="vegan">Веган-сыроед</label>
+          </li>
+        </ul>
+      </li>
+      <li class="filter-companion__item filter-companion__item--open">
+        <h3 class="subhead--sub">Транспорт:</h3>
+        <ul class="filter-companion__sublist filter-companion__sublist--transport transport-list transport-list--cycle">
+          <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+          <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+          <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle"></li>
+          <li class="transport-list__item filter-companion__subitem--transport transport-list__item--white transport-list__item--cycle transport-list__item--active"></li>
+        </ul>
+      </li>
+      <li class="filter-companion__item filter-companion__item--open">
+        <h3 class="subhead--sub subhead--sub-level">Левел:</h3>
+        <ul class="filter-companion__sublist filter-companion__sublist--level">
+          <li class="filter-companion__subitem filter-companion__subitem--level">
+            <label class="level-range__label level-range__label--low" for="level_low"><input class="level-range level-range--low" type="number" id="level_low" value="30"></label>
+          </li>
+          <li class="filter-companion__subitem filter-companion__subitem--level">
+            <label class="level-range__label level-range__label--high" for="level_high"><input class="level-range level-range--high" type="number" id="level_high" value="100"></label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <button class="btn btn--white btn--upper btn--filter-companion">Показать</button>
+  </form>
+  <section class="traveler">
+    <ul class="traveler-list">
+      <li class="traveler-list__item">
+        <img class="traveler__avatar" src="img/firsova-mobile@1x.jpg">
+        <span class="traveler__name">Таня Фирсова</span>
+        <button class="traveler__like traveler__like--like"></button>
+        <span class="traveler__score">1,5 M</span>
+        <ul class="tag-list tag-list--traveler">
+          <li class="tag-list__item tag-list__item--traveler">#ЗОЖ</li>
+          <li class="tag-list__item tag-list__item--traveler">#ПП</li>
+          <li class="tag-list__item tag-list__item--traveler">#Фитнес</li>
+          <li class="tag-list__item tag-list__item--traveler">#пляж</li>
+          <li class="tag-list__item tag-list__item--traveler">#авокадо</li>
+          <li class="tag-list__item tag-list__item--traveler">#смузи</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">хочет посетить:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <ul class="adventure-list adventure-list--catalog">
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--shrilanka">Шри-Ланка</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--thailand">Таиланд</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--seychelles">Сейшелы</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">транспорт:</span>
+          <span class="traveler__head-list traveler__head-list--level">левел:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <div class="traveler__wrapper traveler__wrapper--transport-level">
+          <ul class="transport-list transport-list--cycle transport-list--traveler">
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+          </ul>
+          <div class="traveler__level traveler__level--firsova"></div>
+        </div>
+        <button class="btn  btn--yellow btn--traveler btn--upper">Позвать!</button>
+      </li>
+      <li class="traveler-list__item">
+        <img class="traveler__avatar" src="img/demin-mobile@1x.jpg">
+        <span class="traveler__name">Петя Демин</span>
+        <button class="traveler__like"></button>
+        <span class="traveler__score">1500</span>
+        <ul class="tag-list tag-list--traveler">
+          <li class="tag-list__item tag-list__item--traveler">#бургер</li>
+          <li class="tag-list__item tag-list__item--traveler">#бар</li>
+          <li class="tag-list__item tag-list__item--traveler">#футбол</li>
+          <li class="tag-list__item tag-list__item--traveler">#концерт</li>
+          <li class="tag-list__item tag-list__item--traveler">#крафт</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">хочет посетить:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <ul class="adventure-list adventure-list--catalog">
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--belgium">Бельгия</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--czech">Чехия</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">транспорт:</span>
+          <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-demin">левел:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <div class="traveler__wrapper traveler__wrapper--transport-level">
+          <ul class="transport-list transport-list--cycle transport-list--traveler">
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+          </ul>
+          <div class="traveler__level traveler__level--demin"></div>
+        </div>
+        <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
+      </li>
+      <li class="traveler-list__item">
+        <img class="traveler__avatar" src="img/smolov-mobile@1x.jpg">
+        <span class="traveler__name">Марк Смолов</span>
+        <button class="traveler__like"></button>
+        <span class="traveler__score">170</span>
+        <ul class="tag-list tag-list--traveler">
+          <li class="tag-list__item tag-list__item--traveler">#рэп</li>
+          <li class="tag-list__item tag-list__item--traveler">#тату</li>
+          <li class="tag-list__item tag-list__item--traveler">#хайпбист</li>
+          <li class="tag-list__item tag-list__item--traveler">#кроссовки</li>
+          <li class="tag-list__item tag-list__item--traveler">#суприм</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">хочет посетить:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <ul class="adventure-list adventure-list--catalog">
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--usa">США</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--australia">Австралия</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--dominica">Доминика</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">транспорт:</span>
+          <span class="traveler__head-list traveler__head-list--level traveler__head-list--level-smolov">левел:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <div class="traveler__wrapper traveler__wrapper--transport-level">
+          <ul class="transport-list transport-list--cycle transport-list--traveler">
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+          </ul>
+          <div class="traveler__level traveler__level--smolov"></div>
+        </div>
+        <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
+      </li>
+      <li class="traveler-list__item">
+        <img class="traveler__avatar" src="img/rogovaya-mobile@1x.jpg">
+        <span class="traveler__name traveler__name--active">Лариса Роговая</span>
+        <button class="traveler__like"></button>
+        <span class="traveler__score">23</span>
+        <ul class="tag-list tag-list--traveler">
+          <li class="tag-list__item tag-list__item--traveler">#образования</li>
+          <li class="tag-list__item tag-list__item--traveler">#карьера</li>
+          <li class="tag-list__item tag-list__item--traveler">#учеба</li>
+          <li class="tag-list__item tag-list__item--traveler">#линкедин</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">хочет посетить:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <ul class="adventure-list adventure-list--catalog">
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--uk">Великобритания</li>
+          <li class="adventure-list__item adventure-list__item--catalog adventure-list__item--germany">Германия</li>
+        </ul>
+        <div class="traveler__wrapper">
+          <span class="traveler__head-list">транспорт:</span>
+          <span class="traveler__head-list  traveler__head-list--level traveler__head-list--level-rogovay">левел:</span>
+          <span class="traveler__headline"></span>
+        </div>
+        <div class="traveler__wrapper traveler__wrapper--transport-level">
+          <ul class="transport-list transport-list--cycle transport-list--traveler">
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle transport-list__item--active"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+            <li class="transport-list__item transport-list__item--traveler transport-list__item--cycle"></li>
+          </ul>
+          <div class="traveler__level traveler__level--rogovay"></div>
+        </div>
+        <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
+      </li>
+    </ul>
+    <a class="traveler__more">Показать ещё</a>
+    <div class="page">
+      <ul class="page__list">
+        <li class="page__number page__number--active">1</li>
+        <li class="page__number">2</li>
+        <li class="page__number">3</li>
+        <li class="page__number">4</li>
+      </ul>
+      <span class="page__move page__move--left"></span>
+      <span class="page__move page__move--right"></span>
+    </div>
+  </section>
+</main>
+<footer class="footer footer--catalog">
+  <span class="slogan slogan--footer"></span>
+  <ul class="social-list social-list--footer">
+    <li class="social-list__item social-list__item--footer"></li>
+    <li class="social-list__item social-list__item--footer"></li>
+    <li class="social-list__item social-list__item--footer"></li>
+  </ul>
+  <span class="footer__develop">Разработано</span>
+</footer>
+</body>
+<script type="text/javascript" src="js/catalog.js"></script>
 </html>

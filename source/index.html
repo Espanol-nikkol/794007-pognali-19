@@ -9,13 +9,14 @@
     <header class="header">
       <span class="slogan slogan--header"></span>
       <nav class="nav">
+        <button type="button" class="nav__open"></button>
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="">О сервисе</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Направления</a></li>
+          <li class="nav__item"><a class="nav__link" href="form.html">Направления</a></li>
           <li class="nav__item"><a class="nav__link" href="catalog.html">Попутчики</a></li>
         </ul>
         <button class="btn btn--yellow btn--upper btn--header" type="button">Авторизация</button>
-        <ul class='contact contact--header visually-hidden'>
+        <ul class='contact contact--header'>
           <li class="contact__item contact__item--header">
             <a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a>
           </li>
@@ -24,9 +25,9 @@
           </li>
         </ul>
         <ul class="social-list social-list--header">
-          <li class="social-list__item"></li>
-          <li class="social-list__item"></li>
-          <li class="social-list__item"></li>
+          <li class="social-list__item social-list__item--header"></li>
+          <li class="social-list__item social-list__item--header"></li>
+          <li class="social-list__item social-list__item--header"></li>
         </ul>
       </nav>
     </header>
@@ -92,7 +93,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn--small-radius btn--yellow btn--direction" type="button">Показать все</button>
+        <button class="btn btn--small-radius btn--yellow btn--direction" type="button"><a href="form.html">Показать все</a></button>
       </section>
       <section class="companions">
         <h2 class="subhead subhead--companions">Попутчики</h2>
@@ -149,10 +150,10 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn--companions btn--small-radius btn--yellow" type="button">Показать всех</button>
+        <button class="btn btn--companions btn--small-radius btn--yellow" type="button"><a href="catalog.html">Показать всех</a></button>
       </section>
-      <section class="offer">
-        <div class="offer__popup visually-hidden">
+      <div class="index__wrapper">
+        <div class="offer__popup">
           <h2 class="subhead subhead--popup">Бизнес-тарифы</h2>
           <ul class="offer-list offer-list--popup">
             <li class="offer-list__item offer-list__item--popup">
@@ -174,6 +175,8 @@
           </ul>
           <button class="btn btn--popup btn--upper">Закрыть окно</button>
         </div>
+      </div>
+      <section class="offer">
         <h2 class="subhead subhead--offer">Добавьте свой профиль</h2>
         <ol class="offer-list">
           <li class="offer-list__item">
@@ -218,7 +221,7 @@
           <span class="map__address">ул. Большая конюшенная, 19/8</span>
           <button class="btn btn--yellow btn--small-radius btn--map" type="button">Проложить маршрут</button>
         </div>
-        <img class="map__map">
+        <iframe class="map__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d471401edb72d975755dbee46e49c038c734e338a54f329649f573b293f3277&amp;source=constructor" width="320" height="576" frameborder="0"></iframe>
       </section>
     </main>
     <footer class="footer footer--index">
@@ -231,4 +234,5 @@
       <span class="footer__develop">Разработано</span>
     </footer>
   </body>
+  <script type="text/javascript" src="js/index.js"></script>
 </html>

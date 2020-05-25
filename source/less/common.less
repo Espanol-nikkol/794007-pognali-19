@@ -26,6 +26,21 @@ section {
   border-radius: 27px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+select,
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type="number"]:focus,
+button:focus,
+textarea:focus,
+input:focus,
+button:active {
+  outline: none;
+}
+
 @media (min-width: 768px) {
   body {
     width: 768px;

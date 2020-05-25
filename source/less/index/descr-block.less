@@ -4,10 +4,10 @@
 }
 
 .descr-block--about {
-  width: 200px;
+  width: 210px;
   display: block;
   position: relative;
-  margin-left: 23px;
+  margin: 0 0 18px 23px;
   z-index: 2;
 
   color: transparent;
@@ -23,7 +23,7 @@
     z-index: -1;
     border-radius: 20px;
 
-    background-image: url("../img/about-mobile@1x.png");
+    background-image: url("../../img/about-mobile@1x.png");
     background-size: 292px 352px;
     background-position: 15px 2px;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
 
 .descr-block--direction {
   color: @black-grey;
-  margin-left: 25px;
+  margin: 0 0 59px 25px;
 
   width: 200px;
 }
@@ -94,7 +94,7 @@
       top: -80px;
       left: 310px;
 
-      background-image: url("../img/about-tablet@1x.png");
+      background-image: url("../../img/about-tablet@1x.png");
       background-size: 376px 548px;
       background-position: 0 0;
       background-color: transparent;
@@ -106,7 +106,7 @@
   }
 
   .descr-block--direction {
-    margin-left: 0;
+    margin: 0 0 103px 0;
     width: 340px;
   }
 
@@ -166,7 +166,7 @@
       top: -150px;
       left: 618px;
 
-      background-image: url("../img/about-desktop@1x.png");
+      background-image: url("../../img/about-desktop@1x.png");
       background-size: 630px 665px;
       background-position: 0 0;
       background-color: transparent;
@@ -175,10 +175,14 @@
 
   .descr-block--direction {
     grid-column: 2;
+    grid-row: 2;
+
+    margin: 0;
   }
 
   .descr-block--companions {
     grid-column: 1;
+    margin: 0;
   }
 
   .descr-block--reg:nth-of-type(2) {

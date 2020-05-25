@@ -6,7 +6,7 @@
   font-size: 15px;
   line-height: 18px;
 
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
 .traveler__avatar {
@@ -65,6 +65,10 @@
   background-size: 13px 11px;
   background-repeat: no-repeat;
   background-image: url("../../../img/heart.svg");
+}
+
+.traveler__like--like {
+  background-image: url("../../../img/heart-active.svg");
 }
 
 .traveler__score {
@@ -273,7 +277,7 @@
   }
 
   .traveler__level {
-    margin: 0 0 0 -5px;
+    margin: 0;
     width: 60px;
     height: 60px;
     background-size: 60px 60px;
@@ -346,27 +350,39 @@
     width: 285px;
     height: 285px;
     border-radius: 20px 0 0 20px;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row: 1 / span 4;
     grid-column: 1;
+    margin: 0;
   }
 
   .traveler__name {
     grid-column-start: 2;
     grid-row: 2;
+    position: relative;
+    margin-bottom: 0;
+
+    &::after {
+      position: absolute;
+      margin: 0;
+      top: 12px;
+      left: -25px;
+    }
   }
 
   .traveler__like {
     grid-column-start: 2;
     grid-row-start: 4;
 
-    margin-right: 93px;
+    margin-right: 137px;
   }
 
   .traveler__score {
     grid-column-start: 2;
     grid-row-start: 4;
-    margin: 10px 33px 0 0;
+    width: 50px;
+    margin: 12px 0 0 202px;
+
+    text-align: left;
   }
 
   .traveler__wrapper:nth-of-type(1) {
@@ -379,17 +395,25 @@
     .visually-hidden;
   }
 
+  .traveler-list__item:nth-child(2) .traveler__name::after {
+    top: 12px;
+    left: -25px;
+  }
+
   .traveler__wrapper--transport-level {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 5;
     justify-self: flex-start;
+    justify-content: flex-start;
     width: 319px;
   }
 
   .traveler__level {
-    margin: 0 44px 0 auto;
+    margin: 0;
+    position: relative;
+    top: -5px;
   }
 
   .traveler__head-list {
@@ -413,13 +437,14 @@
   .traveler__more {
     font-size: 20px;
 
-    margin: 0 auto 54px auto;
-    width: 188px;
+    margin: 0 auto 65px auto;
+    width: 260px;
 
     &::before {
       width: 27px;
       height: 27px;
-      margin-right: 25px;
+      margin-right: 24px;
+      top: 5px;
       background-size: 27px 27px;
     }
   }

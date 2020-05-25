@@ -1,39 +1,82 @@
 .step-list {
-  margin-top: 31px;
+  width: 270px;
 }
 
 .step-list__item {
-  padding: 24px 24px 22px 24px;
-  margin-bottom: 10px;
+  padding: 23.5px 17px 22px 24px;
+  margin-bottom: 9px;
   border-radius: 10px;
 
   background-color: white;
+
+  &:nth-child(2) {
+    padding-bottom: 7px;
+  }
+
+  &:nth-child(3) {
+    padding-top: 24px;
+    padding-bottom: 5px;
+  }
 }
 
 @media (min-width: 768px) {
   .step-list {
-    margin-top: 60px;
+    width: 619px;
   }
 
   .step-list__item {
-    padding: 49px 44px 55px 43px;
+    padding: 49px 44px 54px 43px;
     margin-bottom: 40px;
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    &:nth-child(2) {
+      padding-top: 47px;
+      padding-bottom: 48px;
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 49px;
+      padding-bottom: 48px;
+      margin-bottom: 60px;
+    }
   }
 }
 
 @media (min-width: 1440px) {
+  .step-list {
+    width: 1320px;
+  }
+
   .step-list__item {
-    padding: 100px 162px 105px 162px;
+    padding: 99px 162px 105px 161px;
     margin-bottom: 44px;
-    border-radius: 50px;
+    border-radius: 58px;
     display: grid;
-    grid-template-columns: 218px 181px 401px 193px;
+    grid-template-columns: 218px 181px 401px 201px;
     justify-content: flex-start;
     align-items: flex-start;
+
+    &:nth-child(2) {
+      padding-top: 99px;
+      padding-bottom: 100px;
+      margin-bottom: 45px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 99px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .step-list__wrapper {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .step-list__steps {
@@ -41,21 +84,41 @@
     grid-column: 4;
     grid-row-start: 1;
     grid-row-end: 3;
-
+    margin: 9px 0 0 14px;
 
   }
 
   .step-list__stage {
-    margin-bottom: 26px;
+    margin-bottom: 21px;
     opacity: 0.6;
+    position: relative;
+
     font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: black;
+
+    &::before {
+      content: "";
+
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 8px;
+      left: -43px;
+      opacity: 0.3;
+      border-radius: 50%;
+
+      background-color: @dark-state-blue;
+    }
   }
 
   .step-list__stage--active {
     opacity: 1;
+
+    &::before {
+      opacity: 1;
+    }
   }
 }
 

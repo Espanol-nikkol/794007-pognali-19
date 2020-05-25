@@ -1,0 +1,376 @@
+.country-dict {
+  .visually-hidden;
+}
+
+.country-dict--active {
+  .visually-hidden--no;
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  margin:  0 0 282px 50px;
+  border-top: 1px solid @cloudy-blue;
+  border-left: 1px solid @cloudy-blue;
+}
+
+.country-dict--form-active {
+  .visually-hidden--no;
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 5;
+  top: 42px;
+  left: 0;
+  border-top: 1px solid @cloudy-blue;
+  border-left: 1px solid @cloudy-blue;
+}
+
+.country-dict__item--active .country-dict__label {
+  border: none;
+  background-color: @dark-state-blue;
+  color: white;
+}
+
+.country-dict__item--active .country-dict__list {
+  .visually-hidden--no;
+
+  position: absolute;
+  z-index: 8;
+  top: 218px;
+  left: 0;
+}
+
+.country-dict__list {
+  .visually-hidden;
+}
+
+.country-dict__list--form-active {
+  .visually-hidden--no;
+
+  width: 221px;
+  min-height: 270px;
+  box-sizing: border-box;
+  padding: 13px 0 0 20px;
+  position: absolute;
+  z-index: 8;
+  top: 204px;
+  left: -1px;
+
+  box-shadow: 0px 20px 50px 0 @dark-state-blue-10;
+  border: solid 1px @cloudy-blue;
+  border-radius: 0 0 10px 10px;
+
+  background-color: white;
+}
+
+.country-dict__radio {
+  .visually-hidden;
+}
+
+.country-dict__label {
+  width: 44px;
+  height: 41px;
+  display: block;
+  box-sizing: border-box;
+
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid @cloudy-blue;
+  border-left: none;
+  border-top: none;
+
+}
+
+.country-dict__label--form {
+  font-size: 14px;
+}
+
+.country-dict__head {
+  .visually-hidden;
+}
+
+@media (min-width: 768px) {
+  .country-dict {
+    .visually-hidden;
+  }
+
+  .country-dict--active {
+    .visually-hidden--no;
+
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    width: 375px;
+    margin: 40px 0 39px 75px;
+    justify-content: space-between;
+  }
+
+  .country-dict__item {
+    margin: 0 25px 23px -5px;
+
+
+    &:nth-child(24) {
+      margin: 0 30px 23px -10px;
+    }
+  }
+
+  .country-dict__item--active .country-dict__label {
+    background-color: transparent;
+    color: @dark-blue-grey;
+    opacity: 1;
+  }
+
+  .country-dict__item--active .country-dict__list {
+    .visually-hidden--no;
+
+    width: 170px;
+    position: absolute;
+    z-index: 8;
+    top: -5px;
+    left: 444px;
+  }
+
+  .country-dict__country {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .country-dict__label {
+    width: 45px;
+    height: auto;
+
+    .bloggersans-bold;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: @dark-blue-grey;
+    opacity: 0.2;
+    border: none;
+
+  }
+
+  .country-dict--form-active {
+    .visually-hidden--no;
+
+    width: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+
+    border-top: 1px solid @cloudy-blue;
+    border-left: 1px solid @cloudy-blue;
+  }
+
+  .country-dict__item--form {
+    margin: 0;
+
+    &:nth-child(24) {
+      margin: 0;
+    }
+  }
+
+  .country-dict__label--form {
+    width: 52px;
+    height: 69px;
+    display: block;
+    border: 1px solid @cloudy-blue;
+    border-left: none;
+    border-top: none;
+    opacity: 1;
+    padding: 15px 0 0 2.5px;
+
+    .bloggersans-medium;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @dark-state-blue;
+
+    background-color: white;
+  }
+
+  .country-dict__label--form-active {
+    color: white;
+    background-color: @dark-state-blue;
+  }
+
+  .country-dict__list--form-active {
+    .visually-hidden--no;
+
+    width: 180px;
+    min-height: 270px;
+    box-sizing: border-box;
+    //padding: 36px 0 0 25px;
+    padding: 0;
+    position: absolute;
+    z-index: 11;
+    top: -3px;
+    left: 367px;
+
+    box-shadow: none;
+    border: none;
+    border-radius: 0 0 10px 10px;
+
+    background-color: white;
+  }
+}
+
+@media (min-width: 1440px) {
+  .country-dict {
+    .visually-hidden;
+  }
+
+  .country-dict--active {
+    .visually-hidden--no;
+
+    width: 1250px;
+    margin: 13px 0 0 15px;
+
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 253px 252px 250px 250px 250px;
+    grid-template-rows: 650px 497px 450px 497px 310px;
+  }
+  .country-dict__item {
+    width: 240px;
+    margin: 0 0 0 0;
+    position: relative;
+
+    &:nth-child(5) .country-dict__list {
+      left: -4px;
+    }
+
+    &:nth-child(13) .country-dict__label {
+      position: relative;
+      left: -2px;
+      top: -2px;
+    }
+
+    &:nth-child(13) .country-dict__list {
+      top: 5px;
+      left: 1px;
+    }
+
+    &:nth-child(14) .country-dict__list,
+    &:nth-child(20) .country-dict__list {
+      left: 4px;
+      top: 4px;
+    }
+
+    &:nth-child(11) .country-dict__list,
+    &:nth-child(21) .country-dict__list,
+    &:nth-child(22) .country-dict__list,
+    &:nth-child(23) .country-dict__list,
+    &:nth-child(24) .country-dict__list,
+    &:nth-child(25) .country-dict__list{
+      top: 8px;
+    }
+
+    &:nth-child(4) .country-dict__list,
+    &:nth-child(16) .country-dict__list,
+    &:nth-child(23) .country-dict__list,
+    &:nth-child(24) .country-dict__list,
+    &:nth-child(25) .country-dict__list{
+      left: 3px;
+    }
+
+    &:nth-child(24) {
+      left: 10px;
+    }
+  }
+
+  .country-dict__label {
+    width: auto;
+    margin-bottom: 30px;
+    opacity: 1;
+
+    text-align: left;
+  }
+
+  .country-dict__list {
+    .visually-hidden--no;
+  }
+
+  .country-dict__item--active .country-dict__list {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .country-dict--form-active {
+    .visually-hidden--no;
+
+    width: 375px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+
+    border: none;
+  }
+
+  .country-dict__list--form {
+    .visually-hidden;
+  }
+
+  .country-dict__item--form {
+    width: 60px;
+    height: 70.2px;
+    margin: 0 15px 14.5px 0;
+
+    &:nth-child(13) .country-dict__label {
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(24) {
+      left: 0;
+      margin: 0 15px 14.5px 0;
+    }
+  }
+
+  .country-dict__label--form {
+    display: block;
+    border: 1px solid @cloudy-blue;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 15px 0 0 0;
+
+    .bloggersans-medium;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @dark-state-blue;
+
+    background-color: white;
+  }
+
+  .country-dict__label--form-active {
+    color: white;
+    background-color: @dark-state-blue;
+  }
+
+  .country-dict__list--form-active {
+    .visually-hidden--no;
+
+    width: 180px;
+    min-height: 270px;
+    box-sizing: border-box;
+    //padding: 36px 0 0 25px;
+    padding: 0;
+    position: absolute;
+    z-index: 11;
+    top: -3px;
+    left: 488px;
+
+    box-shadow: none;
+    border: none;
+    border-radius: 0 0 10px 10px;
+
+    background-color: white;
+  }
+}

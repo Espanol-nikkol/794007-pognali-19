@@ -1,12 +1,38 @@
 .plan-add {
   position: relative;
   z-index: 3;
-  margin-top: -30px;
+  margin-top: -40px;
   padding: 30px 25px 74px 25px;
 
   background-color: @light-blue-grey-five;
 }
 
+.plan-add__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.plan-add__steps-number {
+  height: 5px;
+  width: 47px;
+  margin: 9px 18px 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-add__step-number {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  background-color: @dark-state-blue;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
 
 .plan-add__wrapper {
   margin-bottom: 18px;
@@ -20,7 +46,12 @@
 }
 
 .plan-add__description {
-  margin-bottom: 25px;
+  width: 215px;
+  margin: 14px 0 20px 0;
+}
+
+.step-list__item:nth-child(2) .plan-add__description {
+  width: 220px;
 }
 
 .plan-add__label {
@@ -31,8 +62,40 @@
   letter-spacing: 1.6px;
   text-transform: uppercase;
 
-  margin-bottom: 21px;
+  width: 222px;
+  margin-bottom: 20px;
   display: block;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: auto;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .bloggersans-medium;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px;
+    color: @dark-state-blue-30;
+    letter-spacing: 1.6px;
+  }
+}
+
+.plan-add__label--companion::after {
+  content: "чел.";
+}
+
+.plan-add__label--duration {
+  margin-bottom: 12.5px;
+
+  &::after {
+    content: "дн.";
+  }
 }
 
 .plan-add__label--child {
@@ -44,6 +107,7 @@
   letter-spacing: normal;
 
   display: inline-block;
+  margin-bottom: 25px;
 
   &::before {
     content: "";
@@ -52,9 +116,11 @@
     width: 26px;
     height: 26px;
     border-radius: 4px;
+    box-sizing: border-box;
     margin-right: 13px;
     position: relative;
     top: 8px;
+
 
     border: 1px solid @cloudy-blue;
 
@@ -64,8 +130,13 @@
   }
 }
 
+.plan-add__check--child:checked + .plan-add__label--child::before {
+  background-image: url("../../img/tick.svg");
+}
+
 .plan-add__input {
   width: 220px;
+  height: 39px;
   display: block;
   border-radius: 4px;
   border: 1px solid @cloudy-blue;
@@ -80,27 +151,33 @@
   color: @dark-state-blue;
 }
 
-.plan-add__location {
-  .bloggersans-medium;
-  font-size: 18px;
-  line-height: 18px;
-  color: @dark-state-blue;
+.plan-add__change {
+  width: 42px;
+  height: 40px;
+  position: absolute;
+  border: none;
+  padding: 0;
+  opacity: 0.2;
 
-  display: block;
-  margin: 0 0 19px 12px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.plan-add__change--minus {
+  top: 27px;
+  left: 0;
+
+  background-image: url("../../img/qty-minus-mobile.svg");
+  background-size: 14px 2px;
 }
 
-.plan-add__plan {
-  padding: 13px 21px 0 15px;
-  width: 188px;
-  min-height: 220px;
+.plan-add__change--plus {
+  width: 60px;
+  top: 27px;
+  right: 0;
 
-  font-size: 16px;
-  line-height: 22px;
-
-  &::placeholder {
-    opacity: 0.3;
-  }
+  background-image: url("../../img/qty-plus-mobile.svg");
+  background-size: 14px 14px;
 }
 
 .plan-add__check {
@@ -109,7 +186,14 @@
 
 @media (min-width: 768px) {
   .plan-add {
-    padding: 58px 75px 63px 75px;
+    padding: 46px 75px 63px 75px;
+    margin-top: -70px;
+    border-radius: 28px;
+  }
+
+  .plan-add__steps-number {
+    width: 74px;
+    margin: 20px 0 0 auto;
   }
 
   .plan-add__wrapper {
@@ -122,17 +206,23 @@
 
   .plan-add__description {
     width: 500px;
-    margin-bottom: 42px;
+    margin: 33px 0 39px;
     order: 2;
 
     font-size: 20px;
     line-height: 24px;
   }
 
+  .step-list__item:nth-child(2) .plan-add__description {
+    width: 400px;
+  }
+
   .plan-add__label {
     line-height: 18px;
     font-size: 20px;
     letter-spacing: 2px;
+
+    width: 568px;
 
     &::before {
       content: "";
@@ -143,6 +233,15 @@
       margin-bottom: 24px;
 
       background-color: @light-blue-grey-two;
+    }
+
+    &::after {
+      top: 26px;
+      right: 3px;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
     }
 
     &--companion {
@@ -157,16 +256,15 @@
   }
 
   .plan-add__label--child {
+    margin: -47px 0 35px 0;
+    order: 4;
+
     .bloggersans-medium;
     text-transform: uppercase;
     line-height: 18px;
     font-size: 20px;
     letter-spacing: 2px;
     color: @dark-state-blue;
-    margin-top: -20px;
-    order: 4;
-
-    margin-bottom: 35px;
 
     &::before {
       display: inline-block;
@@ -175,11 +273,11 @@
       border-radius: 4px;
       margin-right: 23px;
       position: relative;
-      top: 35px;
+      top: 37px;
 
       border: 1px solid @cloudy-blue;
 
-      background-size: 9px 9px;
+      background-size: 12px 12px;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: transparent;
@@ -188,11 +286,31 @@
 
   .plan-add__input {
     width: 531px;
+    height: 66px;
     margin-top: 25px;
 
     line-height: 70px;
     font-size: 20px;
     letter-spacing: 2px;
+  }
+
+  .plan-add__change {
+    height: 70px;
+    top: 68px;
+  }
+
+  .plan-add__change--minus {
+    width: 68px;
+
+    background-size: 20px 2px;
+    background-image: url("../../img/qty-minus.svg");
+  }
+
+  .plan-add__change--plus {
+    width: 65px;
+
+    background-size: 20px 20px;
+    background-image: url("../../img/qty-plus.svg");
   }
 
   .plan-add__calendar {
@@ -235,7 +353,12 @@
 
 @media (min-width: 1440px) {
   .plan-add {
-    padding: 57px 60px 174px 60px;
+    padding: 48px 60px 174px 60px;
+    border-radius: 54px;
+  }
+
+  .plan-add__steps-number {
+    .visually-hidden;
   }
 
   .plan-add__wrapper {
@@ -250,14 +373,21 @@
 
   .plan-add__description {
     width: 576px;
-    margin-bottom: 56px;
+    margin: 0 0 62px 0;
     grid-column-start: 1;
     grid-column-end: 4;
+    white-space: pre;
+  }
+
+  .step-list__item:nth-child(2) .plan-add__description,
+  .step-list__item:nth-child(3) .plan-add__description {
+    margin-bottom: 30px;
   }
 
   .plan-add__label {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width: auto;
+    grid-column: 1 / span 2;
+    margin: 0 0 13px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -273,14 +403,16 @@
       height: 1px;
       display: block;
       position: absolute;
-      top: -30px;
+      top: -33px;
       left: 0;
+      margin: 0;
 
       background-color: @light-blue-grey-two;
     }
 
-    &--companion {
-      margin: 30px 0 14px 0;
+    &::after {
+      right: -82px;
+      color: @dark-state-blue;
     }
   }
 
@@ -290,24 +422,61 @@
     &::before {
       display: none;
     }
+
+    &::after {
+      right: -76px;
+    }
   }
 
   .plan-add__label--child {
     grid-column: 4;
     grid-row: 3;
-    margin: 30px 0 0 0;
+    margin-left: 15px;
     align-self: center;
 
     &::before {
-      display: none;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-right: 13px;
+      position: absolute;
+      top: 16px;
+      left: -59px;
+
+
+      border: 1px solid @cloudy-blue;
+
+      background-size: 12px 12px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: transparent;
     }
   }
 
+  .plan-add__check--child:checked + .plan-add__label--child::before {
+    background-image: url("../../img/tick.svg");
+  }
+
   .plan-add__input {
-    width: 181px;
+    width: 179px;
     margin: 0;
     display: inline-block;
     grid-column: 2;
+  }
+
+  .plan-add__change {
+    width: 60px;
+    top: 0;
+
+    &--minus {
+      left: 220px;
+    }
+
+    &--plus {
+      right: 0;
+    }
   }
 
   .plan-add__calendar {

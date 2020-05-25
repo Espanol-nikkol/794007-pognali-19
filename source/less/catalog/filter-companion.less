@@ -1,5 +1,5 @@
 .filter-companion {
-  padding: 26px 25px 22px 26px;
+  padding: 28px 25px 22px 26px;
   margin-bottom: 28px;
   border-radius: 20px;
 
@@ -8,7 +8,6 @@
 
 .filter-companion__list {
   position: relative;
-  margin-bottom: 43px;
 
   &::before {
     content: "";
@@ -27,7 +26,7 @@
 }
 
 .filter-companion__item {
-  padding: 13px 0 10px 0;
+  padding: 12px 0 10px 0;
   position: relative;
 
   &::after {
@@ -52,7 +51,7 @@
     width: 8px;
     height: 4px;
     position: absolute;
-    top: 19px;
+    top: 18px;
     right: 0;
 
     background-repeat: no-repeat;
@@ -66,31 +65,21 @@
   }
 }
 
-.filter-companion__item--open-sublist::before {
+.filter-companion__item--open::before {
   top: 18px;
   transform: rotate(180deg);
 }
 
-.filter-companion__item--close-sublist::before {
-  transform: none;
+.filter-companion__item--open .filter-companion__sublist {
+  .visually-hidden--no;
 }
 
 .filter-companion__sublist {
-  margin-top: 13px;
-}
-
-.filter-companion__sublist--transport {
-  margin: 13px 0 11px -1.5px;
+  .visually-hidden;
 }
 
 .filter-companion__subitem {
   margin: 0 0 8px 25px;
-}
-
-.filter-companion__subitem--transport {
-  &:nth-child(2) {
-    margin-left: -1px;
-  }
 }
 
 .filter-companion__check {
@@ -111,12 +100,12 @@
     height: 18px;
     border-radius: 4px;
     position: absolute;
-    top: -1px;
-    left: -27px;
+    top: -4px;
+    left: -26px;
 
     background-color: white;
     background-size: 9px 9px;
-    background-position: 6px center;
+    background-position: 5px center;
     background-repeat: no-repeat;
     //background-image: url("../../img/tick.svg");
   }
@@ -126,8 +115,12 @@
   background-image: url("../../img/tick.svg");
 }
 
+.filter-companion__item--open .filter-companion__sublist--transport {
+  margin-left: -2.5px;
+  margin-bottom: 12px;
+}
+
 .filter-companion__sublist--level {
-  margin-top: 0;
   display: flex;
   position: relative;
 
@@ -155,6 +148,10 @@
 
     background-color: @cloudy-blue;
   }
+}
+
+.filter-companion__item--open .filter-companion__sublist--level {
+  padding-bottom: 43px;
 }
 
 .filter-companion__subitem--level {
@@ -296,8 +293,10 @@
 
   .filter-companion__list {
     position: relative;
+    padding-bottom: 0;
+    margin-bottom: 67px;
 
-    &::before {
+    &::before, &::after {
       display: none;
     }
   }
@@ -309,13 +308,33 @@
     &::after {
       display: none;
     }
+
+    &::before {
+      display: block;
+      width: 10px;
+      height: 5px;
+      top: 3px;
+      right: -1px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 25px;
+    }
   }
 
   .filter-companion__sublist {
     width: 189px;
-    margin-bottom: 33px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .filter-companion__subitem {
+    margin-bottom: 13px;
+  }
+
+  .filter-companion__sublist--music {
+    margin-bottom: 23px;
+
   }
 
   .filter-companion__sublist--food,
@@ -325,12 +344,14 @@
 
   .filter-companion__sublist--transport {
     display: flex;
+    margin: -5px 0 38px 0;
   }
 
   .filter-companion__sublist--level {
+    width: 200px;
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 43px;
+    justify-content: flex-start;
+    margin: 0 0 43px -2px;
   }
 
   .filter-companion__subitem--level {

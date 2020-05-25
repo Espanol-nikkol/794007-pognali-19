@@ -3,15 +3,31 @@
   position: relative;
 }
 
+.header--scroll + main {
+  padding-top: 94px;
+}
+
+.index__wrapper {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .index {
     background-color: @dark-blue-grey;
+  }
+
+  .header--scroll + main {
+    padding-top: 164px;
   }
 }
 
 @media (min-width: 1440px) {
   .index {
     margin-top: -1px;
+  }
+
+  .header--scroll + main {
+    padding-top: 100px;
   }
 }
 
@@ -22,4 +38,6 @@
 @import "offer/offer";
 @import "reg/reg";
 @import "map/map";
+@import "descr-block";
+@import "motivator";
 
