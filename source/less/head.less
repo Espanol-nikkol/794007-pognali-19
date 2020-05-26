@@ -71,7 +71,7 @@
 
   .head--catalog, .head--form {
     width: 620px;
-    padding: 57px 73px 63px 75px;
+    padding: 59px 73px 63px 75px;
     margin: -5px -40px 0 -40px;
     border-radius: 0 0 57px 57px;
     position: relative;
@@ -88,7 +88,7 @@
       width: 768px;
       height: 30px;
       position: absolute;
-      top: -20px;
+      top: -28px;
       left: 0;
       background-color: @dark-two;
     }
@@ -121,7 +121,7 @@
 
   .head__return {
     .visually-hidden--no;
-    margin-top: 2px;
+    margin: 3px 1px 0 0;
 
     .bloggersans-bold;
     font-size: 20px;
@@ -154,10 +154,14 @@
 @media (min-width: 1440px) {
   .head--catalog, .head--form {
     width: 1189.5px;
-    padding: 0 123px 63px 127.5px;
-    margin: 0 -60px 0 -60px;
+    padding: 118px 123px 63px 127.5px;
+    margin: -64px -60px 0 -60px;
     display: flex;
     justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
 
     &::after {
       left: 126px;
@@ -171,9 +175,13 @@
 
   .head__title {
     text-align: left;
+  }
 
-    &--catalog {
-      letter-spacing: 2.9px;
+  .head__title--catalog {
+    letter-spacing: 2.9px;
+
+    &::after {
+      left: -2px;
     }
   }
 

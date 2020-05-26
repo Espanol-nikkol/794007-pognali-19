@@ -9,7 +9,7 @@
   let headerMenu = document.querySelector(".header");
 
 
-  function toggleScrollMenu () {
+  window.toggleScrollMenu = function () {
     if (window.scrollY > 0 && !headerMenu.classList.contains("header--scroll")) {
       headerMenu.classList.add("header--scroll");
     } else if (window.scrollY === 0 && headerMenu.classList.contains("header--scroll")) {
@@ -17,7 +17,7 @@
     }
   }
 
-  function toggleOpenMenu() {
+  window.toggleOpenMenu = function () {
     sloganHeader.classList.toggle("slogan--header-open");
     nav.classList.toggle("nav--open");
     buttonOpenMenu.classList.toggle("nav__open--open");
@@ -27,5 +27,4 @@
     socialListHeader.classList.toggle("social-list--header-open");
   }
 
-  export { toggleOpenMenu, toggleScrollMenu };
 })();

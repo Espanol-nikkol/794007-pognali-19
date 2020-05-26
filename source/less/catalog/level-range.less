@@ -77,40 +77,35 @@
 
 @media (min-width: 768px) {
   .level-range {
-    width: 75px;
-    height: 43px;
+    width: 80px;
+    height: 45px;
+    box-sizing: border-box;
     border: 1px solid @cloudy-blue;
     margin: 0;
-    padding: 2px 0 0 0;
+    padding: 4px 3px 0 0;
 
     font-size: 20px;
     text-align: center;
 
-    &--low {
-      padding-left: 10px;
-      width: 70px;
-    }
-
     &--high {
-      padding-left: 8px;
-      width: 65px;
+      width: 75px;
     }
   }
 
   .level-range__label--low {
-    &::before {
-      width: 207px;
+    &::after, &::before {
       height: 3px;
       border-radius: 1.5px;
-      bottom: 26px;
+      bottom: 22px;
+    }
+
+    &::before {
+      width: 207px;
       left: 72px;
     }
 
     &::after {
       width: 280px;
-      height: 3px;
-      border-radius: 1.5px;
-      bottom: 26.5px;
       left: 0;
     }
   }
@@ -119,27 +114,32 @@
     &::after, &::before {
       width: 13px;
       height: 13px;
-      bottom: 22px;
+      bottom: 17px;
     }
 
     &::before {
-      left: 70px;
+      left: 69px;
     }
 
     &::after {
-      left: 269.5px;
+      left: 268.5px;
     }
   }
 }
 
 @media (min-width: 1440px) {
   .level-range {
-    width: 92px;
+    width: 95px;
+    padding-top: 5px;
+
+    &--low {
+      padding-left: 9px;
+    }
   }
 
   .level-range__label--low {
     &::after, &::before {
-      bottom: -26px;
+      bottom: 17px;
     }
 
     &::before {
@@ -153,7 +153,7 @@
 
   .level-range__label--high {
     &::after, &::before {
-      bottom: -30px;
+      bottom: 12px;
     }
 
     &::before {
@@ -161,12 +161,8 @@
     }
 
     &::after {
-      left: 180px;
+      left: 179px;
     }
   }
 
-  .level-range--high {
-    width: 83px;
-    padding-left: 10px;
-  }
 }

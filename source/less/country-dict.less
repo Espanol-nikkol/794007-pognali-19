@@ -85,6 +85,9 @@
 
 .country-dict__label--form {
   font-size: 14px;
+  line-height: 14px;
+  padding: 13px 0 0 2px;
+
 }
 
 .country-dict__head {
@@ -240,6 +243,11 @@
     margin: 0 0 0 0;
     position: relative;
 
+    &:nth-child(2) .country-dict__label,
+    &:nth-child(3) .country-dict__label {
+      margin-left: -2px;
+    }
+
     &:nth-child(5) .country-dict__list {
       left: -4px;
     }
@@ -253,6 +261,10 @@
     &:nth-child(13) .country-dict__list {
       top: 5px;
       left: 1px;
+    }
+
+    &:nth-child(19) .country-dict__label {
+      margin-bottom: 33px;
     }
 
     &:nth-child(14) .country-dict__list,

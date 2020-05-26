@@ -169,8 +169,8 @@
 
   .filter-companion__list {
     position: relative;
-    padding: 13px 0 34px 0;
-    margin-bottom: 35px;
+    padding: 34px 0 18px 0;
+    margin-bottom: 36px;
 
     &::before {
       width: 618px;
@@ -196,25 +196,20 @@
 
   .filter-companion__item {
     padding: 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-
-    &:nth-child(4) {
-      margin: 29px 0 0 -2px;
-    }
-
-    &:nth-child(5) {
-      margin-top: 25px;
-    }
 
     &::after, &::before {
       display: none;
     }
 
-  }
+    &:nth-child(3) {
+      margin-bottom: 28px;
+    }
 
-  .filter-companion__item:nth-child(2) .subhead--sub {
-    margin-left: -2px;
+    &:nth-child(4) {
+      margin-bottom: 24px;
+    }
   }
 
   .filter-companion__sublist {
@@ -222,6 +217,8 @@
     width: 492px;
     display: grid;
     grid-template-columns: 169px 173px 150px;
+    align-items: flex-start;
+    align-content: flex-start;
 
     font-size: 20px;
     line-height: 20px;
@@ -251,7 +248,7 @@
 
   .filter-companion__sublist--transport {
     display: flex;
-    margin: -10px 5px 0 0;
+    margin: -9px 5px 0 0;
   }
 
   .filter-companion__sublist--level {
@@ -293,8 +290,8 @@
 
   .filter-companion__list {
     position: relative;
-    padding-bottom: 0;
-    margin-bottom: 67px;
+    padding: 31px 0 0;
+    margin-bottom: 26px;
 
     &::before, &::after {
       display: none;
@@ -317,41 +314,56 @@
       right: -1px;
     }
 
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .filter-companion__item--open {
+    margin-bottom: 21px;
+
     &:nth-child(4) {
-      margin-top: 25px;
+      margin-bottom: 37px;
     }
   }
 
   .filter-companion__sublist {
+    .visually-hidden;
+  }
+
+  .filter-companion__item--open .filter-companion__sublist {
+    .visually-hidden--no;
+
     width: 189px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .filter-companion__subitem {
-    margin-bottom: 13px;
+  .filter-companion__item--open .filter-companion__sublist--transport {
+    margin-left: -3px;
   }
 
-  .filter-companion__sublist--music {
-    margin-bottom: 23px;
-
-  }
-
-  .filter-companion__sublist--food,
-  .filter-companion__sublist--hobby {
-    .visually-hidden;
-  }
-
-  .filter-companion__sublist--transport {
-    display: flex;
-    margin: -5px 0 38px 0;
-  }
-
-  .filter-companion__sublist--level {
+  .filter-companion__item--open .filter-companion__sublist--level {
     width: 200px;
     display: flex;
     justify-content: flex-start;
-    margin: 0 0 43px -2px;
+    margin: 0 0 0 -2px;
+
+    &::after, &::before {
+      left: 86px;
+    }
+
+    &::after {
+      top: 16px;
+    }
+
+    &::before {
+      top: 22px;
+    }
+  }
+
+  .filter-companion__subitem {
+    margin-bottom: 14px;
   }
 
   .filter-companion__subitem--level {

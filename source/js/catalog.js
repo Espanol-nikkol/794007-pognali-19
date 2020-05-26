@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-  import { toggleOpenMenu, toggleScrollMenu } from "./header-menu.js";
   let filterCountry = document.querySelector(".filter-country");
   let filterCountryWrapper = filterCountry.children[0];
   let subheadFilterCountry = filterCountryWrapper.children[0];
@@ -12,7 +11,6 @@
   let buttonOpenMenu = document.querySelector(".nav").children[0];
   let headsFilterCompanion = document.querySelectorAll(".subhead--sub");
 
-  console.log(toggleOpenMenu)
 
   let toggleFilterCountry = function() {
     filterCountry.classList.toggle("filter-country--active");
@@ -70,7 +68,9 @@
   buttonOpenMenu.addEventListener("click", window.toggleOpenMenu);
   headsFilterCompanion.forEach((el) => {
     el.addEventListener("click", evt => {
-      evt.path[1].classList.toggle("filter-companion__item--open");
+      if (window.innerWidth < 768 || window.innerWidth > 1439) {
+        evt.path[1].classList.toggle("filter-companion__item--open");
+      }
     })
   })
 })();

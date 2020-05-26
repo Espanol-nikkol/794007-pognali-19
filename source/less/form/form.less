@@ -9,17 +9,29 @@
 
 .form {
   background-color: @grey;
-  padding: 0 0 164px 0;
+  padding: 0 0 162px 0;
+}
+
+.header--scroll + .form {
+  padding-top: 75px;
 }
 
 @media (min-width: 768px) {
   .form {
     padding: 0 0 100px 0;
   }
+
+  .header--scroll + .form {
+    padding-top: 165px;
+  }
 }
 
 @media (min-width: 1440px) {
   .form {
-    padding: 0
+    padding: 0;
+  }
+
+  .header--scroll + .form {
+    padding-top: 100px;
   }
 }
