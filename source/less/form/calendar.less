@@ -3,7 +3,8 @@
   padding-top: 13px;
   position: relative;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
 
     width: 221px;
@@ -37,7 +38,8 @@
   margin-bottom: 38px;
   position: relative;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
 
     width: 9px;
@@ -70,7 +72,8 @@
   margin: 0 0 10px 0;
 }
 
-.calendar__week-day, .calendar__month-day {
+.calendar__week-day,
+.calendar__month-day {
   .bloggersans;
   font-size: 14px;
 }
@@ -123,7 +126,7 @@
 
 .calendar__month-day {
   box-sizing: border-box;
-  padding: 4.5px 0 0px 0px;
+  padding: 4.5px 0 0 0;
 
   text-align: center;
 
@@ -155,7 +158,8 @@
     order: 6;
     width: 531px;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
 
       width: 531px;
@@ -189,7 +193,8 @@
     margin-bottom: 65px;
     box-sizing: border-box;
 
-    &::after, &::before {
+    &::after,
+    &::before {
       width: 20px;
       height: 32px;
       top: -1px;
@@ -277,7 +282,8 @@
     grid-column-end: 4;
 
 
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 1000px;
     }
   }
@@ -289,7 +295,8 @@
     margin-bottom: 43px;
     position: relative;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 18px;
       height: 34px;
       top: -1px;
@@ -334,19 +341,23 @@
     line-height: 14px;
     text-align: left;
 
-    &--first-april::after, &--first-march::after {
+    &--first-april::after,
+    &--first-march::after {
       display: inline-block;
       width: auto;
       margin-left: 5px;
     }
+
     &--first-march::after {
       content: "мар";
     }
+
     &--first-april::after {
       content: "апр";
     }
 
-    &--start::after, &--end::after {
+    &--start::after,
+    &--end::after {
       display: block;
       margin: 12px 0 0 0;
       width: auto;
@@ -365,5 +376,4 @@
       padding: 14px 0 0 14px;
     }
   }
-
 }

@@ -295,7 +295,7 @@
 наслаждаться архитектурой и вот это все.` ||
       routePlanCzech.value === `Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.`) {
       if (window.innerWidth < 768) {
-       routePlanCzech.value = `Пить пиво и лазить
+        routePlanCzech.value = `Пить пиво и лазить
 по старым замкам, наслаждаться архитектурой
 и вот это все.`
       } else if (window.innerWidth > 1439) {
@@ -314,4 +314,3 @@
   window.addEventListener("scroll", window.toggleScrollMenu);
   buttonOpenMenu.addEventListener("click", window.toggleOpenMenu);
 }) ();
-
