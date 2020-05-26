@@ -9,6 +9,23 @@
   flex-wrap: wrap;
 
   background-color: @grey;
+
+  &::before {
+    content: "";
+
+    display: block;
+    position: absolute;
+    top: 82px;
+    right: 26px;
+
+    width: 99px;
+    height: 99px;
+
+    background-image: url("../../../img/rates@1x.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .offer__popup {
@@ -29,11 +46,24 @@
   }
 }
 
+@media (min-resolution: 1.5dppx) {
+  .offer {
+    &::before {
+      background-image: url("../../../img/rates@2x.png");
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .offer {
     margin-top: -100px;
     padding: 174px 40px 86px 40px;
+
+    &::before {
+      top: auto;
+      bottom: 47px;
+      right: 85px;
+    }
   }
 
   .offer-list--popup {
@@ -43,7 +73,6 @@
   .offer-list__item--popup {
     padding-top: 12.5px;
   }
-
 
   .offer__popup {
     width: 505px;
@@ -58,6 +87,13 @@
   .offer {
     margin-top: -110px;
     padding: 217px 130px 187px 130px;
+
+    &::before {
+      width: 198px;
+      height: 198px;
+      bottom: 267px;
+      right: 135px;
+    }
   }
 
   .offer__show {

@@ -9,13 +9,16 @@
   margin-bottom: 40px;
 }
 
+.traveler__wrapper-avatar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 1;
+}
+
 .traveler__avatar {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column: 1;
   margin: -2px 0 0 -7px;
 }
 
@@ -193,15 +196,17 @@
     line-height: 24px;
   }
 
+  .traveler__wrapper-avatar {
+    grid-column: 1;
+    grid-row: 1;
+    grid-row-end: 4;
+  }
+
   .traveler__avatar {
     width: 190px;
     height: 190px;
     border-radius: 20px;
     margin: 1.5px 0 0 0;
-
-    grid-column: 1;
-    grid-row: 1;
-    grid-row-end: 4;
   }
 
   .traveler__name {
@@ -290,12 +295,12 @@
 
     &--smolov {
       background-image: url("../../../img/div25.png");
-      background-size: 50px 55px;
+      background-size: 46px 53px;
     }
 
     &--rogovay {
       background-image: url("../../../img/div50.png");
-      background-size: 50px 60px;
+      background-size: 47px 60px;
     }
   }
 
@@ -344,12 +349,16 @@
     grid-row: 3;
   }
 
+  .traveler__wrapper-avatar {
+    height: 285px;
+    grid-row: 1 / span 4;
+    grid-column: 1;
+  }
+
   .traveler__avatar {
     width: 285px;
     height: 285px;
     border-radius: 20px 0 0 20px;
-    grid-row: 1 / span 4;
-    grid-column: 1;
     margin: 0;
   }
 

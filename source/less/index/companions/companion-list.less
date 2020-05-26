@@ -105,6 +105,20 @@
   background-color: @green-apple;
 }
 
+@media (min-resolution: 1.5dppx) {
+  .companion-list__firsova {
+    &::before {
+      background-image: url("../../../img/firsova-desktop@2x.jpg");
+    }
+  }
+
+  .companion-list__demin {
+    &::before {
+      background-image: url("../../../img/demin-desktop@2x.jpg");
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .companion-list {
     margin: 0 0 80px 0;
@@ -133,13 +147,13 @@
     }
   }
 
-  .companion-list__firsova::before {
-    background-image: url("../../../img/firsova-desktop@1x.jpg");
-  }
-
-  .companion-list__demin::before {
-    background-image: url("../../../img/demin-desktop@1x.jpg");
-  }
+  //.companion-list__firsova::before {
+  //  background-image: url("../../../img/firsova-desktop@1x.jpg");
+  //}
+  //
+  //.companion-list__demin::before {
+  //  background-image: url("../../../img/demin-desktop@1x.jpg");
+  //}
 
   .companion-list__card {
     width: 285px;
@@ -187,13 +201,13 @@
     }
   }
 
-  .companion-list__firsova::before {
-    background-image: url("../../../img/firsova-desktop@1x.jpg");
-  }
-
-  .companion-list__demin::before {
-    background-image: url("../../../img/demin-desktop@1x.jpg");
-  }
+  //.companion-list__firsova::before {
+  //  background-image: url("../../../img/firsova-desktop@1x.jpg");
+  //}
+  //
+  //.companion-list__demin::before {
+  //  background-image: url("../../../img/demin-desktop@1x.jpg");
+  //}
 
   .companion-list__card {
     width: 285px;
