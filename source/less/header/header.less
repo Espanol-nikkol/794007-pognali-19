@@ -17,9 +17,21 @@
   padding-bottom: 57px;
 }
 
+.header--scroll {
+  padding-bottom: 3px;
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: auto;
+  z-index: 9;
+
+  background-color: white;
+}
+
 @media (min-width: 768px) {
   .header {
     width: 688px;
+    height: 45px;
     padding: 46px 40px 73px 40px;
     background-color: @dark-blue-grey;
 
@@ -36,22 +48,35 @@
   .header--open {
     background-color: white;
   }
+
+  .header--scroll {
+    padding-top: 44px;
+    padding-bottom: 42px;
+    background-color: white;
+  }
+
+  .header--scroll .header--dark {
+    background-color: red;
+  }
 }
 
 @media (min-width: 1440px) {
   .header {
     width: 1320px;
     padding: 47px 60px 0 60px;
+    height: auto;
 
     display: flex;
     background-color: @dark-two;
   }
 
   .header--catalog {
-    padding-bottom: 119px;
+    padding-bottom: 65px;
   }
 
-  .header--form {
-    padding-bottom: 126px;
+  .header--scroll {
+    padding-top: 19px;
+    padding-bottom: 18px;
+    background-color: white;
   }
 }

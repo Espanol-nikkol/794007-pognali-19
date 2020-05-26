@@ -24,21 +24,18 @@
 }
 
 .btn--header {
-  margin-bottom: 67px;
-  border-radius: 25px;
   .visually-hidden;
-
-  line-height: 50px;
-  text-align: center;
 }
 
 .btn--header-open {
   .visually-hidden--no;
   width: 270px;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
+  border-radius: 25px;
 
   line-height: 50px;
   font-size: 17px;
+  text-align: center;
 }
 
 .btn--small-circle {
@@ -64,6 +61,11 @@
   background-position: 236px 22px;
   background-repeat: no-repeat;
   background-image: url("../img/triangle-arrow-right.svg");
+}
+
+.btn--direction a,
+.btn--companions a {
+  color: @dark-state-blue;
 }
 
 .btn--companions {
@@ -93,6 +95,8 @@
   margin-bottom: 35px;
   padding-left: 20px;
 
+  line-height: 60px;
+
   background-position: 234px 22px;
 }
 
@@ -117,34 +121,30 @@
 .btn--plan-add {
   width: 230px;
   line-height: 40px;
+  margin-left: -5px;
+  letter-spacing: -0.6px;
 }
 
 .btn--popup {
   width: 270px;
-  line-height: 59px;
   margin-left: -25px;
   border-radius: 0 0 20px 20px;
+
+  line-height: 62px;
+  letter-spacing: -1px;
 
   background-color: @grey-five;
 }
 
 .btn--me {
   width: 270px;
-  margin-bottom: 27px;
+  margin-bottom: 32px;
+  height: 40px;
 
-  line-height: 40px;
+  line-height: 42px;
   color: @dark-two;
   font-size: 17px;
   background-color: @pale-grey-two;
-}
-
-.btn--route-list {
-  width: 220px;
-
-  line-height: 40px;
-  border: 1px solid @cloudy-blue;
-  border-radius: 4px;
-  background-color: @grey;
 }
 
 .btn--filter-companion {
@@ -152,8 +152,41 @@
   height: 40px;
   margin-left: -7px;
 
-  line-height: 42px;
+  line-height: 45px;
   font-size: 17px;
+}
+
+.btn--filter-country {
+  .visually-hidden;
+
+  &-active {
+    .visually-hidden--no;
+
+    width: 270px;
+    height: 40px;
+    padding-left: 28px;
+    margin: 0 0 28px 25px;
+
+    font-size: 16.5px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @dark-two;
+    background-color: @light-periwinkle;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-image: url("../img/close.svg");
+    background-position: 85px 14px;
+  }
+}
+
+.btn--step-next {
+  margin-bottom: 6px;
+}
+
+.btn--step-last {
+  letter-spacing: -0.4px;
 }
 
 @media (min-width: 768px) {
@@ -168,7 +201,7 @@
     position: relative;
     width: 188px;
     height: 50px;
-    margin: -10px 0 0 0;
+    margin: -5px 0 0 0;
     border-radius: 25px;
     padding: 0;
     overflow: auto;
@@ -179,7 +212,7 @@
 
   .btn--header-open {
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 2;
   }
 
   .btn--about {
@@ -197,7 +230,7 @@
     line-height: 24px;
   }
 
-  .btn--direction, .btn--companions {
+  .btn--direction {
     border-radius: 25px;
     padding-left: 32px;
 
@@ -205,7 +238,14 @@
   }
 
   .btn--companions {
+    height: 81px;
     margin-bottom: 0;
+    padding-left: 32px;
+    border-radius: 20px;
+
+    line-height: 84px;
+
+    background-position: 572px 35px;
   }
 
   .btn--offer {
@@ -240,8 +280,8 @@
 
       display: block;
       position: absolute;
-      top: 10px;
-      right: 27px;
+      top: 12px;
+      right: 25.5px;
 
       width: 99px;
       height: 99px;
@@ -254,29 +294,32 @@
   }
 
   .btn--map {
-    height: 80px;
+    height: 81px;
     margin-bottom: 85px;
-    padding-left: 30px;
+    padding-left: 32px;
     border-radius: 20px;
+
+    line-height: 79px;
 
     background-position: 567px 30px;
   }
 
   .btn--popup {
-    width: 688px;
-    line-height: 108px;
-    margin-left: -92px;
+    width: 690px;
+    margin-left: -94px;
     border-radius: 0 0 30px 30px;
 
+    line-height: 108px;
     text-transform: none;
+    letter-spacing: 0;
   }
 
   .btn--filter-companion {
-    width: 615px;
+    width: 618px;
     border-radius: 25px;
     height: 50px;
-    margin-left: 2px;
-    padding: 2px 3px 0 0;
+    margin-left: 0;
+    padding: 2px 5px 0 0;
 
     line-height: 50px;
     font-size: 20px;
@@ -287,27 +330,43 @@
     height: 50px;
     grid-row-start: 3;
     grid-column: 2;
+    box-sizing: border-box;
     margin: 0 0 22px -4px;
+    padding-right: 2px;
     border-radius: 25px;
 
     font-size: 20px;
-    line-height: 50px;
+    line-height: 54px;
   }
 
   .btn--me {
     grid-row: 2;
     grid-column-start: 2;
     grid-column-end: 5;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 50px;
 
     font-size: 20px;
     line-height: 60px;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
   }
 
   .btn--plan-add {
     order: 7;
     width: 285px;
+    margin-left: 0;
+    padding: 2px 0 0 35px;
+
+    text-transform: none;
+    text-align: left;
     line-height: 81px;
+    letter-spacing: 0;
+
+    background-size: 10px 14px;
+    background-position: 240px 35px;
+    background-repeat: no-repeat;
+    background-image: url("../img/triangle-arrow-right.svg");
   }
 
   .btn--route-list {
@@ -326,13 +385,44 @@
     text-transform: none;
     text-align: left;
 
-    padding-left: 26px;
+    padding-left: 34px;
+  }
+
+  .btn--step-next {
+    height: 79px;
   }
 
   .btn--step-last {
     width: 244px;
+    position: relative;
+    left: 5px;
+
     text-align: right;
+
+    background-size: 10px 14px;
+    background-position: 63px 34px;
+    background-repeat: no-repeat;
+    background-image: url("../img/triangle-arrow-left.svg");
   }
+
+  .btn--filter-country {
+    .visually-hidden;
+  }
+
+  .btn--filter-country-active {
+    .visually-hidden--no;
+    width: 618px;
+    height: 100px;
+    padding-left: 36px;
+    margin: 0 0 73px 75px;
+
+    font-size: 20px;
+    line-height: 105px;
+    letter-spacing: 0;
+    background-size: 19px 19px;
+    background-position: 242px 40px;
+  }
+
 }
 
 @media (min-width: 1440px) {
@@ -352,6 +442,7 @@
     grid-column: 2;
     margin: 2px 0 0 3px;
     border-radius: 20px;
+    padding: 2px 0 0 33px;
 
     background-position: 228px 35px;
   }
@@ -374,7 +465,7 @@
     width: 198px;
     height: 198px;
     top: -205px;
-    left: 980px;
+    left: 978px;
 
     background-size: 198px 198px;
   }
@@ -396,11 +487,21 @@
 
   .btn--filter-companion {
     width: 196px;
+    margin-left: 0;
+  }
+
+  .btn--filter-country {
+    width: 1320px;
+    margin-left: -20px;
+
+    background-position: 594px 41px;
   }
 
   .btn--traveler {
     grid-row: 4;
     grid-column: 2;
+
+    line-height: 55px;
   }
 
   .btn--me {
@@ -408,7 +509,11 @@
   }
 
   .btn--plan-add {
+    height: 81px;
     grid-column: 1;
+    padding-left: 33px;
+
+    background-position: 238px 35px;
   }
 
   .btn--route-list {
@@ -422,7 +527,14 @@
   .btn--step-last {
     grid-column: 4;
     padding: 0;
-    width: 222px;
-    text-align: center;
+    left: 0;
+    width: 196px;
+    height: 85px;
+    text-align: right;
+
+    background-position: 18px 35px;
+    background-size: 10px 14px;
+    background-repeat: no-repeat;
+    background-image: url("../img/triangle-arrow-left.svg");
   }
 }

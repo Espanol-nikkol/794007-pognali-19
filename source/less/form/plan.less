@@ -1,5 +1,5 @@
 .plan {
-  padding: 29px 25px 30px 25px;
+  padding: 29px 25px 60px 25px;
   margin-top: -30px;
   position: relative;
   z-index: 2;
@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 16px;
 
-  margin:  0 0 21px 0;
+  margin:  0 0 21px -3px;
   display: inline-block;
 }
 
@@ -27,11 +27,11 @@
 }
 
 .plan__companion {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .plan__duration {
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 }
 
 .plan__change {
@@ -41,8 +41,9 @@
 
 @media (min-width: 768px) {
   .plan {
-    padding: 58px 75px 80px 75px;
+    padding: 53px 75px 138px 75px;
     margin-top: -30px;
+    border-radius: 28px;
 
     background-color: @pale-grey-two;
   }
@@ -52,51 +53,55 @@
     line-height: 22px;
 
     width: 535px;
-    margin:  0 0 54px 0;
+    margin:  0 0 54px 2px;
+    grid-row: 1;
+    grid-column: 1 / span 3;
   }
 
   .plan__duration, .plan__companion, .plan__change {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
+
     margin-bottom: 0;
+    grid-row: 2;
   }
 
   .plan__companion {
-    position: relative;
+    grid-column: 1;
+  }
 
-    &::before {
-      content: "";
+  .plan__duration {
+    grid-column: 2;
+  }
 
-      display: block;
-      width: 618px;
-      height: 1px;
-      position: absolute;
-      top: -19px;
-      left: -40px;
-
-      background-color: @dark-blue-grey-30;
-      opacity: 0.3;
-    }
+  .plan__change {
+    grid-column: 3;
   }
 
 }
 
 @media (min-width: 1440px) {
   .plan {
-    padding: 58px 75px 80px 75px;
+    padding: 48px 75px 120px 125px;
     margin-top: -50px;
+    border-radius: 54px;
 
     background-color: @pale-grey-two;
   }
 
+  .plan__direction, .plan__duration, .plan__companion, .plan__change {
+    grid-row: 1;
+  }
+
   .plan__direction {
     width: auto;
-    margin: 0 auto 0 38px;
+    margin: -1.5px 0 0 53px;
+    grid-column: 1;
   }
 
   .plan__companion {
-    margin-right: 39px;
+    grid-column: 2;
 
     &::before {
       display: none;
@@ -104,6 +109,10 @@
   }
 
   .plan__duration {
-    margin-right: auto;
+    grid-column: 3;
+  }
+
+  .plan__change {
+    grid-column: 4;
   }
 }

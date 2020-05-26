@@ -12,8 +12,8 @@
   background-position: 152px 88px, -10px 358px;
   background-size: 143px 143px, 71px 71px;
   background-image:
-    url("../../img/smolov-back-desktop@1x.png"),
-    url("../../img/rogovaya-back-mobile@1x.png");
+    url("../../../img/smolov-back-desktop@1x.png"),
+    url("../../../img/rogovaya-back-mobile@1x.png");
 }
 
 .companions__descr {
@@ -22,23 +22,25 @@
 
 @media (min-width: 768px) {
   .companions {
-    padding: 188px 75px 88px 75px;
+    padding: 191px 75px 88px 75px;
 
     background-position: 40px 475px, 406px 130px;
     background-size: 143px 143px, 285px 285px;
     background-image:
-      url("../../img/smolov-back-desktop@1x.png"),
-      url("../../img/rogovaya-back-desktop@1x.png");
+      url("../../../img/smolov-back-desktop@1x.png"),
+      url("../../../img/rogovaya-back-desktop@1x.png");
   }
 }
 
 @media (min-width: 1440px) {
   .companions {
-    padding: 185px 59px 134px 131px;
+    padding: 182.5px 59px 134px 131px;
     display: grid;
-    grid-template-rows: 100px 171px 130px 81px;
+    grid-template-rows: minmax(98px, min-content) minmax(171px, min-content) minmax(133px, min-content) minmax(81px, min-content);
     grid-template-columns: 423px 630px;
-    grid-column-gap: 195px;
+    grid-column-gap: 196px;
+    align-content: flex-start;
+    align-items: flex-start;
 
     background-position: 547px 170px, 191px 400px;
   }

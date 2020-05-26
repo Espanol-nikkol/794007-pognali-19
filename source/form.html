@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Погнали, форма</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="header header--dark header--form">
-  <span class="slogan slogan--header"></span>
-  <nav class="nav nav--catalog">
-    <ul class="nav__list nav__list--catalog visually-hidden">
-      <li class="nav__item nav__item--catalog">О сервисе</li>
-      <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="">Направления</a></li>
-      <li class="nav__item nav__item--catalog"><a class="nav_link nav-link--catalog" href="catalog.html">Попутчики</a></li>
+  <header class="header header--dark header--form">
+  <span class="slogan slogan--header slogan--header-form"></span>
+  <nav class="nav nav--form">
+    <button type="button" class="nav__open nav__open--form"></button>
+    <ul class="nav__list nav__list--form visually-hidden">
+      <li class="nav__item nav__item--form"><a class="nav_link nav-link--form" href="index.html">О сервисе</a></li>
+      <li class="nav__item nav__item--form"><a class="nav_link nav-link--form" href="">Направления</a></li>
+      <li class="nav__item nav__item--form"><a class="nav_link nav-link--form" href="catalog.html">Попутчики</a></li>
     </ul>
     <button class="btn btn--yellow btn--upper btn--header visually-hidden" type="button">Авторизация</button>
-    <ul class='contact contact--header contact--header-catalog visually-hidden'>
+    <ul class='contact contact--header contact--header-form visually-hidden'>
       <li class="contact__item contact__item--header"><a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a></li>
       <li class="contact__item contact__item--header"><a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
     </ul>
@@ -37,64 +38,66 @@
       <button class="btn btn--me btn--upper">Сменить фото</button>
       <div class="me__wrapper-tags">
         <span class="me__head-list me__head-list--tags">Тэги</span>
-        <ul class="tag-list tag-list--me">
-          <li class="tag-list__item">#бургер</li>
-          <li class="tag-list__item">#бар</li>
-          <li class="tag-list__item">#футбол</li>
-          <li class="tag-list__item">#концерт</li>
-          <li class="tag-list__item">#крафт</li>
-        </ul>
+        <textarea class="me__tags">#бургер #бар #футбол #концерт #крафт</textarea>
       </div>
       <div class="me__wrapper-transports">
         <span class="me__head-list me__head-list--transport">Транспорт</span>
         <ul class="transport-list transport-list--me transport-list--cycle">
-          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
-          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
-          <li class="transport-list__item transport-list__item--cycle transport-list__item--white"></li>
-          <li class="transport-list__item transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+          <li class="transport-list__item transport-list__item--me transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+          <li class="transport-list__item transport-list__item--me transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
+          <li class="transport-list__item transport-list__item--me transport-list__item--cycle transport-list__item--white"></li>
+          <li class="transport-list__item transport-list__item--me transport-list__item--cycle transport-list__item--white transport-list__item--active"></li>
         </ul>
       </div>
     </section>
     <section class="plan">
-      <h2 class="subhead subhead--black subhead--form">Мои планы</h2>
+      <h2 class="subhead subhead--black subhead--plan">Мои планы:</h2>
       <ul class="plan-list">
         <li class="plan-list__item">
           <span class="plan__direction">Франция, Италия</span>
           <span class="plan__companion">3 попутчика</span>
-          <span class="plan__duration">26 мар - 29 мар</span>
+          <span class="plan__duration">26 мар &mdash; 29 мар</span>
           <span class="plan__change">Изменить</span>
         </li>
         <li class="plan-list__item">
           <span class="plan__direction">Таиланд, Индонезия</span>
           <span class="plan__companion">1 попутчик</span>
-          <span class="plan__duration">1 июл - 15 июл</span>
+          <span class="plan__duration">1 июл &mdash; 15 июл</span>
           <span class="plan__change">Изменить</span>
         </li>
       </ul>
     </section>
     <section class="plan-add">
       <form class="plan-add__form">
-        <h2 class="subhead subhead--black subhead--form">Добавить план</h2>
+        <h2 class="subhead subhead--black subhead--form">Добавить план:</h2>
+        <ul class="plan-add__steps-number">
+          <li class="plan-add__step-number plan-add__step-number--active"></li>
+          <li class="plan-add__step-number"></li>
+          <li class="plan-add__step-number"></li>
+        </ul>
         <ul class="step-list">
           <li class="step-list__item">
-            <div class="plan-add__wrapper">
-              <h3 class="plan-add__subhead">Шаг 1.</h3>
-              <span>Даты пребывания</span>
+            <div class="step-list__wrapper">
+              <h3 class="subhead subhead--plan-add">Шаг 1.</h3>
+              <span class="subhead subhead--plan-add">Даты пребывания</span>
             </div>
             <p class="plan-add__description">
-              Укажите предпочтительное количество попутчиков,
-              которых вы хотели бы позвать в поездку
-              и её предполагаемую длительность.
+Укажите предпочтительное количество попутчиков, которых
+вы хотели бы позвать в поездку и её предполагаемую длительность.
             </p>
             <label class="plan-add__label plan-add__label--companion">
               Ищу попутчиков:
+              <button type="button" class="plan-add__change plan-add__change--minus"></button>
               <input class="plan-add__input" type="number" value="2">
+              <button type="button" class="plan-add__change plan-add__change--plus"></button>
             </label>
             <label class="plan-add__label  plan-add__label--duration">
               Длительность:
+              <button type="button" class="plan-add__change plan-add__change--minus"></button>
               <input class="plan-add__input" type="number" value="2">
+              <button type="button" class="plan-add__change plan-add__change--plus"></button>
             </label>
-            <input type="checkbox" class="plan-add__check" id="child">
+            <input type="checkbox" class="plan-add__check plan-add__check--child" id="child" checked>
             <label class="plan-add__label plan-add__label--child" for="child">Можно с детьми</label>
             <div class="calendar">
               <span class="calendar__month">Март 2019</span>
@@ -178,325 +181,360 @@
             </ul>
           </li>
           <li class="step-list__item">
-            <div class="plan-add__wrapper">
-              <h3 class="plan-add__subhead">Шаг 2.</h3>
-              <span>Маршрут</span>
+            <div class="step-list__wrapper">
+              <h3 class="subhead subhead--plan-add">Шаг 2.</h3>
+              <span class="subhead subhead--plan-add">Маршрут</span>
             </div>
             <p class="plan-add__description">
-              Укажите страны, которые вы хотели посетить.
-              Это может быть одна или сразу несколько.
+Укажите страны, которые вы хотели посетить.
+Это может быть одна или сразу несколько.
             </p>
             <ul class="route-list">
               <li class="route-list__item">
-                <select class="route-list__country"></select>
+                <label class="route-list__label">
+                  <input class="route-list__country" readonly value="Босния и Герцеговина">
+                </label>
+                <div class="route-list__wrapper-flag">
+                  <span class="route-list__flag route-list__flag--bosnya"></span>
+                </div>
               </li>
               <li class="route-list__item">
-                <select class="route-list__country"></select>
+                <label class="route-list__label">
+                  <input class="route-list__country" readonly value="Чехия">
+                </label>
+                <div class="route-list__wrapper-flag">
+                  <span class="route-list__flag route-list__flag--czech"></span>
+                </div>
               </li>
               <li class="route-list__item route-list__item--choice">
-                <select class="route-list__country route-list__country--choice"></select>
-                <div class="country-contents country-contents--form visually-hidden">
-                  <h2 class="subhead--country-contents">Выберите страну</h2>
-                  <table class="country-contents__table">
-                    <tr class="country-contents__table-row">
-                      <td class="country-contents__head country-contents__head--active">А</td>
-                      <td class="country-contents__head">Б</td>
-                      <td class="country-contents__head">В</td>
-                      <td class="country-contents__head">Г</td>
-                      <td class="country-contents__head">Д</td>
-                    </tr>
-                    <tr class="country-contents__table-row">
-                      <td class="country-contents__head">Е</td>
-                      <td class="country-contents__head">З</td>
-                      <td class="country-contents__head">И</td>
-                      <td class="country-contents__head">К</td>
-                      <td class="country-contents__head">Л</td>
-                    </tr>
-                    <tr class="country-contents__table-row">
-                      <td class="country-contents__head">М</td>
-                      <td class="country-contents__head">Н</td>
-                      <td class="country-contents__head">О</td>
-                      <td class="country-contents__head">П</td>
-                      <td class="country-contents__head">Р</td>
-                    </tr>
-                    <tr class="country-contents__table-row">
-                      <td class="country-contents__head">С</td>
-                      <td class="country-contents__head">Т</td>
-                      <td class="country-contents__head">У</td>
-                      <td class="country-contents__head">Ф</td>
-                      <td class="country-contents__head">Х</td>
-                    </tr>
-                    <tr class="country-contents__table-row">
-                      <td class="country-contents__head">Ч</td>
-                      <td class="country-contents__head">Ш</td>
-                      <td class="country-contents__head">Щ</td>
-                      <td class="country-contents__head">Э</td>
-                      <td class="country-contents__head">Ю</td>
-                    </tr>
-                  </table>
-                  <ul class="country-contents__list">
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist country-contents__sublist--active">
-                        <li class="country-contents__subitem">Австралия</li>
-                        <li class="country-contents__subitem">Австрия</li>
-                        <li class="country-contents__subitem">Азербайджан</li>
-                        <li class="country-contents__subitem">Албания</li>
-                        <li class="country-contents__subitem">Алжир</li>
-                        <li class="country-contents__subitem">Ангола</li>
-                        <li class="country-contents__subitem">Андорра</li>
-                        <li class="country-contents__subitem">Антигуа и Барбуда</li>
-                        <li class="country-contents__subitem">Аргентина</li>
-                        <li class="country-contents__subitem">Армения</li>
-                        <li class="country-contents__subitem">Афганистан</li>
+                <label class="route-list__label">
+                  <input class="route-list__country" readonly value="Выберите страну">
+                </label>
+                <div class="route-list__wrapper-flag">
+                  <span class="route-list__flag"></span>
+                </div>
+                <div class="route-list__wrapper-dict">
+                  <ul class="country-dict country-dict--form">
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="а">
+                      <label class="country-dict__label country-dict__label--form country-dict__label--form-active" for="а">а</label>
+                      <ul class="country-dict__list country-dict__list--form country-dict__list--form-active">
+                        <li class="country-dict__country country-dict__country--form">Австралия</li>
+                        <li class="country-dict__country country-dict__country--form">Австрия</li>
+                        <li class="country-dict__country country-dict__country--form">Азербайджан</li>
+                        <li class="country-dict__country country-dict__country--form">Албания</li>
+                        <li class="country-dict__country country-dict__country--form">Алжир</li>
+                        <li class="country-dict__country country-dict__country--form">Ангола</li>
+                        <li class="country-dict__country country-dict__country--form">Андорра</li>
+                        <li class="country-dict__country country-dict__country--form">Антигуа и Барбуда</li>
+                        <li class="country-dict__country country-dict__country--form">Аргентина</li>
+                        <li class="country-dict__country country-dict__country--form">Армения</li>
+                        <li class="country-dict__country country-dict__country--form">Афганистан</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Багамские Острова</li>
-                        <li class="country-contents__subitem">Бангладеш</li>
-                        <li class="country-contents__subitem">Барбадос</li>
-                        <li class="country-contents__subitem">Бахрейн</li>
-                        <li class="country-contents__subitem">Белоруссия</li>
-                        <li class="country-contents__subitem">Белиз</li>
-                        <li class="country-contents__subitem">Бельгия</li>
-                        <li class="country-contents__subitem">Бенин</li>
-                        <li class="country-contents__subitem">Болгария</li>
-                        <li class="country-contents__subitem">Боливия</li>
-                        <li class="country-contents__subitem">Босния и Герцеговина</li>
-                        <li class="country-contents__subitem">Ботсвана</li>
-                        <li class="country-contents__subitem">Бразилия</li>
-                        <li class="country-contents__subitem">Бруней</li>
-                        <li class="country-contents__subitem">Буркина-Фасо</li>
-                        <li class="country-contents__subitem">Бурунди</li>
-                        <li class="country-contents__subitem">Бутан</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="б">
+                      <label class="country-dict__label country-dict__label--form" for="б">б</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Багамские Острова</li>
+                        <li class="country-dict__country country-dict__country--form">Бангладеш</li>
+                        <li class="country-dict__country country-dict__country--form">Барбадос</li>
+                        <li class="country-dict__country country-dict__country--form">Бахрейн</li>
+                        <li class="country-dict__country country-dict__country--form">Белоруссия</li>
+                        <li class="country-dict__country country-dict__country--form">Белиз</li>
+                        <li class="country-dict__country country-dict__country--form">Бельгия</li>
+                        <li class="country-dict__country country-dict__country--form">Бенин</li>
+                        <li class="country-dict__country country-dict__country--form">Болгария</li>
+                        <li class="country-dict__country country-dict__country--form">Боливия</li>
+                        <li class="country-dict__country country-dict__country--form">Босния и Герцеговина</li>
+                        <li class="country-dict__country country-dict__country--form">Ботсвана</li>
+                        <li class="country-dict__country country-dict__country--form">Бразилия</li>
+                        <li class="country-dict__country country-dict__country--form">Бруней</li>
+                        <li class="country-dict__country country-dict__country--form">Буркина-Фасо</li>
+                        <li class="country-dict__country country-dict__country--form">Бурунди</li>
+                        <li class="country-dict__country country-dict__country--form">Бутан</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Вануату</li>
-                        <li class="country-contents__subitem">Великобритания</li>
-                        <li class="country-contents__subitem">Венгрия</li>
-                        <li class="country-contents__subitem">Венесуэла</li>
-                        <li class="country-contents__subitem">Восточный Тимор</li>
-                        <li class="country-contents__subitem">Вьетнам</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="в">
+                      <label class="country-dict__label country-dict__label--form" for="в">в</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Вануату</li>
+                        <li class="country-dict__country country-dict__country--form">Великобритания</li>
+                        <li class="country-dict__country country-dict__country--form">Венгрия</li>
+                        <li class="country-dict__country country-dict__country--form">Венесуэла</li>
+                        <li class="country-dict__country country-dict__country--form">Восточный Тимор</li>
+                        <li class="country-dict__country country-dict__country--form">Вьетнам</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Габон</li>
-                        <li class="country-contents__subitem">Гаити</li>
-                        <li class="country-contents__subitem">Гайана</li>
-                        <li class="country-contents__subitem">Гамбия</li>
-                        <li class="country-contents__subitem">Гана</li>
-                        <li class="country-contents__subitem">Гватемала</li>
-                        <li class="country-contents__subitem">Гвинея</li>
-                        <li class="country-contents__subitem">Гвинея-Бисау</li>
-                        <li class="country-contents__subitem">Германия</li>
-                        <li class="country-contents__subitem">Гондурас</li>
-                        <li class="country-contents__subitem">Гренада</li>
-                        <li class="country-contents__subitem">Греция</li>
-                        <li class="country-contents__subitem">Грузия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="г">
+                      <label class="country-dict__label country-dict__label--form" for="г">г</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Габон</li>
+                        <li class="country-dict__country country-dict__country--form">Гаити</li>
+                        <li class="country-dict__country country-dict__country--form">Гайана</li>
+                        <li class="country-dict__country country-dict__country--form">Гамбия</li>
+                        <li class="country-dict__country country-dict__country--form">Гана</li>
+                        <li class="country-dict__country country-dict__country--form">Гватемала</li>
+                        <li class="country-dict__country country-dict__country--form">Гвинея</li>
+                        <li class="country-dict__country country-dict__country--form">Гвинея-Бисау</li>
+                        <li class="country-dict__country country-dict__country--form">Германия</li>
+                        <li class="country-dict__country country-dict__country--form">Гондурас</li>
+                        <li class="country-dict__country country-dict__country--form">Гренада</li>
+                        <li class="country-dict__country country-dict__country--form">Греция</li>
+                        <li class="country-dict__country country-dict__country--form">Грузия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Дания</li>
-                        <li class="country-contents__subitem">Джибути</li>
-                        <li class="country-contents__subitem">Доминика</li>
-                        <li class="country-contents__subitem">Доминикана</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="д">
+                      <label class="country-dict__label country-dict__label--form" for="д">д</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Дания</li>
+                        <li class="country-dict__country country-dict__country--form">Джибути</li>
+                        <li class="country-dict__country country-dict__country--form">Доминика</li>
+                        <li class="country-dict__country country-dict__country--form">Доминикана</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Египет</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="е">
+                      <label class="country-dict__label country-dict__label--form" for="е">е</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Египет</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Замбия</li>
-                        <li class="country-contents__subitem">Зимбабве</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="з">
+                      <label class="country-dict__label country-dict__label--form" for="з">з</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Замбия</li>
+                        <li class="country-dict__country country-dict__country--form">Зимбабве</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Израиль</li>
-                        <li class="country-contents__subitem">Индия</li>
-                        <li class="country-contents__subitem">Индонезия</li>
-                        <li class="country-contents__subitem">Иордания</li>
-                        <li class="country-contents__subitem">Ирак</li>
-                        <li class="country-contents__subitem">Иран</li>
-                        <li class="country-contents__subitem">Ирландия</li>
-                        <li class="country-contents__subitem">Исландия</li>
-                        <li class="country-contents__subitem">Испания</li>
-                        <li class="country-contents__subitem">Италия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="и">
+                      <label class="country-dict__label country-dict__label--form" for="и">и</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Израиль</li>
+                        <li class="country-dict__country country-dict__country--form">Индия</li>
+                        <li class="country-dict__country country-dict__country--form">Индонезия</li>
+                        <li class="country-dict__country country-dict__country--form">Иордания</li>
+                        <li class="country-dict__country country-dict__country--form">Ирак</li>
+                        <li class="country-dict__country country-dict__country--form">Иран</li>
+                        <li class="country-dict__country country-dict__country--form">Ирландия</li>
+                        <li class="country-dict__country country-dict__country--form">Исландия</li>
+                        <li class="country-dict__country country-dict__country--form">Испания</li>
+                        <li class="country-dict__country country-dict__country--form">Италия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Кабо-Верде</li>
-                        <li class="country-contents__subitem">Казахстан</li>
-                        <li class="country-contents__subitem">Камбоджа</li>
-                        <li class="country-contents__subitem">Камерун</li>
-                        <li class="country-contents__subitem">Канада</li>
-                        <li class="country-contents__subitem">Катар</li>
-                        <li class="country-contents__subitem">Кения</li>
-                        <li class="country-contents__subitem">Кипр</li>
-                        <li class="country-contents__subitem">Киргизия</li>
-                        <li class="country-contents__subitem">Кирибати</li>
-                        <li class="country-contents__subitem">Китай</li>
-                        <li class="country-contents__subitem">Колумбия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="к">
+                      <label class="country-dict__label country-dict__label--form" for="к">к</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Кабо-Верде</li>
+                        <li class="country-dict__country country-dict__country--form">Казахстан</li>
+                        <li class="country-dict__country country-dict__country--form">Камбоджа</li>
+                        <li class="country-dict__country country-dict__country--form">Камерун</li>
+                        <li class="country-dict__country country-dict__country--form">Канада</li>
+                        <li class="country-dict__country country-dict__country--form">Катар</li>
+                        <li class="country-dict__country country-dict__country--form">Кения</li>
+                        <li class="country-dict__country country-dict__country--form">Кипр</li>
+                        <li class="country-dict__country country-dict__country--form">Киргизия</li>
+                        <li class="country-dict__country country-dict__country--form">Кирибати</li>
+                        <li class="country-dict__country country-dict__country--form">Китай</li>
+                        <li class="country-dict__country country-dict__country--form">Колумбия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Лаос</li>
-                        <li class="country-contents__subitem">Латвия</li>
-                        <li class="country-contents__subitem">Лесото</li>
-                        <li class="country-contents__subitem">Либерия</li>
-                        <li class="country-contents__subitem">Ливан</li>
-                        <li class="country-contents__subitem">Ливия</li>
-                        <li class="country-contents__subitem">Литва</li>
-                        <li class="country-contents__subitem">Лихтенштейн</li>
-                        <li class="country-contents__subitem">Люксембург</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="л">
+                      <label class="country-dict__label country-dict__label--form" for="л">л</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Лаос</li>
+                        <li class="country-dict__country country-dict__country--form">Латвия</li>
+                        <li class="country-dict__country country-dict__country--form">Лесото</li>
+                        <li class="country-dict__country country-dict__country--form">Либерия</li>
+                        <li class="country-dict__country country-dict__country--form">Ливан</li>
+                        <li class="country-dict__country country-dict__country--form">Ливия</li>
+                        <li class="country-dict__country country-dict__country--form">Литва</li>
+                        <li class="country-dict__country country-dict__country--form">Лихтенштейн</li>
+                        <li class="country-dict__country country-dict__country--form">Люксембург</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Маврикий</li>
-                        <li class="country-contents__subitem">Мавритания</li>
-                        <li class="country-contents__subitem">Мадагаскар</li>
-                        <li class="country-contents__subitem">Малави</li>
-                        <li class="country-contents__subitem">Малайзия</li>
-                        <li class="country-contents__subitem">Мали</li>
-                        <li class="country-contents__subitem">Мальдивы</li>
-                        <li class="country-contents__subitem">Мальта</li>
-                        <li class="country-contents__subitem">Марокко</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="м">
+                      <label class="country-dict__label country-dict__label--form" for="м">м</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Маврикий</li>
+                        <li class="country-dict__country country-dict__country--form">Мавритания</li>
+                        <li class="country-dict__country country-dict__country--form">Мадагаскар</li>
+                        <li class="country-dict__country country-dict__country--form">Малави</li>
+                        <li class="country-dict__country country-dict__country--form">Малайзия</li>
+                        <li class="country-dict__country country-dict__country--form">Мали</li>
+                        <li class="country-dict__country country-dict__country--form">Мальдивы</li>
+                        <li class="country-dict__country country-dict__country--form">Мальта</li>
+                        <li class="country-dict__country country-dict__country--form">Марокко</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Намибия</li>
-                        <li class="country-contents__subitem">Науру</li>
-                        <li class="country-contents__subitem">Непал</li>
-                        <li class="country-contents__subitem">Нигер</li>
-                        <li class="country-contents__subitem">Нигерия</li>
-                        <li class="country-contents__subitem">Нидерланды</li>
-                        <li class="country-contents__subitem">Никарагуа</li>
-                        <li class="country-contents__subitem">Новая Зеландия</li>
-                        <li class="country-contents__subitem">Норвегия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="н">
+                      <label class="country-dict__label country-dict__label--form" for="н">н</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Намибия</li>
+                        <li class="country-dict__country country-dict__country--form">Науру</li>
+                        <li class="country-dict__country country-dict__country--form">Непал</li>
+                        <li class="country-dict__country country-dict__country--form">Нигер</li>
+                        <li class="country-dict__country country-dict__country--form">Нигерия</li>
+                        <li class="country-dict__country country-dict__country--form">Нидерланды</li>
+                        <li class="country-dict__country country-dict__country--form">Никарагуа</li>
+                        <li class="country-dict__country country-dict__country--form">Новая Зеландия</li>
+                        <li class="country-dict__country country-dict__country--form">Норвегия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">ОАЭ</li>
-                        <li class="country-contents__subitem">Оман</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="о">
+                      <label class="country-dict__label country-dict__label--form" for="о">о</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">ОАЭ</li>
+                        <li class="country-dict__country country-dict__country--form">Оман</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Пакистан</li>
-                        <li class="country-contents__subitem">Палау</li>
-                        <li class="country-contents__subitem">Панама</li>
-                        <li class="country-contents__subitem">Папуа — Новая Гвинея</li>
-                        <li class="country-contents__subitem">Парагвай</li>
-                        <li class="country-contents__subitem">Перу</li>
-                        <li class="country-contents__subitem">Польша</li>
-                        <li class="country-contents__subitem">Португалия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="п">
+                      <label class="country-dict__label country-dict__label--form" for="п">п</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Пакистан</li>
+                        <li class="country-dict__country country-dict__country--form">Палау</li>
+                        <li class="country-dict__country country-dict__country--form">Панама</li>
+                        <li class="country-dict__country country-dict__country--form">Папуа — Новая Гвинея</li>
+                        <li class="country-dict__country country-dict__country--form">Парагвай</li>
+                        <li class="country-dict__country country-dict__country--form">Перу</li>
+                        <li class="country-dict__country country-dict__country--form">Польша</li>
+                        <li class="country-dict__country country-dict__country--form">Португалия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Сальвадор</li>
-                        <li class="country-contents__subitem">Самоа</li>
-                        <li class="country-contents__subitem">Сан-Марино</li>
-                        <li class="country-contents__subitem">Саудовская Аравия</li>
-                        <li class="country-contents__subitem">Сейшелы</li>
-                        <li class="country-contents__subitem">Сенегал</li>
-                        <li class="country-contents__subitem">Сербия</li>
-                        <li class="country-contents__subitem">Сингапур</li>
-                        <li class="country-contents__subitem">Сирия</li>
-                        <li class="country-contents__subitem">Словакия</li>
-                        <li class="country-contents__subitem">Словения</li>
-                        <li class="country-contents__subitem">США</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="р">
+                      <label class="country-dict__label country-dict__label--form" for="р">р</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Руанда</li>
+                        <li class="country-dict__country country-dict__country--form">Румыния</li>
+                        <li class="country-dict__country country-dict__country--form">Россия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Таджикистан</li>
-                        <li class="country-contents__subitem">Таиланд</li>
-                        <li class="country-contents__subitem">Танзания</li>
-                        <li class="country-contents__subitem">Того</li>
-                        <li class="country-contents__subitem">Тонга</li>
-                        <li class="country-contents__subitem">Тринидад и Тобаго</li>
-                        <li class="country-contents__subitem">Тувалу</li>
-                        <li class="country-contents__subitem">Тунис</li>
-                        <li class="country-contents__subitem">Туркмения</li>
-                        <li class="country-contents__subitem">Турция</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="с">
+                      <label class="country-dict__label country-dict__label--form" for="с">с</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Сальвадор</li>
+                        <li class="country-dict__country country-dict__country--form">Самоа</li>
+                        <li class="country-dict__country country-dict__country--form">Сан-Марино</li>
+                        <li class="country-dict__country country-dict__country--form">Саудовская Аравия</li>
+                        <li class="country-dict__country country-dict__country--form">Сейшелы</li>
+                        <li class="country-dict__country country-dict__country--form">Сенегал</li>
+                        <li class="country-dict__country country-dict__country--form">Сербия</li>
+                        <li class="country-dict__country country-dict__country--form">Сингапур</li>
+                        <li class="country-dict__country country-dict__country--form">Сирия</li>
+                        <li class="country-dict__country country-dict__country--form">Словакия</li>
+                        <li class="country-dict__country country-dict__country--form">Словения</li>
+                        <li class="country-dict__country country-dict__country--form">США</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Уганда</li>
-                        <li class="country-contents__subitem">Узбекистан</li>
-                        <li class="country-contents__subitem">Украина</li>
-                        <li class="country-contents__subitem">Уругвай</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="т">
+                      <label class="country-dict__label country-dict__label--form" for="т">т</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Таджикистан</li>
+                        <li class="country-dict__country country-dict__country--form">Таиланд</li>
+                        <li class="country-dict__country country-dict__country--form">Танзания</li>
+                        <li class="country-dict__country country-dict__country--form">Того</li>
+                        <li class="country-dict__country country-dict__country--form">Тонга</li>
+                        <li class="country-dict__country country-dict__country--form">Тринидад и Тобаго</li>
+                        <li class="country-dict__country country-dict__country--form">Тувалу</li>
+                        <li class="country-dict__country country-dict__country--form">Тунис</li>
+                        <li class="country-dict__country country-dict__country--form">Туркмения</li>
+                        <li class="country-dict__country country-dict__country--form">Турция</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Фиджи</li>
-                        <li class="country-contents__subitem">Филиппины</li>
-                        <li class="country-contents__subitem">Финляндия</li>
-                        <li class="country-contents__subitem">Франция</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="у">
+                      <label class="country-dict__label country-dict__label--form" for="у">у</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Уганда</li>
+                        <li class="country-dict__country country-dict__country--form">Узбекистан</li>
+                        <li class="country-dict__country country-dict__country--form">Украина</li>
+                        <li class="country-dict__country country-dict__country--form">Уругвай</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Хорватия</li>
-                      </ul>
-
-                    </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Чад</li>
-                        <li class="country-contents__subitem">Черногория</li>
-                        <li class="country-contents__subitem">Чехия</li>
-                        <li class="country-contents__subitem">Чили</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="ф">
+                      <label class="country-dict__label country-dict__label--form" for="ф">ф</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Фиджи</li>
+                        <li class="country-dict__country country-dict__country--form">Филиппины</li>
+                        <li class="country-dict__country country-dict__country--form">Финляндия</li>
+                        <li class="country-dict__country country-dict__country--form">Франция</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Швейцария</li>
-                        <li class="country-contents__subitem">Швеция</li>
-                        <li class="country-contents__subitem">Шри-Ланка</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="х">
+                      <label class="country-dict__label country-dict__label--form" for="х">х</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Хорватия</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Эквадор</li>
-                        <li class="country-contents__subitem">Эритрея</li>
-                        <li class="country-contents__subitem">Эсватини</li>
-                        <li class="country-contents__subitem">Эстония</li>
-                        <li class="country-contents__subitem">Эфиопия</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="ч">
+                      <label class="country-dict__label country-dict__label--form" for="ч">ч</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Чад</li>
+                        <li class="country-dict__country country-dict__country--form">Черногория</li>
+                        <li class="country-dict__country country-dict__country--form">Чехия</li>
+                        <li class="country-dict__country country-dict__country--form">Чили</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">ЮАР</li>
-                        <li class="country-contents__subitem">Южный Судан</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="ш">
+                      <label class="country-dict__label country-dict__label--form" for="ш">ш</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Швейцария</li>
+                        <li class="country-dict__country country-dict__country--form">Швеция</li>
+                        <li class="country-dict__country country-dict__country--form">Шри-Ланка</li>
                       </ul>
                     </li>
-                    <li class="country-contents__item">
-                      <ul class="country-contents__sublist">
-                        <li class="country-contents__subitem">Ямайка</li>
-                        <li class="country-contents__subitem">Япония</li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="э">
+                      <label class="country-dict__label country-dict__label--form" for="э">э</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Эквадор</li>
+                        <li class="country-dict__country country-dict__country--form">Эритрея</li>
+                        <li class="country-dict__country country-dict__country--form">Эсватини</li>
+                        <li class="country-dict__country country-dict__country--form">Эстония</li>
+                        <li class="country-dict__country country-dict__country--form">Эфиопия</li>
+                      </ul>
+                    </li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="ю">
+                      <label class="country-dict__label country-dict__label--form" for="ю">ю</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">ЮАР</li>
+                        <li class="country-dict__country country-dict__country--form">Южный Судан</li>
+                      </ul>
+                    </li>
+                    <li class="country-dict__item country-dict__item--form">
+                      <input class="country-dict__radio country-dict__radio--form" type="radio" name="country-letter" id="я">
+                      <label class="country-dict__label country-dict__label--form" for="я">я</label>
+                      <ul class="country-dict__list country-dict__list--form">
+                        <li class="country-dict__country country-dict__country--form">Ямайка</li>
+                        <li class="country-dict__country country-dict__country--form">Япония</li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="route-list__item route-list__item--more">
-                <button class="btn btn--route-list btn--upper">Добавить страну</button>
+                <label class="route-list__label">
+                  <input class="route-list__country route-list__country--add" value="Добавить страну">
+                </label>
               </li>
             </ul>
             <button class="btn btn--yellow btn--plan-add btn--upper btn--step-next">Следующий шаг</button>
@@ -514,22 +552,34 @@
             </ul>
           </li>
           <li class="step-list__item">
-            <div class="plan-add__wrapper">
-              <h3 class="plan-add__subhead">Шаг 3.</h3>
-              <span>Развлечения</span>
+            <div class="step-list__wrapper">
+              <h3 class="subhead subhead--plan-add">Шаг 3.</h3>
+              <span class="subhead subhead--plan-add">Развлечения</span>
             </div>
             <p class="plan-add__description">
-              Наконец, расскажите о своих планах времяпровождения.
-              Можно писать в свободной форме и ставить теги.
+Наконец, расскажите о своих планах времяпровождения.
+Можно писать в свободной форме и ставить теги.
             </p>
-            <ul class="entertainment-list">
-              <li class="entertainment-list__item">
-                <span class="plan-add__location">Босния и Герцеговина</span>
-                <textarea class="plan-add__plan" placeholder="План действий"></textarea>
+            <ul class="route-list route-list--detail">
+              <li class="route-list__item route-list__item--detail">
+                <label class="route-list__label route-list__label--detail">
+                  <input class="route-list__country route-list__country--detail" readonly value="Босния и Герцеговина">
+                </label>
+                <div class="route-list__wrapper-flag route-list__wrapper-flag--detail">
+                  <span class="route-list__flag route-list__flag--bosnya route-list__flag--detail"></span>
+                </div>
+                <textarea class="route-list__plan" placeholder="План действий"></textarea>
               </li>
-              <li class="entertainment-list__item">
-                <span class="plan-add__location">Чехия</span>
-                <textarea class="plan-add__plan">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <li class="route-list__item route-list__item--detail">
+                <label class="route-list__label route-list__label--detail">
+                  <input class="route-list__country route-list__country--detail" readonly value="Чехия">
+                </label>
+                <div class="route-list__wrapper-flag route-list__wrapper-flag--detail">
+                  <span class="route-list__flag route-list__flag--czech route-list__flag--detail"></span>
+                </div>
+                <textarea class="route-list__plan">Пить пиво и лазить
+по старым замкам, наслаждаться архитектурой
+и вот это все.</textarea>
               </li>
             </ul>
             <button class="btn btn--yellow btn--plan-add btn--upper btn--step-next">Отправить</button>
@@ -550,7 +600,7 @@
       </form>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer footer--form">
     <span class="slogan slogan--footer slogan--form"></span>
     <ul class="social-list social-list--footer">
       <li class="social-list__item social-list__item--footer"></li>
@@ -560,4 +610,6 @@
     <span class="footer__develop">Разработано</span>
   </footer>
 </body>
+<script type="text/javascript" src="js/header-menu.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
 </html>

@@ -1,7 +1,7 @@
 @import "country-list.less";
 
 .direction {
-  padding: 132px 25px 30px 25px;
+  padding: 132px 25px 29px 25px;
   margin-top: -60px;
   position: relative;
   z-index: 6;
@@ -29,7 +29,7 @@
       right: 40px;
       z-index: -1;
 
-      background-image: url("../../img/flags-back@1x.png");
+      background-image: url("../../../img/flags-back@1x.png");
       background-size: 289px 575px;
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -42,8 +42,9 @@
     padding: 265px 0 139px 131px;
     display: grid;
     grid-template-columns: 559px 337px;
-    grid-template-rows: 105px 258px 81px;
+    grid-template-rows: minmax(103px, min-content) minmax(258px, min-content) minmax(81px, min-content);
     grid-column-gap: 171px;
+    align-items: flex-start;
+    align-content: flex-start;
   }
-
 }

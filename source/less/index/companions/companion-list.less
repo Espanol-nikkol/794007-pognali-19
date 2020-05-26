@@ -1,11 +1,16 @@
 .companion-list {
-  margin: 58px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .companion-list__item {
   margin-bottom: 10px;
+  padding: 270px 0 0 0;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 
   background-color: white;
 
@@ -15,6 +20,9 @@
     display: block;
     width: 270px;
     height: 270px;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 10px 10px 0 0;
 
     background-size: 270px 270px;
@@ -39,23 +47,23 @@
 
 .companion-list__firsova {
   &::after {
-    background-image: url("../../img/div99.png");
+    background-image: url("../../../img/div99.png");
   }
 
   &::before {
-    background-image: url("../../img/firsova-desktop@1x.jpg");
+    background-image: url("../../../img/firsova-desktop@1x.jpg");
   }
 }
+
 .companion-list__demin {
   &::after {
-    background-image: url("../../img/div80.png");
+    background-image: url("../../../img/div80.png");
   }
 
   &::before {
-    background-image: url("../../img/demin-desktop@1x.jpg");
+    background-image: url("../../../img/demin-desktop@1x.jpg");
   }
 }
-
 
 .companion-list__card {
   width: 270px;
@@ -68,7 +76,7 @@
 }
 
 .companion-list__name {
-  margin: 0 0 13px -2px;
+  margin: 0 0 6px -3px;
   display: block;
   width: auto;
 
@@ -85,7 +93,7 @@
     height: 5px;
     position: relative;
     top: 6.5px;
-    left: -15px;
+    left: -13px;
     border-radius: 50%;
     float: left;
 
@@ -97,7 +105,6 @@
   background-color: @green-apple;
 }
 
-
 @media (min-width: 768px) {
   .companion-list {
     margin: 0 0 80px 0;
@@ -106,13 +113,14 @@
 
   .companion-list__item {
     margin: 0 48px 0 0;
+    padding: 285px 0 18px;
     width: 285px;
     border-radius: 20px;
 
     &::before {
       width: 285px;
       height: 285px;
-      border-radius: 10px;
+      border-radius: 20px 20px 0 0;
 
       background-size: 285px 285px;
       background-repeat: no-repeat;
@@ -126,11 +134,11 @@
   }
 
   .companion-list__firsova::before {
-    background-image: url("../../img/firsova-desktop@1x.jpg");
+    background-image: url("../../../img/firsova-desktop@1x.jpg");
   }
 
   .companion-list__demin::before {
-    background-image: url("../../img/demin-desktop@1x.jpg");
+    background-image: url("../../../img/demin-desktop@1x.jpg");
   }
 
   .companion-list__card {
@@ -147,6 +155,7 @@
       width: 7px;
       height: 7px;
       top: 8px;
+      left: -16px;
     }
   }
 }
@@ -166,7 +175,6 @@
     &::before {
       width: 285px;
       height: 285px;
-      border-radius: 20px;
 
       background-size: 285px 285px;
       background-repeat: no-repeat;
@@ -175,16 +183,16 @@
 
     &::after {
       top: 23px;
-      left: 25px;
+      left: 23px;
     }
   }
 
   .companion-list__firsova::before {
-    background-image: url("../../img/firsova-desktop@1x.jpg");
+    background-image: url("../../../img/firsova-desktop@1x.jpg");
   }
 
   .companion-list__demin::before {
-    background-image: url("../../img/demin-desktop@1x.jpg");
+    background-image: url("../../../img/demin-desktop@1x.jpg");
   }
 
   .companion-list__card {
@@ -194,10 +202,14 @@
   }
 
   .companion-list__name {
-    margin: 0 0 18px -3px;
+    margin: 0 0 19px -5px;
 
     .bloggersans-bold;
     font-size: 24px;
     line-height: 24px;
+
+    &::before {
+      left: -15px;
+    }
   }
 }

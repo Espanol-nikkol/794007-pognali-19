@@ -7,7 +7,7 @@
   height: 45px;
   border-radius: 50%;
 
-  &:first-child {
+  &:nth-child(1) {
     background-image: url("../img/facebook.svg");
     background-repeat: no-repeat;
     background-position: 17px 12px;
@@ -21,7 +21,7 @@
     background-size: 21px 12px;
   }
 
-  &:last-child {
+  &:nth-child(3) {
     background-image: url("../img/instagram.svg");
     background-repeat: no-repeat;
     background-position: 14px 14px;
@@ -54,23 +54,20 @@
     width: 60px;
     height: 60px;
 
-    &:first-child {
+    &:nth-child(1) {
       background-image: url("../img/facebook.svg");
-      background-repeat: no-repeat;
       background-position: 23px 16px;
       background-size: 14px 28px;
     }
 
     &:nth-child(2) {
       background-image: url("../img/vk.svg");
-      background-repeat: no-repeat;
       background-position: 14px 23px;
       background-size: 31px 16px;
     }
 
-    &:last-child {
+    &:nth-child(3) {
       background-image: url("../img/instagram.svg");
-      background-repeat: no-repeat;
       background-position: 18px 18px;
       background-size: 24px 24px;
     }
@@ -80,15 +77,27 @@
     margin: 0 10px 0 0;
   }
 
-  .social-list--header {
-    .visually-hidden;
-  }
-
   .social-list--header-open {
     grid-column: 2;
     grid-row: 4;
     justify-content: flex-start;
-    opacity: 0.2;
+    justify-self: flex-start;
+    align-self: flex-end;
+    opacity: 1;
+  }
+
+  .social-list__item--header {
+    &:nth-child(1) {
+      background-image: url("../img/facebook-grey.svg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/vk-grey.svg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/instagram-grey.svg");
+    }
   }
 }
 

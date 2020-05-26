@@ -1,5 +1,5 @@
 .filter-companion {
-  padding: 26px 25px 22px 26px;
+  padding: 28px 25px 22px 26px;
   margin-bottom: 28px;
   border-radius: 20px;
 
@@ -8,7 +8,6 @@
 
 .filter-companion__list {
   position: relative;
-  margin-bottom: 43px;
 
   &::before {
     content: "";
@@ -27,7 +26,7 @@
 }
 
 .filter-companion__item {
-  padding: 13px 0 10px 0;
+  padding: 12px 0 10px 0;
   position: relative;
 
   &::after {
@@ -52,7 +51,7 @@
     width: 8px;
     height: 4px;
     position: absolute;
-    top: 19px;
+    top: 18px;
     right: 0;
 
     background-repeat: no-repeat;
@@ -66,31 +65,21 @@
   }
 }
 
-.filter-companion__item--open-sublist::before {
+.filter-companion__item--open::before {
   top: 18px;
   transform: rotate(180deg);
 }
 
-.filter-companion__item--close-sublist::before {
-  transform: none;
+.filter-companion__item--open .filter-companion__sublist {
+  .visually-hidden--no;
 }
 
 .filter-companion__sublist {
-  margin-top: 13px;
-}
-
-.filter-companion__sublist--transport {
-  margin: 13px 0 11px -1.5px;
+  .visually-hidden;
 }
 
 .filter-companion__subitem {
   margin: 0 0 8px 25px;
-}
-
-.filter-companion__subitem--transport {
-  &:nth-child(2) {
-    margin-left: -1px;
-  }
 }
 
 .filter-companion__check {
@@ -111,12 +100,12 @@
     height: 18px;
     border-radius: 4px;
     position: absolute;
-    top: -1px;
-    left: -27px;
+    top: -4px;
+    left: -26px;
 
     background-color: white;
     background-size: 9px 9px;
-    background-position: 6px center;
+    background-position: 5px center;
     background-repeat: no-repeat;
     //background-image: url("../../img/tick.svg");
   }
@@ -126,8 +115,12 @@
   background-image: url("../../img/tick.svg");
 }
 
+.filter-companion__item--open .filter-companion__sublist--transport {
+  margin-left: -2.5px;
+  margin-bottom: 12px;
+}
+
 .filter-companion__sublist--level {
-  margin-top: 0;
   display: flex;
   position: relative;
 
@@ -157,6 +150,10 @@
   }
 }
 
+.filter-companion__item--open .filter-companion__sublist--level {
+  padding-bottom: 43px;
+}
+
 .filter-companion__subitem--level {
   margin: 0 0 0 0;
 
@@ -172,8 +169,8 @@
 
   .filter-companion__list {
     position: relative;
-    padding: 13px 0 34px 0;
-    margin-bottom: 35px;
+    padding: 34px 0 18px 0;
+    margin-bottom: 36px;
 
     &::before {
       width: 618px;
@@ -199,25 +196,20 @@
 
   .filter-companion__item {
     padding: 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-
-    &:nth-child(4) {
-      margin: 29px 0 0 -2px;
-    }
-
-    &:nth-child(5) {
-      margin-top: 25px;
-    }
 
     &::after, &::before {
       display: none;
     }
 
-  }
+    &:nth-child(3) {
+      margin-bottom: 28px;
+    }
 
-  .filter-companion__item:nth-child(2) .subhead--sub {
-    margin-left: -2px;
+    &:nth-child(4) {
+      margin-bottom: 24px;
+    }
   }
 
   .filter-companion__sublist {
@@ -225,6 +217,8 @@
     width: 492px;
     display: grid;
     grid-template-columns: 169px 173px 150px;
+    align-items: flex-start;
+    align-content: flex-start;
 
     font-size: 20px;
     line-height: 20px;
@@ -254,7 +248,7 @@
 
   .filter-companion__sublist--transport {
     display: flex;
-    margin: -10px 5px 0 0;
+    margin: -9px 5px 0 0;
   }
 
   .filter-companion__sublist--level {
@@ -296,8 +290,10 @@
 
   .filter-companion__list {
     position: relative;
+    padding: 31px 0 0;
+    margin-bottom: 26px;
 
-    &::before {
+    &::before, &::after {
       display: none;
     }
   }
@@ -309,28 +305,65 @@
     &::after {
       display: none;
     }
+
+    &::before {
+      display: block;
+      width: 10px;
+      height: 5px;
+      top: 3px;
+      right: -1px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .filter-companion__item--open {
+    margin-bottom: 21px;
+
+    &:nth-child(4) {
+      margin-bottom: 37px;
+    }
   }
 
   .filter-companion__sublist {
+    .visually-hidden;
+  }
+
+  .filter-companion__item--open .filter-companion__sublist {
+    .visually-hidden--no;
+
     width: 189px;
-    margin-bottom: 33px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .filter-companion__sublist--food,
-  .filter-companion__sublist--hobby {
-    .visually-hidden;
+  .filter-companion__item--open .filter-companion__sublist--transport {
+    margin-left: -3px;
   }
 
-  .filter-companion__sublist--transport {
+  .filter-companion__item--open .filter-companion__sublist--level {
+    width: 200px;
     display: flex;
+    justify-content: flex-start;
+    margin: 0 0 0 -2px;
+
+    &::after, &::before {
+      left: 86px;
+    }
+
+    &::after {
+      top: 16px;
+    }
+
+    &::before {
+      top: 22px;
+    }
   }
 
-  .filter-companion__sublist--level {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 43px;
+  .filter-companion__subitem {
+    margin-bottom: 14px;
   }
 
   .filter-companion__subitem--level {

@@ -15,18 +15,6 @@
 
   background-color: @dark-two;
 
-  &::after {
-    content: "";
-
-    display: block;
-    width: 173px;
-    height: 5px;
-    position: absolute;
-    bottom: -1px;
-    left: 25px;
-    border-radius: 2.4px;
-    background-color: @mango;
-  }
 }
 
 .head__title {
@@ -39,8 +27,31 @@
   text-align: center;
 }
 
-.head__title--catalog {
+.head__title--catalog, .head__title--form {
   letter-spacing: 1.9px;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    border-radius: 2.4px;
+    background-color: @mango;
+  }
+}
+
+.head__title--form {
+  width: 215px;
+}
+
+.head__title--catalog {
+  width: 173px;
+
 }
 
 .head__return {
@@ -48,9 +59,9 @@
 }
 
 .head--form {
-  margin:  0 0 23px 0;
+  margin:  0 0 21px 0;
+  padding-top: 19px;
 }
-
 
 @media (min-width: 768px) {
   .head--index {
@@ -69,13 +80,6 @@
     justify-content: space-between;
 
     background-color: @dark-two;
-    &::after {
-      width: 287px;
-      height: 8px;
-      bottom: -4px;
-      left: 76px;
-      border-radius: 4px;
-    }
 
     &::before {
       content: "";
@@ -84,7 +88,7 @@
       width: 768px;
       height: 30px;
       position: absolute;
-      top: -20px;
+      top: -28px;
       left: 0;
       background-color: @dark-two;
     }
@@ -93,15 +97,31 @@
   .head__title {
     font-size: 60px;
     line-height: 70px;
+  }
 
-    &--catalog {
-      letter-spacing: 3.1px;
+  .head__title--form, .head__title--catalog {
+    &::after {
+      width: 100%;
+      height: 8px;
+      bottom: -67px;
+      left: 0;
+      border-radius: 4px;
     }
+  }
+
+  .head__title--catalog {
+    width: 288px;
+    letter-spacing: 3.1px;
+  }
+
+  .head__title--form {
+    width: 355px;
+    letter-spacing: 2.7px;
   }
 
   .head__return {
     .visually-hidden--no;
-    margin-top: 2px;
+    margin: 3px 1px 0 0;
 
     .bloggersans-bold;
     font-size: 20px;
@@ -127,16 +147,21 @@
 
   .head--form {
     margin:  0 0 64px 0;
+    padding-top: 53px;
   }
 }
 
 @media (min-width: 1440px) {
   .head--catalog, .head--form {
-    width: 1190px;
-    padding: 0 123px 64px 127.5px;
-    margin: 0 -60px 0 -60px;
+    width: 1189.5px;
+    padding: 118px 123px 63px 127.5px;
+    margin: -64px -60px 0 -60px;
     display: flex;
     justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
 
     &::after {
       left: 126px;
@@ -150,9 +175,13 @@
 
   .head__title {
     text-align: left;
+  }
 
-    &--catalog {
-      letter-spacing: 2.9px;
+  .head__title--catalog {
+    letter-spacing: 2.9px;
+
+    &::after {
+      left: -2px;
     }
   }
 
@@ -163,14 +192,8 @@
   }
 
   .head__return {
-    .bloggersans-bold;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-
     margin-top: 3px;
-    position: relative;
-    left: 4px;
+    left: 3px;
 
     &::after {
       content: "";
