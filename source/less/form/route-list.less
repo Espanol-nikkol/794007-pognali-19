@@ -73,7 +73,8 @@
 }
 
 .route-list__item--more {
-  &::after, &::before {
+  &::after,
+  &::before {
     display: none;
   }
 }
@@ -181,7 +182,8 @@
   border: 1px solid @cloudy-blue;
   border-radius: 4px;
 
-  &::after, &::before {
+  &::after,
+  &::before {
     content: "";
 
     width: 21px;
@@ -193,7 +195,6 @@
     z-index: 5;
 
     border-radius: 50%;
-
   }
 
   &::before {
@@ -423,7 +424,8 @@
   }
 
   .route-list__item--more {
-    &::after, &::before {
+    &::after,
+    &::before {
       display: block;
     }
 
@@ -458,7 +460,6 @@
     &::after {
       width: 17px;
       height: 9px;
-
       top: 33px;
       right: 27px;
 
@@ -519,14 +520,13 @@
   .route-list__flag {
     width: 71px;
     height: 48px;
-
     margin: 0;
-
   }
 
   .route-list--detail {
     padding-top: 13px;
     margin-bottom: 47px;
+
     &::before {
       top: -4px;
     }

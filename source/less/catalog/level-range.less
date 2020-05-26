@@ -1,7 +1,6 @@
 .level-range {
   width: 63px;
-  margin: 0;
-  margin-left: -1px;
+  margin: 0 0 0 -1px;
   padding: 10px 0 6px 0;
   display: block;
   border: 1px solid @cloudy-blue;
@@ -19,7 +18,8 @@
 }
 
 .level-range__label--low {
-  &::after, &::before {
+  &::after,
+  &::before {
     content: "";
 
     display: block;
@@ -53,7 +53,8 @@
 }
 
 .level-range__label--high {
-  &::after, &::before {
+  &::after,
+  &::before {
     content: "";
 
     width: 10px;
@@ -93,7 +94,8 @@
   }
 
   .level-range__label--low {
-    &::after, &::before {
+    &::after,
+    &::before {
       height: 3px;
       border-radius: 1.5px;
       bottom: 22px;
@@ -111,7 +113,8 @@
   }
 
   .level-range__label--high {
-    &::after, &::before {
+    &::after,
+    &::before {
       width: 13px;
       height: 13px;
       bottom: 17px;
@@ -138,7 +141,8 @@
   }
 
   .level-range__label--low {
-    &::after, &::before {
+    &::after,
+    &::before {
       bottom: 17px;
     }
 
@@ -152,7 +156,8 @@
   }
 
   .level-range__label--high {
-    &::after, &::before {
+    &::after,
+    &::before {
       bottom: 12px;
     }
 
@@ -164,5 +169,4 @@
       left: 179px;
     }
   }
-
 }

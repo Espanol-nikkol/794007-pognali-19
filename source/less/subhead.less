@@ -23,6 +23,7 @@
 .subhead--companions {
   letter-spacing: 1.5px;
   position: relative;
+
   &::before {
     content: "";
 
@@ -45,22 +46,6 @@
   padding-left: 0;
 
   letter-spacing: 1.9px;
-  &::before {
-    content: "";
-
-    display: block;
-    position: absolute;
-    top: 80px;
-    right: 26px;
-
-    width: 99px;
-    height: 99px;
-
-    background-image: url("../img/rates@1x.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 99px 99px;
-  }
 }
 
 .subhead--reg {
@@ -134,7 +119,8 @@
   color: @dark-state-blue;
 }
 
-.subhead--form, .subhead--plan {
+.subhead--form,
+.subhead--plan {
   padding-left: 0;
   margin-bottom: 29px;
 
@@ -221,10 +207,6 @@
     width: 480px;
     margin: 0 auto 74px;
     padding-left: 2px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .subhead--reg {
@@ -244,8 +226,6 @@
     .visually-hidden;
   }
 
-  .subhead--filter-country--active {}
-
   .subhead--filter-companion {
     width: auto;
     margin-bottom: 37px;
@@ -263,10 +243,8 @@
     margin-right: auto;
   }
 
-  .subhead--sub-transport {
-  }
-
-  .subhead--form, .subhead--plan {
+  .subhead--form,
+  .subhead--plan {
     font-size: 36px;
     line-height: 50px;
     letter-spacing: -0.1px;
@@ -301,6 +279,7 @@
 @media (min-width: 1440px) {
   .subhead--about {
     margin: 173px 0 58px 0;
+
     &::before {
       width: 213px;
       height: 213px;
@@ -368,7 +347,7 @@
 
   .subhead--sub {
     width: 189px;
-    margin:  0 0 25px -2px;
+    margin: 0 0 25px -2px;
     line-height: 16px;
 
     &-level {

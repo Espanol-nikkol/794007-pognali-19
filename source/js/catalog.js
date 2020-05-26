@@ -57,7 +57,9 @@
     toggleFilterCountry();
   });
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+      document.querySelectorAll(".filter-companion__item--open").
+        forEach((el) => el.classList.remove("filter-companion__item--open"));
       subheadFilterCountry.removeEventListener("click", toggleFilterCountry);
     } else {
       subheadFilterCountry.addEventListener("click", toggleFilterCountry);

@@ -440,7 +440,20 @@
   <section class="traveler">
     <ul class="traveler-list">
       <li class="traveler-list__item">
-        <img class="traveler__avatar" src="img/firsova-mobile@1x.jpg">
+        <picture class="traveler__wrapper-avatar">
+          <source @media="(min-width: 768px)"
+                  srcset=
+                    "img/firsova-tablet@1x.jpg 1x,
+                    img/firsova-tablet@2x.jpg 2x">
+          <source @media="(min-width: 1440px)"
+                  srcset=
+                    "img/firsova-desctop@1x.jpg 1x,
+                    img/firsova-desctop@2x.jpg 2x">
+          <img class="traveler__avatar"
+                src="img/firsova-mobile@1x.jpg"
+                srcset="img/firsova-mobile@2x.jpg 2x"
+                alt="Avatar of Tatiana Firsova">
+        </picture>
         <span class="traveler__name">Таня Фирсова</span>
         <button class="traveler__like traveler__like--like"></button>
         <span class="traveler__score">1,5 M</span>
@@ -478,7 +491,20 @@
         <button class="btn  btn--yellow btn--traveler btn--upper">Позвать!</button>
       </li>
       <li class="traveler-list__item">
-        <img class="traveler__avatar" src="img/demin-mobile@1x.jpg">
+        <picture class="traveler__wrapper-avatar">
+          <source @media="(min-width: 768px)"
+                  srcset=
+                    "img/demin-tablet@1x.jpg 1x,
+                    img/demin-tablet@2x.jpg 2x">
+          <source @media="(min-width: 1440px)"
+                  srcset=
+                    "img/demin-desctop@1x.jpg 1x,
+                    img/demin-desctop@2x.jpg 2x">
+          <img class="traveler__avatar"
+                src="img/demin-mobile@1x.jpg"
+                srcset="img/demin-mobile@2x.jpg 2x"
+                alt="Avatar of Petr Demin">
+        </picture>
         <span class="traveler__name">Петя Демин</span>
         <button class="traveler__like"></button>
         <span class="traveler__score">1500</span>
@@ -514,7 +540,20 @@
         <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
       </li>
       <li class="traveler-list__item">
-        <img class="traveler__avatar" src="img/smolov-mobile@1x.jpg">
+        <picture class="traveler__wrapper-avatar">
+          <source @media="(min-width: 768px)"
+                  srcset=
+                    "img/smolov-tablet@1x.jpg 1x,
+                    img/smolov-tablet@2x.jpg 2x">
+          <source @media="(min-width: 1440px)"
+                  srcset=
+                    "img/smolov-desctop@1x.jpg 1x,
+                    img/smolov-desctop@2x.jpg 2x">
+          <img class="traveler__avatar"
+                src="img/smolov-mobile@1x.jpg"
+                srcset="img/smolov-mobile@2x.jpg 2x"
+                alt="Avatar of Mark Smolov">
+        </picture>
         <span class="traveler__name">Марк Смолов</span>
         <button class="traveler__like"></button>
         <span class="traveler__score">170</span>
@@ -551,7 +590,20 @@
         <button class="btn  btn--upper btn--yellow btn--traveler">Позвать!</button>
       </li>
       <li class="traveler-list__item">
-        <img class="traveler__avatar" src="img/rogovaya-mobile@1x.jpg">
+        <picture class="traveler__wrapper-avatar">
+          <source @media="(min-width: 768px)"
+                  srcset=
+                    "img/rogovaya-tablet@1x.jpg 1x,
+                    img/rogovaya-tablet@2x.jpg 2x">
+          <source @media="(min-width: 1440px)"
+                  srcset=
+                    "img/rogovaya-desctop@1x.jpg 1x,
+                    img/rogovaya-desctop@2x.jpg 2x">
+          <img class="traveler__avatar"
+                src="img/rogovaya-mobile@1x.jpg"
+                srcset="img/rogovaya-mobile@2x.jpg 2x"
+                alt="Avatar of Larisa Rogovay">
+        </picture>
         <span class="traveler__name traveler__name--active">Лариса Роговая</span>
         <button class="traveler__like"></button>
         <span class="traveler__score">23</span>
