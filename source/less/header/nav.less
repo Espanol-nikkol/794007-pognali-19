@@ -212,13 +212,12 @@
 
   .nav__item {
     overflow: hidden;
+    margin-right: 34px;
   }
 
   .nav__link span {
     position: relative;
     display: inline-block;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
 
@@ -227,14 +226,11 @@
     top: 100%;
     content: attr(data-hover);
     color: @light-gold;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+
+    transform: translate3d(0, 0, 0);
   }
 
   .nav__link:hover span {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
     transform: translateY(-100%);
   }
 
@@ -242,9 +238,6 @@
     color: @pinkish-grey;
   }
 
-  .nav__item {
-    margin-right: 34px;
-  }
 
   .nav__item--form {
     &:nth-child(1) {
