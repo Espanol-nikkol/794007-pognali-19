@@ -5,21 +5,11 @@
   let filterCountryWrapper = filterCountry.children[0];
   let subheadFilterCountry = filterCountryWrapper.children[0];
   let filterWorld = filterCountryWrapper.children[1];
-  let countryDict = filterCountryWrapper.children[2];
   let buttonClose = filterCountryWrapper.children[3];
   let subheadsFilterCompany = document.querySelectorAll(".subhead--sub");
   let buttonOpenMenu = document.querySelector(".nav").children[0];
   let headsFilterCompanion = document.querySelectorAll(".subhead--sub");
 
-
-  let toggleFilterCountry = function() {
-    filterCountry.classList.toggle("filter-country--active");
-    filterCountryWrapper.classList.toggle("filter-country__wrapper--active");
-    subheadFilterCountry.classList.toggle("subhead--filter-country-active");
-    filterWorld.classList.toggle("filter-world--active");
-    countryDict.classList.toggle("country-dict--active");
-    buttonClose.classList.toggle("btn--filter-country-active");
-  };
 
   let changeSubheadsFilterCompany = function () {
     if (768 < window.innerWidth && window.innerWidth < 1440) {
@@ -35,37 +25,14 @@
 
   changeSubheadsFilterCompany();
 
-  if (window.innerWidth <= 768) {
-    subheadFilterCountry.addEventListener("click", toggleFilterCountry);
-  }
-
-
-  filterWorld.children[4].addEventListener("click", evt => {
-    if (evt.target.textContent !== "Свернуть") {
-      evt.target.textContent = "Свернуть";
-    } else {
-      evt.target.textContent = "Показать все";
-    }
-    toggleFilterCountry();
-  });
-  buttonClose.addEventListener("click", () => {
-    if (filterWorld.children[4].textContent !== "Свернуть") {
-      filterWorld.children[4].textContent = "Свернуть";
-    } else {
-      filterWorld.children[4].textContent = "Показать все";
-    }
-    toggleFilterCountry();
-  });
+  window.addEventListener("resize", changeSubheadsFilterCompany);
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 768 && window.innerWidth < 1440) {
       document.querySelectorAll(".filter-companion__item--open").
-        forEach((el) => el.classList.remove("filter-companion__item--open"));
-      subheadFilterCountry.removeEventListener("click", toggleFilterCountry);
-    } else {
-      subheadFilterCountry.addEventListener("click", toggleFilterCountry);
+      forEach((el) => el.classList.remove("filter-companion__item--open"));
     }
   });
-  window.addEventListener("resize", changeSubheadsFilterCompany);
+
   window.addEventListener("scroll", window.toggleScrollMenu);
   buttonOpenMenu.addEventListener("click", window.toggleOpenMenu);
   headsFilterCompanion.forEach((el) => {

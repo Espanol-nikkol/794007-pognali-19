@@ -32,9 +32,22 @@
       <h1 class="head__title head__title--form">Направления</h1>
     </div>
     <section class="me">
-      <div class="me__wrapper-avatar">
-        <img class="me__avatar" src="img/photo-account-tablet@1x.jpg" width="99" height="100" alt="avatar">
-      </div>
+      <picture class="me__wrapper-avatar">
+        <source
+          @media="(min-width: 768px)"
+          srcset="
+          img/photo-account-tablet@1x.jpg 1x,
+          img/photo-account-tablet@2x.jpg 2x">
+        <source
+          @media="(min-width: 1440px)"
+          srcset="
+          img/photo-account-tablet@1x.jpg 1x,
+          img/photo-account-tablet@2x.jpg 2x">
+        <img class="me__avatar"
+              src="img/photo-account-mobile@1x.jpg"
+              srcset="img/photo-account-mobile@2x.jpg"
+              alt="Avatar of you">
+      </picture>
       <button class="btn btn--me btn--upper">Сменить фото</button>
       <div class="me__wrapper-tags">
         <span class="me__head-list me__head-list--tags">Тэги</span>
@@ -610,6 +623,7 @@
     <span class="footer__develop">Разработано</span>
   </footer>
 </body>
+<script type="text/javascript" src="js/country-filter.js"></script>
 <script type="text/javascript" src="js/header-menu.js"></script>
 <script type="text/javascript" src="js/form.js"></script>
 </html>
