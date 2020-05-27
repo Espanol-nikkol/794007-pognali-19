@@ -107,6 +107,28 @@
   margin-left: -1px;
 }
 
+// animation
+
+.transport-list__item:hover::after {
+  opacity: 0.3;
+}
+
+.transport-list__item:active {
+  background-color: @pale-grey-three;
+
+  &::after {
+    opacity: 0.1;
+  }
+}
+
+.transport-list__item--active:hover::after {
+  opacity: 0.7;
+}
+
+.transport-list__item:active::after {
+    opacity: 0.3;
+}
+
 @media (min-width: 768px) {
   .transport-list {
     margin: 0;

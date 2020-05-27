@@ -62,6 +62,16 @@
     right: 0;
     background-image: url("../../img/month-arrow-right.svg");
   }
+
+  &::after:hover,
+  &::before:hover {
+    opacity: 0.5;
+  }
+
+  &::after:active,
+  &::before:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__week-list {
@@ -130,10 +140,10 @@
 
   text-align: center;
 
-  border: 1px solid @light-blue-grey-five;
+  border: 1px solid @cloudy-blue;
 }
 
-.calendar__month-day--last {
+.calendar__month-day--disable {
   color: @dark-state-blue-30;
 }
 
@@ -148,6 +158,13 @@
 
 .calendar__month-day--today {
   border: 2px solid @orange-red;
+  background-color: @dark-state-blue;
+}
+
+// animation
+
+.calendar__month-day:hover {
+  outline: 2px solid @orange-red;
 }
 
 @media (min-width: 768px) {

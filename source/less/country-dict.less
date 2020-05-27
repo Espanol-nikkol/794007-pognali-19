@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 220px;
-  margin: 0 0 282px 50px;
+  margin: 0 0 271px 50px;
   border-top: 1px solid @cloudy-blue;
   border-left: 1px solid @cloudy-blue;
 }
@@ -86,6 +86,14 @@
   font-size: 14px;
   line-height: 14px;
   padding: 13px 0 0 2px;
+}
+
+.country-dict__country {
+  line-height: 22px;
+}
+
+.country-dict__country a {
+  color: @black-grey;
 }
 
 .country-dict__head {
@@ -233,11 +241,18 @@
     display: grid;
     justify-content: flex-start;
     grid-template-columns: 253px 252px 250px 250px 250px;
-    grid-template-rows: 650px 497px 450px 497px 310px;
+    grid-template-rows: repeat(5, min-content);
+  }
+
+  .country-dict__list {
+    .visually-hidden--no;
+
+    margin-bottom: 51px;
   }
 
   .country-dict__item {
     width: 240px;
+    height: min-content;
     margin: 0 0 0 0;
     position: relative;
 
@@ -250,6 +265,14 @@
       left: -4px;
     }
 
+    &:nth-child(9) .country-dict__list {
+      margin-bottom: 48px;
+    }
+
+    &:nth-child(11) .country-dict__list {
+      margin-bottom: 89px;
+    }
+
     &:nth-child(13) .country-dict__label {
       position: relative;
       left: -2px;
@@ -259,6 +282,10 @@
     &:nth-child(13) .country-dict__list {
       top: 5px;
       left: 1px;
+    }
+
+    &:nth-child(16) .country-dict__list {
+      margin-bottom: 46px;
     }
 
     &:nth-child(19) .country-dict__label {
@@ -299,10 +326,6 @@
     opacity: 1;
 
     text-align: left;
-  }
-
-  .country-dict__list {
-    .visually-hidden--no;
   }
 
   .country-dict__item--active .country-dict__list {

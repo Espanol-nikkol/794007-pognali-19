@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <span class="slogan slogan--header"></span>
-      <nav class="nav">
-        <button type="button" class="nav__open"></button>
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="">О сервисе</a></li>
-          <li class="nav__item"><a class="nav__link" href="form.html">Направления</a></li>
-          <li class="nav__item"><a class="nav__link" href="catalog.html">Попутчики</a></li>
+    <header class="header header--without-js">
+      <span class="slogan slogan--header slogan--header-open"></span>
+      <nav class="nav nav--open nav--without-js">
+        <button type="button" class="nav__open nav__open--open visually-hidden"></button>
+        <ul class="nav__list nav__list--open">
+          <li class="nav__item"><a class="nav__link" href=""><span data-hover="О сервисе">О сервисе</span></a></li>
+          <li class="nav__item"><a class="nav__link" href="form.html"><span data-hover="Направления">Направления</span></a></li>
+          <li class="nav__item"><a class="nav__link" href="catalog.html"><span data-hover="Попутчики">Попутчики</span></a></li>
         </ul>
-        <button class="btn btn--yellow btn--upper btn--header" type="button">Авторизация</button>
-        <ul class='contact contact--header'>
+        <button class="btn btn--yellow btn--upper btn--header btn--header-open" type="button">Авторизация</button>
+        <ul class='contact contact--header contact--header-open'>
           <li class="contact__item contact__item--header">
             <a class="contact__link--header" href="tel:88005558628">8 800 555-86-28</a>
           </li>
@@ -24,7 +24,7 @@
             <a class="contact__link--header" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
         </ul>
-        <ul class="social-list social-list--header">
+        <ul class="social-list social-list--header social-list--header-open">
           <li class="social-list__item social-list__item--header"></li>
           <li class="social-list__item social-list__item--header"></li>
           <li class="social-list__item social-list__item--header"></li>
@@ -44,7 +44,7 @@
         </ul>
         <div class="review__wrapper">
           <q class="review__quote">Лучшее приложение, что я видел в жизни!</q>
-          <cite class="review__quote-author">Мурат Эльтазин <br>главный редактор газеты &laquoгаджетлайф&raquo</cite>
+          <cite class="review__quote-author">Мурат Эльтазин <br>главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
         </div>
         <ol class="guide-list">
           <li class="guide-list__item"><span class="guide-list__text">Выберите направление</span></li>
@@ -93,7 +93,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn--small-radius btn--yellow btn--direction" type="button"><a href="form.html">Показать все</a></button>
+        <a href="form.html" class="btn btn--small-radius btn--yellow btn--direction">Показать все</a>
       </section>
       <section class="companions">
         <h2 class="subhead subhead--companions">Попутчики</h2>
@@ -150,7 +150,7 @@
             </div>
           </li>
         </ul>
-        <button class="btn btn--companions btn--small-radius btn--yellow" type="button"><a href="catalog.html">Показать всех</a></button>
+        <a href="catalog.html" class="btn btn--companions btn--small-radius btn--yellow">Показать всех</a>
       </section>
       <div class="index__wrapper">
         <div class="offer__popup">
@@ -202,9 +202,12 @@
         </span>
         <span class="descr-block descr-block--reg">
           Уже зарегистрированы? Тогда
-          скорее <a class="reg__link">авторизуйтесь</a>.
+          скорее <a class="reg__link" href="#">авторизуйтесь</a>.
         </span>
-        <label class="reg__label"><input class="reg__email" type="email" placeholder="E-mail"></label>
+        <form class="reg__form">
+          <label class="reg__label"><input class="reg__email" type="email" placeholder="E-mail"></label>
+          <button type="submit" class="reg__submit"></button>
+        </form>
         <span class="motivator motivator--reg">
           Остались вопросы?
         </span>
@@ -219,9 +222,10 @@
       <section class="map">
         <div class="map__wrapper">
           <span class="map__address">ул. Большая конюшенная, 19/8</span>
-          <button class="btn btn--yellow btn--small-radius btn--map" type="button">Проложить маршрут</button>
+          <a href="https://yandex.ru/maps/?ll=25.429104%2C57.388102&mode=routes&rtext=59.936119%2C30.321285~54.721357%2C20.525342&rtt=auto&ruri=~&z=6.43"
+            class="btn btn--yellow btn--small-radius btn--map">Проложить маршрут</a>
         </div>
-        <iframe class="map__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d471401edb72d975755dbee46e49c038c734e338a54f329649f573b293f3277&amp;source=constructor" width="320" height="576" frameborder="0"></iframe>
+        <iframe class="map__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d471401edb72d975755dbee46e49c038c734e338a54f329649f573b293f3277&amp;source=constructor" width="320" height="576"></iframe>
       </section>
     </main>
     <footer class="footer footer--index">
@@ -233,7 +237,8 @@
       </ul>
       <span class="footer__develop">Разработано</span>
     </footer>
+    <script src="js/header-menu.js"></script>
+    <script src="js/transport-list.js"></script>
+    <script src="js/index.js"></script>
   </body>
-  <script type="text/javascript" src="js/header-menu.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
 </html>

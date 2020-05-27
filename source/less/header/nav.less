@@ -15,6 +15,12 @@
 
     background-color: white;
   }
+
+  &--without-js {
+    position: relative;
+    top: -70px;
+    left: -25px;
+  }
 }
 
 .nav__open {
@@ -22,10 +28,10 @@
   width: 24px;
   height: 11px;
   border: none;
-  position: absolute;
   top: 31px;
   right: 25px;
   z-index: 10;
+  position: absolute;
 
   background-size: 24px 11px;
   background-repeat: no-repeat;
@@ -37,6 +43,10 @@
     top: 23px;
   }
 
+  &--scroll {
+    background-image: url("../../img/menu-grey.svg");
+  }
+
   &--open {
     width: 19px;
     height: 19px;
@@ -46,10 +56,6 @@
     background-size: 19px 19px;
     background-image: url("../../img/menu-close-grey.svg");
   }
-}
-
-.header--scroll .nav__open {
-  background-image: url("../../img/menu-grey.svg");
 }
 
 .nav__list {
@@ -91,6 +97,11 @@
       display: grid;
       grid-template-rows: 134px 355px 265px 170px;
       grid-template-columns: 59px 440px 188px;
+    }
+
+    &--without-js {
+      left: -40px;
+      padding-right: 41px;
     }
   }
 
@@ -153,6 +164,13 @@
 
       background-color: @pinkish-grey;
     }
+
+    &--without-js {
+      left: 0;
+      top: 0;
+      padding: 0;
+      background-color: transparent;
+    }
   }
 
   .header--scroll .nav::before {
@@ -168,19 +186,56 @@
     .visually-hidden--no;
     display: flex;
     order: 2;
+
+    &--open {
+      top: -12px;
+      line-height: 30px;
+      align-self: flex-start;
+      align-items: flex-start;
+    }
   }
 
-  .nav__link,
-  .nav__item {
+  .nav__link {
     .bloggersans-medium;
     font-size: 20px;
     line-height: 30px;
     color: white;
     text-transform: uppercase;
+    letter-spacing: 0;
+    position: relative;
+
+    &:active {
+      color: @light-gold;
+      opacity: 0.3;
+    }
   }
 
-  .nav__link {
-    letter-spacing: 0;
+  .nav__item {
+    overflow: hidden;
+  }
+
+  .nav__link span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+
+  .nav__link span::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    color: @light-gold;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  .nav__link:hover span {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 
   .header--scroll .nav__link {

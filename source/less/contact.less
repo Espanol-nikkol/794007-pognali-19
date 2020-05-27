@@ -148,37 +148,8 @@
     margin: -14px 0 0 auto;
   }
 
-  .contact__item--header {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-bottom: 0;
-
-    background-repeat: no-repeat;
-
-    &::before {
-      display: none;
-    }
-
-    &:first-child {
-      margin: 0;
-
-      background-color: @mango;
-      background-size: 18px 18px;
-      background-position: 17px 16px;
-      background-image: url("../img/topmenu-phone.svg");
-    }
-
-    &:last-child {
-      background-color: @mango-two;
-      background-size: 18px 14px;
-      background-position: 16px 18px;
-      background-image: url("../img/topmenu-mail.svg");
-    }
-  }
-
-  .contact__link--header {
-    .visually-hidden;
+  .contact--header-open {
+    padding: 0;
   }
 
   .contact__item {
@@ -200,6 +171,56 @@
     background-position: 28px 33px;
   }
 
+  .contact__item--header {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+
+      background-color: transparent;
+    }
+
+    &:first-child {
+      background-color: @mango;
+    }
+
+    &:last-child {
+      background-color: @mango-two;
+    }
+
+    &:first-child::before {
+      width: 18px;
+      height: 18px;
+
+      top: 17px;
+      left: 16px;
+
+      background-size: contain;
+      background-position: 0 0;
+      background-image: url("../img/topmenu-phone.svg");
+    }
+
+    &:last-child::before {
+      width: 18px;
+      height: 14px;
+      top: 19px;
+      left: 16px;
+      border-radius: 0;
+
+      background-size: 18px 14px;
+      background-position: 0 0;
+      background-image: url("../img/topmenu-mail.svg");
+    }
+  }
+
+  .contact__link--header {
+    .visually-hidden;
+  }
+
   .contact--reg {
     display: flex;
     width: 905px;
@@ -218,5 +239,20 @@
 
   .contact__link {
     text-transform: uppercase;
+  }
+
+  //animation
+
+  .contact__item--header:first-child:hover {
+    background-color: @dusty-orange;
+  }
+
+  .contact__item--header:nth-child(2):hover {
+    background-color: @mango;
+  }
+
+  .contact__item--header:active::before,
+  .contact__item--header:focus::before {
+      opacity: 0.3;
   }
 }

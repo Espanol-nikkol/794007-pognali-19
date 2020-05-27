@@ -51,6 +51,24 @@
   background-position: 50% 0;
 }
 
+@media (min-resolution: 1.5dppx) {
+  .slogan--header {
+    background-image: url("../img/logo-mobile-white@2x.png");
+
+    &-open {
+      background-image: url("../img/logo-mobile-blue@2x.png");
+    }
+  }
+
+  .header--scroll .slogan--header {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
+
+  .slogan--footer {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
+}
+
 @media (min-width: 768px) {
   .slogan {
     width: 166px;
@@ -94,6 +112,24 @@
     background-position: 0 0;
     background-color: transparent;
   }
+
+  @media (min-resolution: 1.5dppx) {
+    .slogan--header {
+      background-image: url("../img/logo-tablet-white@2x.png");
+
+      &-open {
+        background-image: url("../img/logo-tablet-blue@2x.png");
+      }
+    }
+
+    .header--scroll .slogan--header {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
+
+    .slogan--footer {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
+  }
 }
 
 @media (min-width: 1440px) {
@@ -119,5 +155,19 @@
 
   .header--scroll .slogan--header {
     width: 200px;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .slogan--header {
+      background-image: url("../img/logo-desktop-white@2x.png");
+    }
+
+    .header--scroll .slogan--header {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+    }
+
+    .slogan--footer {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+    }
   }
 }

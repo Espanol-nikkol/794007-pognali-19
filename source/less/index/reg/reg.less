@@ -15,29 +15,30 @@
   text-decoration: underline;
 }
 
+.reg__form {
+  position: relative;
+}
+
 .reg__label {
   margin: 28px 0 30px 0;
   width: 270px;
   display: block;
-  position: relative;
+}
 
-  &::after {
-    content: "";
-
-    display: block;
+.reg__submit {
     width: 60px;
     height: 62px;
     position: absolute;
-    top: 0;
+    top: 28px;
     right: 0;
     border-radius: 10px;
+    border: none;
 
     background-color: @light-gold;
     background-image: url("../../../img/triangle-arrow-right.svg");
     background-size: 10px 14px;
     background-repeat: no-repeat;
     background-position: 51% 50%;
-  }
 }
 
 .reg__email {
@@ -62,13 +63,14 @@
     margin: 0 0 58px 0;
     width: 618px;
     border-radius: 20px;
+  }
 
-    &::after {
-      width: 82px;
-      height: 81px;
+  .reg__submit {
+    width: 82px;
+    height: 81px;
+    top: 0;
 
-      border-radius: 0 20px 20px 0;
-    }
+    border-radius: 0 20px 20px 0;
   }
 
   .reg__email {
@@ -89,23 +91,27 @@
   .reg__label {
     margin: 0 0 70px 0;
     width: 1175px;
+  }
 
-    &::after {
-      content: "Регистрация";
-      .bloggersans-bold;
-      font-size: 24px;
-      color: @dark-state-blue;
-      line-height: 85px;
-      padding-left: 35px;
+  .reg__submit {
+    .bloggersans-bold;
+    font-size: 24px;
+    color: @dark-state-blue;
+    line-height: 85px;
+    text-align: left;
 
-      width: 290px;
-      height: 81px;
+    width: 325px;
+    height: 81px;
+    padding-left: 35px;
 
-      background-position: 278px 36px;
-    }
+    background-position: 278px 36px;
   }
 
   .reg__email {
     width: 815px;
+
+    &::placeholder {
+      letter-spacing: -0.4px;
+    }
   }
 }

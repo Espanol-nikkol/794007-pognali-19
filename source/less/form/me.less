@@ -20,7 +20,7 @@
 }
 
 .me__wrapper-avatar {
-  margin: 0 17px 14px auto;
+  margin: 0 20px 16px auto;
 
   &::before {
     content: "";
@@ -29,8 +29,8 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 0;
-    left: -135px;
+    top: -5px;
+    left: -137px;
 
     background-position: 0 0;
     background-size: 100px 100px;
@@ -54,6 +54,19 @@
   background-color: transparent;
   font-size: 16px;
   line-height: 22px;
+
+  &::placeholder {
+    color: @greyish-brown-60;
+  }
+
+  &:hover {
+    border-color: @cloudy-blue-two;
+  }
+
+  &:focus,
+  &:active {
+    border-color: @dark-two;
+  }
 }
 
 .me__head-list {
@@ -181,27 +194,6 @@
     grid-row: 1;
     margin: 0 0 0 3px;
     justify-self: center;
-
-    &::after {
-      content: "Фото";
-
-      width: 190px;
-      height: 47px;
-      display: block;
-      position: absolute;
-      bottom: -40px;
-      left: 0;
-      border-radius: 0 0 10px 10px;
-
-      .bloggersans-medium;
-      font-size: 20px;
-      line-height: 51px;
-      letter-spacing: 2px;
-      color: @dark-state-blue;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: @pale-grey-two;
-    }
 
     &::before {
       top: 42px;

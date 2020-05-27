@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
   let sloganHeader = document.querySelector(".slogan--header");
   let nav = document.querySelector(".nav");
@@ -8,14 +10,15 @@
   let socialListHeader = nav.children[4];
   let headerMenu = document.querySelector(".header");
 
-
   window.toggleScrollMenu = function () {
     if (window.scrollY > 0 && !headerMenu.classList.contains("header--scroll")) {
       headerMenu.classList.add("header--scroll");
+      buttonOpenMenu.classList.add("nav__open--scroll");
     } else if (window.scrollY === 0 && headerMenu.classList.contains("header--scroll")) {
       headerMenu.classList.remove("header--scroll");
+      buttonOpenMenu.classList.remove("nav__open--scroll");
     }
-  }
+  };
 
   window.toggleOpenMenu = function () {
     sloganHeader.classList.toggle("slogan--header-open");
@@ -25,6 +28,10 @@
     buttonHeaderReg.classList.toggle("btn--header-open");
     contactListHeader.classList.toggle("contact--header-open");
     socialListHeader.classList.toggle("social-list--header-open");
-  }
+  };
 
+  window.toggleOpenMenu();
+  buttonOpenMenu.classList.remove("visually-hidden");
+  nav.classList.remove("nav--without-js");
+  headerMenu.classList.remove("header--without-js");
 })();

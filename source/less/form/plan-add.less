@@ -54,6 +54,17 @@
   width: 220px;
 }
 
+.plan-add__wrapper-change {
+  width: 222px;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+
+  &--duration {
+    margin-bottom: 12.5px;
+  }
+}
+
 .plan-add__label {
   .bloggersans-medium;
   color: @dark-state-blue;
@@ -61,11 +72,10 @@
   font-size: 16px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
+  position: relative;
 
   width: 222px;
-  margin-bottom: 20px;
   display: block;
-  position: relative;
 
   &::after {
     content: "";
@@ -90,12 +100,8 @@
   content: "чел.";
 }
 
-.plan-add__label--duration {
-  margin-bottom: 12.5px;
-
-  &::after {
+.plan-add__label--duration::after {
     content: "дн.";
-  }
 }
 
 .plan-add__label--child {
@@ -109,6 +115,7 @@
   display: inline-block;
   margin-bottom: 25px;
 
+  &::after,
   &::before {
     content: "";
 
@@ -120,9 +127,15 @@
     margin-right: 13px;
     position: relative;
     top: 8px;
+  }
 
-
+  &::before {
     border: 1px solid @cloudy-blue;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
 
     background-size: 9px 9px;
     background-position: center center;
@@ -130,25 +143,35 @@
   }
 }
 
-.plan-add__check--child:checked + .plan-add__label--child::before {
+.plan-add__check--child:checked + .plan-add__label--child::after {
   background-image: url("../../img/tick.svg");
 }
 
 .plan-add__input {
   width: 220px;
-  height: 39px;
+  height: 43px;
   display: block;
+  box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid @cloudy-blue;
   margin-top: 9px;
 
-  line-height: 43px;
+  line-height: 45px;
   text-align: center;
   .bloggersans-medium;
   text-transform: uppercase;
   font-size: 15px;
   letter-spacing: 1.5px;
   color: @dark-state-blue;
+
+  &:hover {
+    border-color: @bluey-grey;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @dark-two;
+  }
 }
 
 .plan-add__change {
@@ -158,14 +181,22 @@
   border: none;
   padding: 0;
   opacity: 0.2;
+  top: 26px;
 
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .plan-add__change--minus {
-  top: 27px;
   left: 0;
 
   background-image: url("../../img/qty-minus-mobile.svg");
@@ -173,8 +204,6 @@
 }
 
 .plan-add__change--plus {
-  width: 60px;
-  top: 27px;
   right: 0;
 
   background-image: url("../../img/qty-plus-mobile.svg");
@@ -183,6 +212,27 @@
 
 .plan-add__check {
   .visually-hidden;
+}
+
+// animation
+
+.plan-add__input:hover ~ .plan-add__change {
+  opacity: 0.5;
+}
+.plan-add__input:focus ~ .plan-add__change {
+  opacity: 1;
+}
+
+.plan-add__label--child:hover::before {
+  border-color: @bluey-grey;
+}
+
+.plan-add__label--child:active::before {
+  background-color: @pale-grey-three;
+}
+
+.plan-add__check:checked + .plan-add__label--child:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: 768px) {
@@ -219,12 +269,26 @@
     margin-bottom: 40px;
   }
 
+  .plan-add__wrapper-change {
+    width: 568px;
+
+    &--companion {
+      order: 3;
+      margin-bottom: 35px;
+    }
+
+    &--duration {
+      order: 5;
+      margin-bottom: 59px;
+    }
+  }
+
   .plan-add__label {
     line-height: 18px;
     font-size: 20px;
     letter-spacing: 2px;
 
-    width: 568px;
+    width: 535px;
 
     &::before {
       content: "";
@@ -245,16 +309,6 @@
       line-height: 18px;
       letter-spacing: 2px;
     }
-
-    &--companion {
-      order: 3;
-      margin-bottom: 35px;
-    }
-
-    &--duration {
-      order: 5;
-      margin-bottom: 59px;
-    }
   }
 
   .plan-add__label--child {
@@ -268,16 +322,19 @@
     letter-spacing: 2px;
     color: @dark-state-blue;
 
-    &::before {
+    &::before,
+    &::after {
       display: inline-block;
       width: 36px;
       height: 36px;
       border-radius: 4px;
       margin-right: 23px;
-      position: relative;
       top: 37px;
 
-      border: 1px solid @cloudy-blue;
+      background-color: transparent;
+    }
+
+    &::after {
 
       background-size: 12px 12px;
       background-position: center center;
@@ -287,8 +344,8 @@
   }
 
   .plan-add__input {
-    width: 526px;
-    height: 66px;
+    width: 532px;
+    height: 70px;
     margin-top: 25px;
 
     line-height: 70px;
@@ -382,7 +439,7 @@
     margin-bottom: 30px;
   }
 
-  .plan-add__label {
+  .plan-add__wrapper-change {
     width: auto;
     grid-column: 1 / span 2;
     margin: 0 0 13px 0;
@@ -390,9 +447,15 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    position: relative;
 
+    &--duration {
+      margin-bottom: 32px;
+    }
+  }
+
+  .plan-add__label {
     line-height: 70px;
+    width: 200px;
 
     &::before {
       content: "";
@@ -409,56 +472,42 @@
     }
 
     &::after {
-      right: -82px;
+      right: -283px;
       color: @dark-state-blue;
     }
   }
 
   .plan-add__label--duration {
-    margin-bottom: 32px;
-
     &::before {
       display: none;
     }
 
     &::after {
-      right: -76px;
+      right: -275px;
     }
   }
 
   .plan-add__label--child {
     grid-column: 4;
     grid-row: 3;
-    margin-left: 15px;
+    margin: -12px 0 0 15px;
     align-self: center;
 
-    &::before {
+    &::before,
+    &::after {
       display: inline-block;
       width: 36px;
       height: 36px;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-right: 13px;
       position: absolute;
       top: 16px;
       left: -59px;
 
-
-      border: 1px solid @cloudy-blue;
-
-      background-size: 12px 12px;
-      background-position: center center;
-      background-repeat: no-repeat;
       background-color: transparent;
     }
   }
 
-  .plan-add__check--child:checked + .plan-add__label--child::before {
-    background-image: url("../../img/tick.svg");
-  }
-
   .plan-add__input {
-    width: 174px;
+    width: 179px;
     margin: 0;
     display: inline-block;
     grid-column: 2;
