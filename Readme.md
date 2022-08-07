@@ -1,9 +1,5 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Коля Колганов](https://up.htmlacademy.ru/adaptive/19/user/794007).
-* Наставник: `Сам себе голова отныне и во веки веков`.
-
----
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
